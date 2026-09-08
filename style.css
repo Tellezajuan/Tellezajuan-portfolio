@@ -2118,10 +2118,6 @@ img[data-lightbox]:hover {
   border-top: 1px solid var(--line);
 }
 
-.template-credit {
-  margin-top: 5px;
-}
-
 /* Workbench and layout inspection */
 
 .builder-toolbar {
