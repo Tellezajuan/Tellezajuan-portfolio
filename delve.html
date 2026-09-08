@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.dataset.theme="dark";}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>Delve — A daily dungeon game prototype</title>
+  <meta name="description" content="A small daily dungeon-game prototype built for a low-friction return: seeded worlds, risky doors, classes, a Friday boss, and a Trophy Hall.">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Delve — A daily dungeon game prototype">
+  <meta property="og:description" content="A small daily dungeon-game prototype built for a low-friction return: seeded worlds, risky doors, classes, a Friday boss, and a Trophy Hall.">
+  <meta property="og:url" content="https://www.tellezajuan.com/delve.html">
+  <link rel="canonical" href="https://www.tellezajuan.com/delve.html">
+  <meta property="og:image" content="https://www.tellezajuan.com/images/delve/delve-v15-intro.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Delve — A daily dungeon game prototype">
+  <meta name="twitter:description" content="A small daily dungeon-game prototype built for a low-friction return: seeded worlds, risky doors, classes, a Friday boss, and a Trophy Hall.">
+  <meta name="twitter:image" content="https://www.tellezajuan.com/images/delve/delve-v15-intro.png">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
+  <link rel="stylesheet" href="style.css?v=bf38e0bc2e">
+</head>
+<body data-route="delve.html" data-recipe="case-study">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Juan Tellez home">JT<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life around the work.</span></a>
+<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years of media, measurement, and lead-quality work.</span></a>
+<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>Choices, process, and where AI fits.</span></a>
+<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important claims stay tied to sources.</span></a></div></details>
+      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>Choose a project by the kind of problem it solves.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>How late-arriving conversion credit changed a campaign decision.</span></a>
+<a data-page="growth-method.html" href="growth-method.html"><strong>Measurement Method</strong><span>The plan written before analysis, five supporting charts, and source record.</span></a></div>
+<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html"><strong>Job Search Workflow</strong><span>How 683 postings became a checked shortlist worth reading.</span></a>
+<a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Workflow</strong><span>A clip-sifting and editing system with an owner release check.</span></a></div>
+<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html"><strong>Options Research</strong><span>A paper-only system designed to make weak ideas fail safely.</span></a>
+<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>A written testing process with explicit rejection rules.</span></a></div>
+<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html" aria-current="page"><strong>Delve</strong><span>A daily dungeon prototype built around returning.</span></a></div></div></div></details>
+      <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <div class="header-tools desktop-tools">
+      <a class="icon-link" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener" aria-label="Juan Tellez on LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20.5H6.94V8.5Z"/><path d="M5.25 7.11C6.35 7.11 7.24 6.22 7.24 5.11C7.24 4.01 6.35 3.11 5.25 3.11C4.24 3.11 3.25 4.01 3.25 5.11Z"/><path d="M20.5 13.66V20.5H17.13V14.05C17.13 12.44 16.56 11.34 15.12 11.34C14.02 11.34 13.37 12.08 13.08 12.79C12.98 13.05 12.95 13.4 12.95 13.76V20.5H9.57C9.57 20.5 9.62 9.47 9.57 8.5H12.95V9.95C13.4 9.25 14.21 8.24 16.54 8.24C19.43 8.24 20.5 10.24 20.5 13.66Z"/></svg>
+      </a>
+      <button class="theme-toggle icon-button" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button>
+    </div>
+    <details class="mobile-menu">
+      <summary><span class="menu-label">Menu</span><span class="close-label">Close</span></summary>
+      <nav class="mobile-nav" aria-label="Mobile">
+        <a data-page="index.html" href="index.html">Home</a>
+        <details class="mobile-nav-group"><summary>About</summary><div class="mobile-nav-links"><a data-page="about-me.html" href="about-me.html">About Juan</a>
+<a data-page="experience.html" href="experience.html">Experience</a>
+<a data-page="about.html" href="about.html">How I Work</a>
+<a data-page="proof-system.html" href="proof-system.html">How I Check the Work</a></div></details>
+        <details class="mobile-nav-group" open><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html">Marketing Measurement</a>
+<a data-page="growth-method.html" href="growth-method.html">Measurement Method</a></div>
+<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html">Job Search Workflow</a>
+<a data-page="cutting-room.html" href="cutting-room.html">YouTube Workflow</a></div>
+<div class="mobile-project-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html">Options Research</a>
+<a data-page="sports.html" href="sports.html">Sports Research</a></div>
+<div class="mobile-project-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html" aria-current="page">Delve</a></div></div></details>
+        <div class="mobile-utilities">
+          <a href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">LinkedIn</a>
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">Theme <span aria-hidden="true">◐</span></button>
+        </div>
+      </nav>
+    </details>
+  </div>
+</header>
+  <main id="main-content">
+<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">Delve</li></ol></nav>
+<header class="page-intro container" data-block="intro">
+  <div class="intro-head">
+          <p class="eyebrow">Delve prototype · daily return loop · product design</p>
+          <h1>A daily dungeon game: <span>easy enough for coffee, worth coming back to.</span>
+  </h1>
+        </div>
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <p class="intro-subtitle">A short daily dungeon run built to feel easy on the eyes and easy to return to, whichever time of day you open it.</p>
+            <p class="intro-lede">I was thinking about the habit created by Wordle, LinkedIn's daily games, and Chess.com's daily puzzles: something quick enough to open casually, but satisfying enough to compare with friends. I wanted to mix that with the feeling of an RPG dungeon crawl. <em class="caveat">Delve is a personal prototype</em> built around that return loop.</p>
+            <div class="action-row">
+          <a class="button button-primary" href="#screenshot-tour">See the screenshot tour</a>
+          <a class="button button-secondary" href="#daily-loop">Why I built it</a>
+        </div>        </div>
+        </div>
+        <div class="feature-callout">
+          <span class="callout-label">The boundary</span>
+          <strong class="callout-title">A short run, a shared weekly world, and a reason to return.</strong>
+          <span class="callout-copy">Delve combines the quick habit of a daily puzzle with the feeling of an RPG dungeon crawl: one short run, a risky choice, a shared weekly world, and a Trophy Hall that gives the next day a reason to exist.</span>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+  <strong>5</strong>
+  <span>floors in a normal run</span>
+  </div>
+          <div class="metric">
+  <strong>4</strong>
+  <span>classes with different route identities</span>
+  </div>
+          <div class="metric">
+  <strong>6</strong>
+  <span>themes built around the same readable controls</span>
+  </div>
+          <div class="metric">
+  <strong>1</strong>
+  <span>weekly lair, with a Friday boss</span>
+  </div>
+        </div>
+</header>
+<nav class="page-toc container" aria-label="On this page">
+  <span>On this page</span>
+  <div class="page-toc-links">
+    <a href="#screenshot-tour">Screenshot Tour</a>
+    <a href="#daily-loop">Daily Loop</a>
+    <a href="#what-it-took">What it took</a>
+    <a href="#release-boundary">Release Boundary</a>
+    <a href="#takeaway">Takeaway</a>
+  </div>
+</nav>
+<section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="heading" id="screenshot-tour">
+  <div class="section-shell">
+    <div class="kicker">The full gameplay loop</div>
+    <h2>A full run makes more sense when you can <span class="heading-focus">see every beat.</span></h2>
+    <p class="section-intro">These are real screenshots from the retained Delve v15 build, ordered from the first choice through the end of the week. The playable local build is still clearing a release check, so the product loop is shown here rather than presented as a public demo.</p>
+    <div class="tour" role="group" aria-roledescription="carousel" aria-label="Delve v15 full gameplay screenshot tour">
+      <div class="tour-track" tabindex="0">
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-intro.png" width="1280" height="909" alt="Delve v15 title screen for D, Candlelit Cathedral, with the option to begin the week." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Start the week.</strong><span>The title screen establishes the dungeon and the return loop before play begins.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-body-select.png" width="1280" height="909" alt="Delve v15 body selection screen showing the available starting bodies and their traits." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Choose a body.</strong><span>The first meaningful decision is compact, readable, and immediately connected to play.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-body-armed.png" width="1280" height="1026" alt="Delve v15 body selection screen with the chosen body details visible." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Commit to the build.</strong><span>The chosen body turns a menu choice into visible strengths, limits, and consequences.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-camp.png" width="1280" height="1173" alt="Delve v15 camp screen showing the selected Fighter, Obols, daily progress, and limited skills." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Set up the run.</strong><span>Camp puts body, resources, progression, and limited abilities in one place before the descent.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-door-choice.png" width="1280" height="900" alt="Delve v15 floor screen showing three readable door choices with different room types and risks." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Read the room.</strong><span>Each floor becomes a small risk decision instead of a blind sequence of clicks.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-duel.png" width="1280" height="900" alt="Delve v15 duel screen showing the Fighter entering a room encounter on floor one." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Enter the duel.</strong><span>The room choice becomes a concrete encounter with a visible round, cost, and consequence.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-reveal.png" width="1280" height="900" alt="Delve v15 encounter result screen showing cost and loot." loading="lazy" data-lightbox="true">
+          <figcaption><strong>See the result.</strong><span>The cost and reward arrive together, so the player can understand what the choice changed.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-run-progress.png" width="1280" height="900" alt="Delve v15 floor-two run screen showing the run continuing with rooms remaining and skills available." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Keep going.</strong><span>The floor counter and remaining rooms make progress easy to read at a glance.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-mouth.png" width="1280" height="900" alt="Delve v15 mouth screen after five floors, offering the choice to bank the run or go down into the deep." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Reach the mouth.</strong><span>After five floors, the loop offers a clear choice: keep what you earned or risk it in the deep.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-deep-confirm.png" width="1280" height="900" alt="Delve v15 confirmation screen showing the risk of the deep." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Confirm the risk.</strong><span>A second prompt prevents the most consequential choice from feeling accidental.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-day-result.png" width="1280" height="900" alt="Delve v15 completed-day screen showing the banked result." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Land the day.</strong><span>The run closes with a concrete result before the weekly loop moves forward.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-friday.png" width="1280" height="900" alt="Delve v15 Friday boss screen showing a tactical prompt." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Face Friday.</strong><span>The week ends with one readable tactical prompt that tests the choices made earlier.</span></figcaption>
+        </figure>
+        <figure class="tour-slide">
+          <img src="images/delve/delve-v15-week-result.png" width="1280" height="1295" alt="Delve v15 week-result screen summarizing the run and offering the next-week action." loading="lazy" data-lightbox="true">
+          <figcaption><strong>Leave a trace.</strong><span>The week closes with a result and a visible reason to return.</span></figcaption>
+        </figure>
+      </div>
+      <p class="gallery-status" aria-live="polite">1 of 13</p>
+      <div>
+        <button type="button" class="tour-btn tour-prev" data-tour-direction="prev" aria-label="Previous screenshot">‹</button>
+        <button type="button" class="tour-btn tour-next" data-tour-direction="next" aria-label="Next screenshot">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="site-section" data-intent="feature" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" id="daily-loop">
+  <div class="section-shell">
+    <div class="section-grid">
+            <div class="lead-heading">
+              <div class="kicker">Why I wanted to make it</div>
+              <h2>Casual to start. Hard to master. <span class="heading-focus">Fun to compare.</span></h2>
+            </div>
+            <div class="lead-body prose">
+              <p class="prose">A player picks a class, enters the same seeded lair as everyone else, chooses between three visible doors per floor, and clears a short weekday descent. The basic run should be approachable enough to finish casually. <strong>The depth comes from the route</strong>: which risks you take, which abilities you find, and whether you save enough to face Friday's boss.</p>
+              <p class="prose">That is the mix I wanted: <strong>a daily game with no long session requirement</strong>, but enough identity that a result can start a conversation in a group chat. You can play it quickly, then come back because your friend took a different route or because the Trophy Hall still has something missing.</p>
+            </div>
+          </div>
+          <div class="highlight">
+    <strong>The loop in one sentence</strong>
+    <span>Five floors, one shared weekly seed, four classes, and a Friday boss give a casual player a complete session and a committed player a harder route to compare.</span>
+    </div>
+  </div>
+</section>
+<section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" id="visual-direction">
+  <div class="section-shell">
+    <div class="section-grid">
+            <div class="lead-heading">
+              <div class="kicker">Comfort is part of the design</div>
+              <h2>One readable loop, <span class="heading-focus">six visual moods.</span></h2>
+            </div>
+            <div class="lead-body">
+              <p class="section-intro">The layout and controls stay stable while neutral, cool, sage, warm, plum, and ash themes change the feel of the lair. The Minimal direction removes decorative weight so <span>the next choice stays easy to scan</span>.</p>
+              <p class="caption">Seasonal rotation is a documented next idea, not shipped adoption.</p>
+            </div>
+          </div>
+  </div>
+</section>
+<section class="site-section tone-soft" data-intent="categories" data-template="horizontal-rows" data-lead="stack" data-tone="soft" data-attention="component" id="what-it-took">
+  <div class="section-shell">
+    <div class="kicker">What it took</div>
+    <h2>The small loop took more judgment than the feature list suggests.</h2>
+    <div class="detail-list takeaway-list">
+      <article class="detail-row"><span class="card-label">Time and scale</span><div class="detail-row-copy"><span>Five floors, four classes, six themes, and a weekly boss had to read as one short session.</span></div></article>
+      <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>The build is verified locally, but its release metadata and public-readiness checks are not finished.</span></div></article>
+      <article class="detail-row"><span class="card-label">Next time</span><div class="detail-row-copy"><span>I would validate the release boundary earlier, before polishing exploratory screens.</span></div></article>
+      <article class="detail-row"><span class="card-label">Why it belongs</span><div class="detail-row-copy"><span>It shows product judgment—what to keep, what to cut, and what not to claim yet.</span></div></article>
+    </div>
+  </div>
+</section>
+<section class="site-section" data-intent="comparison-3" data-template="cards-3" data-lead="stack" data-tone="base" data-attention="component" id="release-boundary">
+  <div class="section-shell">
+    <div class="kicker">The release boundary</div>
+            <h2>Small on purpose. Honest about what is next.</h2>
+            <p class="section-intro">A working build is not a finished product.</p>
+            <div class="card-grid">
+              <div class="card">
+    <span class="card-label">01 / Prototype</span>
+    <strong>A personal prototype</strong>
+    <span>This is a fun, small game project. The claim is the build and release discipline, not commercial success, user growth, retention, or revenue.</span>
+    </div>
+              <div class="card">
+    <span class="card-label">02 / Pre-release</span>
+    <strong>Not a finished public release</strong>
+    <span>The evidence is a verified local build plus active UI work; public release is a separate gate.</span>
+    </div>
+              <div class="card">
+    <span class="card-label">03 / Next gate</span>
+    <strong>Reach still needs proof</strong>
+    <span>Audience understanding and the next feature both need evidence.</span>
+    </div>
+            </div>
+            <p>Delve belongs here as a build story: product thinking, iteration, and release discipline without pretending a local build is a market result.</p>
+  </div>
+</section>
+<section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" id="takeaway">
+  <div class="section-shell">
+    <div class="section-grid">
+            <div class="lead-heading">
+              <div class="kicker">Why it belongs here</div>
+              <h2>I built a game because I <span class="heading-focus">wanted to play it</span>.</h2>
+            </div>
+            <div class="lead-body prose">
+              <p>Delve is a personal experiment in making a small daily experience feel <span>worth opening, worth sharing, and worth returning to</span>.
+    </p>
+              <p>The common thread with my marketing work is still there: make the experience clear, make the system coherent, and <strong>be honest about the distance between a good build and a proven audience</strong>.</p>
+              <p>
+    <a class="button button-primary" href="about.html">Read how I work →</a>
+    <a class="button button-secondary" href="proof-system.html">See how I check the work →</a>
+    </p>
+            </div>
+          </div>
+  </div>
+</section>
+<section class="site-section tone-inverse" data-intent="ending" data-template="split-ending" data-lead="stack" data-tone="inverse" data-attention="action" id="talk">
+  <div class="section-shell">
+    <div class="ending-content">
+    <div class="ending-heading">
+    <div class="kicker">If this sounds like your kind of thing</div>
+    <h2>Let’s build something small.</h2>
+    </div>
+    <div class="ending-response">
+    <div class="prose">
+    <p>
+    <span>The habit of shipping something small and complete</span> is the same one I bring to client work.</p>
+    </div>
+    <div class="action-row">
+    <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Let’s talk on LinkedIn →</a>
+    <a class="button button-secondary" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
+    </div>
+    </div>
+    </div>
+    <div class="read-next">
+    <span class="read-next-label">Keep going</span>
+    <div class="card-grid">
+    <a class="card" href="proof-system.html">
+    <strong>How I check the work</strong>
+    <span>How important claims stay tied to sources</span>
+    <span class="action-label">See how I check the work →</span>
+    </a>
+    <a class="card" href="projects.html">
+    <strong>All projects</strong>
+    <span>Six projects, one route through them</span>
+    <span class="action-label">Browse projects →</span>
+    </a>
+    </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <strong>Juan Tellez</strong>
+      <span>Demand-generation marketer who builds useful things.</span>
+    </div>
+    <nav class="footer-links" aria-label="Explore">
+      <strong>Explore</strong>
+      <a href="about-me.html">About Juan</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html">All Projects</a>
+<a href="about.html">How I Work</a>
+    </nav>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <strong>Elsewhere</strong>
+      <a href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Tellezajuan" target="_blank" rel="noopener">GitHub</a>
+      <a href="#main-content">Back to top ↑</a>
+    </nav>
+    <div class="footer-meta">
+      <span>Updated September 2026 · each case study lists its own evidence date and current boundary.</span>
+      <span class="template-credit">Visual reference: <a href="https://bootstrapmade.com/demo/MinimalFolio/" target="_blank" rel="noopener">MinimalFolio by BootstrapMade</a>.</span>
+    </div>
+  </div>
+</footer>
+  <dialog class="image-dialog" aria-label="Expanded image">
+    <button class="dialog-close" type="button" aria-label="Close expanded image">×</button>
+    <div class="image-dialog-stage">
+      <button class="dialog-nav dialog-prev" type="button" aria-label="Previous image">‹</button>
+      <!-- nav.js swaps in the real src on open; a transparent pixel keeps this
+           a valid image instead of a src-less element the browser reports broken. -->
+      <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+      <button class="dialog-nav dialog-next" type="button" aria-label="Next image">›</button>
+    </div>
+    <div class="image-dialog-meta">
+      <p></p>
+      <span class="image-dialog-status" aria-live="polite"></span>
+    </div>
+  </dialog>
+  <script src="nav.js?v=eca70636e4" defer></script>
+</body>
+</html>
