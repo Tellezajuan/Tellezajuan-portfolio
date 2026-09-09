@@ -6,22 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ee">
   <title>Marketing measurement — Reported cost looked too low</title>
-  <meta name="description" content="A public-benchmark study planned in advance: late-arriving conversion credit made reported cost per customer look about 4× too low in 25 campaigns.">
+  <meta name="description" content="A public-data study planned in advance: late-arriving conversion credit made reported cost per customer look about 4× too low in 25 campaigns.">
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="Marketing measurement — Reported cost looked too low">
-  <meta property="og:description" content="A public-benchmark study planned in advance: late-arriving conversion credit made reported cost per customer look about 4× too low in 25 campaigns.">
+  <meta property="og:description" content="A public-data study planned in advance: late-arriving conversion credit made reported cost per customer look about 4× too low in 25 campaigns.">
   <meta property="og:url" content="https://www.tellezajuan.com/growth.html">
   <link rel="canonical" href="https://www.tellezajuan.com/growth.html">
   <meta property="og:image" content="https://www.tellezajuan.com/images/growth/growth-candidate-funnel.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Marketing measurement — Reported cost looked too low">
-  <meta name="twitter:description" content="A public-benchmark study planned in advance: late-arriving conversion credit made reported cost per customer look about 4× too low in 25 campaigns.">
+  <meta name="twitter:description" content="A public-data study planned in advance: late-arriving conversion credit made reported cost per customer look about 4× too low in 25 campaigns.">
   <meta name="twitter:image" content="https://www.tellezajuan.com/images/growth/growth-candidate-funnel.png">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=79064869b1">
+  <link rel="stylesheet" href="style.css?v=8ccb5fdb6b">
 </head>
 <body data-route="growth.html" data-recipe="case-study">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -82,18 +82,29 @@
         </div>
         <div class="intro-grid">
           <div class="intro-copy">
-            <p class="intro-subtitle">A public-benchmark study of conversions credited after the budget decision.</p>
-            <p class="intro-lede">I used a public Criteo advertising dataset to test whether late-arriving conversions could make an old report look better than the evidence available at the time. I wrote the test plan before looking at the result.</p>
+            <p class="intro-subtitle">A study using public advertising data to ask what the report knew when the budget decision was due.</p>
+            <p class="intro-lede">I tested whether conversions recorded later could make an old campaign report look better than the information available when the decision was made. I wrote the test plan before looking at the result.</p>
             <div class="action-row">
   <a class="button button-primary" href="#findings">Read the finding</a>
   <a class="button button-secondary" href="#receipt">See the evidence</a>
   </div>
-            <p class="caption">The 60.3% is a follow-up description, not part of the original plan: it is the share of test budget behind campaigns that failed the timing check.</p>        </div>
+          </div>
+          <figure class="story-snapshot">
+            <div class="decision-window">
+              <span class="visual-label">What the report knew at the decision point</span>
+              <progress class="share-meter" max="100" value="39" aria-label="39 percent of conversion credit was known at the budget decision">39%</progress>
+              <div class="visual-stat-pair">
+                <div class="visual-stat is-accent"><strong><span data-claim="share_credited_at_gate">39%</span></strong><span>visible when the budget decision was due</span></div>
+                <div class="visual-stat"><strong><span data-claim="share_credited_after_gate">61%</span></strong><span>arrived later and changed the older report</span></div>
+              </div>
+            </div>
+            <figcaption><strong>The story in one glance:</strong> the report kept changing after the choice.</figcaption>
+          </figure>
         </div>
         <div class="feature-callout">
   <span class="callout-label">The finding</span>
   <strong class="callout-title">Campaigns with late-arriving credit looked about 4× cheaper than they were.</strong>
-  <span class="callout-copy">The median gap was <span data-claim="median_cpa_inflation_pct">297%</span>, and the planned check on data held back from the analysis improved by <span data-claim="oos_improvement_pct">50.8%</span>. I selected 25 campaigns after the study because they had the most late-arriving conversions; that description was chosen after the fact and is not a typical result across all 675 campaigns.</span>
+  <span class="callout-copy">Among the 25 campaigns with the most late-arriving conversions, the middle result was <span data-claim="median_cpa_inflation_pct">297%</span> higher after correction. A separate check on data kept out of the first analysis improved the public-data comparison by <span data-claim="oos_improvement_pct">50.8%</span>. The 25-campaign example was chosen after the study and is not a typical result across all 675 campaigns.</span>
   </div>
         <div class="metrics">
   <div class="metric">
@@ -113,15 +124,16 @@
   <span>next candidates</span>
   </div>
   </div>
+        <p class="caption">Separate from the 4× example, <span data-claim="spend_at_risk_pct">60.3%</span> of the test budget sat behind campaigns that failed the timing check. That figure was calculated after the planned study.</p>
 </header>
 <nav class="page-toc container" aria-label="On this page">
   <span>On this page</span>
   <div class="page-toc-links">
     <a href="#problem">Problem</a>
-    <a href="#mechanism">Mechanism</a>
+    <a href="#mechanism">What changed</a>
     <a href="#findings">Findings</a>
-    <a href="#receipt">Evidence receipt</a>
-    <a href="#method">Method</a>
+    <a href="#receipt">Evidence record</a>
+    <a href="#method">Deeper method</a>
   </div>
 </nav>
 <section class="site-section" data-intent="evidence" data-template="evidence" data-lead="split" data-tone="base" data-attention="heading" id="problem">
@@ -175,19 +187,19 @@
     <div class="card-grid">
     <div class="card">
     <span class="card-label">CHECK 1 · PLANNED IN ADVANCE</span>
-    <strong>A placebo run finds almost nothing.</strong>
-    <span>We scrambled the timing and re-ran the same check <span data-claim="placebo_permutations">20</span> times. The scrambled runs produced a median of 0 candidates and never more than 1. The real timing produced <span data-claim="placebo_observed">33</span>.</span>
+    <strong>Scrambling the timing produces almost nothing.</strong>
+    <span>As a false-alarm check, I scrambled the timing and re-ran the test <span data-claim="placebo_permutations">20</span> times. The scrambled runs produced a middle result of 0 candidates and never more than 1. The real timing produced <span data-claim="placebo_observed">33</span>.</span>
     </div>
     <div class="card">
     <span class="card-label">CHECK 2 · CONFIRMED AT LARGER SCALE</span>
-    <strong>A second, larger placebo agrees.</strong>
+    <strong>999 more timing shuffles tell the same story.</strong>
     <span>
-    Across <span data-claim="placebo_hr_permutations">999</span> scrambled runs, the median was <span data-claim="placebo_hr_median">0</span> and the maximum was <span data-claim="placebo_hr_max">4</span>. None matched or exceeded the real result (p = <span data-claim="placebo_hr_p">0.001</span>).</span>
+    Across <span data-claim="placebo_hr_permutations">999</span> scrambled runs, the middle result was <span data-claim="placebo_hr_median">0</span> and the highest was <span data-claim="placebo_hr_max">4</span>. None matched or exceeded the real result; the statistical check reports p = <span data-claim="placebo_hr_p">0.001</span>.</span>
     </div>
     </div>
     <figure class="media-block">
     <img src="images/growth/growth-verdict-distribution.png" width="1547" height="591" alt="Most of 675 campaign decisions stopped or downgraded the campaign; 33 earned another experiment." loading="lazy" data-lightbox="true">
-    <figcaption>The decision ledger across all 675 campaigns: <span data-claim="verdict_kill">393</span> killed, <span data-claim="verdict_demote">152</span> demoted, <span data-claim="verdict_insufficient">97</span> called insufficient evidence, and <span data-claim="verdict_promote">33</span> qualified for a next experiment.</figcaption>
+    <figcaption>The final decisions across all 675 campaigns: <span data-claim="verdict_kill">393</span> stopped, <span data-claim="verdict_demote">152</span> moved down, <span data-claim="verdict_insufficient">97</span> did not have enough evidence, and <span data-claim="verdict_promote">33</span> earned a next experiment.</figcaption>
     </figure>
   </div>
 </section>
@@ -200,11 +212,26 @@
     </div>
     <div class="lead-body prose">
     <p>
-    The real test of a correction is <span>whether it changes what you would have done</span>. On public-benchmark data held back from the analysis, the first rule selects <span data-claim="oos_naive_selected">274</span> campaigns at a cost per customer of <span data-claim="oos_cpa_naive">0.01782</span>. The corrected rule selects a different, smaller set: <span data-claim="oos_corrected_selected">99</span> campaigns at <span data-claim="oos_cpa_corrected">0.00877</span>, a <mark class="editorial-highlight"><span data-claim="oos_improvement_pct">50.8%</span></mark> improvement in this benchmark comparison, not proof of live campaign lift.</p>
-    <p>One anonymous campaign reports a cost per customer of <span data-claim="example_naive_cpa">0.00828</span> before the correction and <span data-claim="example_corrected_cpa">0.05076</span> after: a <span data-claim="example_multiple">6.1</span>&times; difference caused by <span data-claim="example_leaked">431</span> late-arriving credits. These are the benchmark's own units, not dollars. The source identifier stays in the receipt for auditability.</p>
+    The real test of a correction is <span>whether it changes what you would have done</span>. On public data kept out of the first analysis, the first rule selects <span data-claim="oos_naive_selected">274</span> campaigns at a cost per customer of <span data-claim="oos_cpa_naive">0.01782</span>. The corrected rule selects a different, smaller set: <span data-claim="oos_corrected_selected">99</span> campaigns at <span data-claim="oos_cpa_corrected">0.00877</span>, a <mark class="editorial-highlight"><span data-claim="oos_improvement_pct">50.8%</span></mark> improvement in this public-data comparison, not proof of live campaign lift.</p>
+    <p>One anonymous campaign reports a cost per customer of <span data-claim="example_naive_cpa">0.00828</span> before the correction and <span data-claim="example_corrected_cpa">0.05076</span> after: a <span data-claim="example_multiple">6.1</span>&times; difference caused by <span data-claim="example_leaked">431</span> late-arriving credits. These are the public dataset's own units, not dollars. The source identifier stays in the evidence record so the example can be checked.</p>
     <p><strong>Two implementation bugs were caught before the result was treated as evidence.</strong> One check was first compared against the wrong baseline, and a second miscounted which campaigns belonged in the test group. Both were fixed, everything downstream was re-run, and the original plan stayed intact.</p>
     </div>
     </div>
+    <figure class="media-block system-visual decision-comparison">
+      <div class="comparison-states">
+        <div class="comparison-state">
+          <span class="visual-label">First rule · data kept out of the first analysis</span>
+          <strong><span data-claim="oos_naive_selected">274</span> campaigns selected</strong>
+          <span>Cost per customer: <span data-claim="oos_cpa_naive">0.01782</span> in the public dataset's own units</span>
+        </div>
+        <div class="comparison-state is-corrected">
+          <span class="visual-label">After the time gate · different selection</span>
+          <strong><span data-claim="oos_corrected_selected">99</span> campaigns selected</strong>
+          <span>Cost per customer: <span data-claim="oos_cpa_corrected">0.00877</span> in the same units</span>
+        </div>
+      </div>
+      <figcaption><strong>The correction changed the decision set.</strong> This public-data comparison improved by <span data-claim="oos_improvement_pct">50.8%</span>; it is not a claim of live campaign lift.</figcaption>
+    </figure>
   </div>
 </section>
 <section class="site-section" data-intent="sequence" data-template="timeline" data-lead="split" data-tone="base" data-attention="component" id="check-your-account">
@@ -240,7 +267,7 @@
 <section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="heading" id="verdicts">
   <div class="section-shell">
     <div class="kicker">Supporting evidence</div>
-    <h2>Read the evidence <span class="heading-focus">as a set</span>, not a hero chart.</h2>
+    <h2>Read the evidence <span class="heading-focus">as a set</span>, not one impressive chart.</h2>
     <p class="section-intro">The finding above rests on more than one chart. This is the placebo run referenced in <a href="#findings">The finding</a>: <strong>the test that had to come back empty</strong> for the result to mean anything.</p>
     <div class="media-grid analysis-grid">
     <figure class="media-block">
@@ -252,16 +279,16 @@
 </section>
 <section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" id="receipt">
   <div class="section-shell">
-    <div class="kicker">Evidence receipt</div>
-    <h2>The complete benchmark ledger, for readers who want the audit trail.</h2>
+    <div class="kicker">Evidence record</div>
+    <h2>The checked numbers, for readers who want the full trail.</h2>
     <details>
-    <summary>Open the measurement receipt</summary>
-    <p>Every value here is generated from the public benchmark receipt. Nothing is redacted, because the underlying data is already public. The public page shows the checked summary; the raw working record remains private.
+    <summary>Open the checked measurement evidence</summary>
+    <p>Every value here is generated from a dated record built from the public dataset. Nothing is redacted from the checked summary because the underlying data is already public; the larger working record remains private.
     </p>
-    <p class="caption">The attribution-credit count is grouped by campaign-day cohort; it is not a count of unique customers or revenue.</p>
+    <p class="caption">The credited-conversion count is grouped by campaign and day; it is not a count of unique customers or revenue.</p>
     <div class="receipt-overview">
-    <div class="receipt-overview-item"><h3>The claim</h3><p>The first figures describe what changed: candidates before and after the time gate, the decision ledger, and the registered out-of-sample comparison.</p></div>
-    <div class="receipt-overview-item"><h3>The checks</h3><p>The next figures test leakage, attribution-model sensitivity, placebo behavior, and weekly stability.</p></div>
+    <div class="receipt-overview-item"><h3>The claim</h3><p>The first figures show what changed before and after the timing correction, plus a separate check on data kept out of the first analysis.</p></div>
+    <div class="receipt-overview-item"><h3>The checks</h3><p>The next figures ask whether late information, the credit-assignment rule, false alarms, or week-to-week changes could explain the result.</p></div>
     <div class="receipt-overview-item"><h3>The scale</h3><p>The final figures describe volume, cohort coverage, and the worked example. Units stay with each value below.</p></div>
     </div>
     <div class="receipt-grid">
@@ -279,11 +306,11 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="heldout_cohorts">9,979</strong>
-    <span>held-out cohorts</span>
+    <span>campaign-day groups kept aside</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="leakage_cohorts">8,730</strong>
-    <span>leakage cohorts</span>
+    <span>groups with late-arriving credit</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="leakage_rate">87.5%</strong>
@@ -486,10 +513,10 @@
     <div class="kicker">What it took</div>
     <h2>The result only became useful after two uncomfortable checks.</h2>
     <div class="detail-list takeaway-list">
-      <article class="detail-row"><span class="card-label">Time and scale</span><div class="detail-row-copy"><span>The public benchmark made the question reproducible, but it also made every denominator visible.</span></div></article>
+      <article class="detail-row"><span class="card-label">Time and scale</span><div class="detail-row-copy"><span>The public dataset made the question repeatable by someone else, but it also meant every denominator had to stay visible.</span></div></article>
       <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>Late credit changed the apparent answer, and the first weekly prediction written before analysis did not fully match the result.</span></div></article>
       <article class="detail-row"><span class="card-label">Next time</span><div class="detail-row-copy"><span>I would state every denominator and caveat in the first layer, before asking a reader to trust the headline.</span></div></article>
-      <article class="detail-row"><span class="card-label">Why it belongs</span><div class="detail-row-copy"><span>The claim is not just the 4× gap; it is a measured answer that survived timing, model, placebo, and stability checks.</span></div></article>
+      <article class="detail-row"><span class="card-label">Why it belongs</span><div class="detail-row-copy"><span>The claim is not just the 4× gap; it is a measured answer that survived timing, credit-rule, false-alarm, and week-by-week checks.</span></div></article>
     </div>
   </div>
 </section>
@@ -501,7 +528,7 @@
               <h2>The full <span class="heading-focus">method and evidence trail</span> live on a separate page.</h2>
             </div>
             <div>
-              <p class="section-intro">This page stays readable as a summary. The method page carries the <span>plan written before analysis and five supporting charts</span>, the credit-assignment and stability checks, and a clear boundary around this public-benchmark study. The source write-up remains separate from this portfolio page, and publication remains gated until the final source-release, redaction, and licensing checks pass.</p>
+              <p class="section-intro">This page keeps the main story readable. The optional method page shows <span>the plan written before analysis and five supporting charts</span>, including how credit was assigned and whether the result held up week by week. The full source write-up remains separate, and publication still waits for its final privacy, licensing, and release checks.</p>
             </div>
           </div>
           <div class="action-row">

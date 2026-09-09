@@ -21,7 +21,7 @@
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=79064869b1">
+  <link rel="stylesheet" href="style.css?v=8ccb5fdb6b">
 </head>
 <body data-route="growth-method.html" data-recipe="appendix">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -82,8 +82,8 @@
         </div>
         <div class="intro-grid">
           <div class="intro-copy">
-            <p class="intro-subtitle">Four checks test the timing rule, the way credit is assigned, the risk of testing many campaigns at once, and week-by-week stability.</p>
-            <p class="intro-lede">This page asks a narrower question: does the finding survive a different timing rule, a different way of assigning credit, a many-comparisons check, and separate weekly tests? The plan written before analysis, supporting charts, and source record live here.</p>
+            <p class="intro-subtitle">This optional page shows four ways I tried to prove the first result wrong.</p>
+            <p class="intro-lede">I changed the timing rule, changed the way campaigns received credit, checked whether testing many campaigns created false winners, and repeated the test week by week. The plan, supporting charts, and source record live here.</p>
             <div class="action-row">
   <a class="button button-primary" href="#visuals">See the supporting charts</a>
   <a class="button button-secondary" href="growth.html">Back to the summary</a>
@@ -99,10 +99,10 @@
   <span>On this page</span>
   <div class="page-toc-links">
     <a href="#plain-language">Plain language</a>
-    <a href="#attribution">Attribution</a>
-    <a href="#stability">Stability</a>
-    <a href="#visuals">Visuals</a>
-    <a href="#reproduce">Reproduce</a>
+    <a href="#attribution">Who gets credit?</a>
+    <a href="#stability">Week by week</a>
+    <a href="#visuals">Five charts</a>
+    <a href="#reproduce">Build record</a>
   </div>
 </nav>
 <section class="site-section tone-soft" data-intent="comparison-4" data-template="cards-4" data-lead="stack" data-tone="soft" data-attention="heading" id="plain-language">
@@ -119,14 +119,14 @@
 </section>
 <section class="site-section" data-intent="reading" data-template="reading" data-lead="stack" data-tone="base" data-attention="prose" id="attribution">
   <div class="section-shell">
-    <div class="kicker">Does the model choice matter?</div>
+    <div class="kicker">Does the credit rule matter?</div>
           <div class="section-grid">
             <div>
-              <h2>Last-click and multi-touch change the answer for some campaigns.</h2>
+              <h2>Changing who gets credit changes the answer.</h2>
             </div>
             <div>
               <div class="prose">
-    <p>Two attribution models were run on the same corrected data: <span data-claim="attribution_last_click">100</span> rows scored last-click, <span data-claim="attribution_multitouch">81</span> scored multi-touch. <span data-claim="attribution_flips">45</span> campaigns <strong>flip verdict depending on the model</strong>, a real methodological choice, not a rounding difference.</p>
+    <p><strong>Changing who received credit changed the answer for 45 campaigns.</strong> On the same corrected data, <span data-claim="attribution_last_click">100</span> rows passed under last-click credit and <span data-claim="attribution_multitouch">81</span> passed when credit was shared across several touches. <span data-claim="attribution_flips">45</span> campaigns changed verdict depending on that choice; this is not a rounding difference.</p>
     </div>
             </div>
           </div>
@@ -141,8 +141,12 @@
             </div>
             <div>
               <div class="prose">
-    <p>The benchmark contains 675 campaigns, but <span data-claim="fdr_excluded">59</span> fell below the held-out impression floor, leaving <span data-claim="fdr_family_count">616</span> eligible for this test family. The uncorrected screen had <span data-claim="fdr_raw">530</span> apparent winners. At q&nbsp;=&nbsp;<span data-claim="fdr_q">0.1</span>, Benjamini–Hochberg requires p&nbsp;&lt;&nbsp;<span data-claim="fdr_threshold_p">0.002</span>; <span data-claim="fdr_bh">480</span> of the 616 clear that bar. That survival rate reflects the volume in each eligible campaign, <strong>not a loose correction</strong>.
-    </p>
+    <p><strong>Most apparent winners still survived the stricter check.</strong> The public data contains 675 campaigns, but <span data-claim="fdr_excluded">59</span> did not have enough activity for this comparison, leaving <span data-claim="fdr_family_count">616</span>.</p>
+    <p>The first screen found <span data-claim="fdr_raw">530</span> apparent winners; <span data-claim="fdr_bh">480</span> remained after correcting for the risk of finding winners by chance when testing many campaigns. The high survival rate reflects the amount of data in each eligible campaign, <strong>not a loose correction</strong>.</p>
+    <details>
+    <summary>See the statistical cutoff</summary>
+    <p>For technical readers, the Benjamini–Hochberg cutoff was q&nbsp;=&nbsp;<span data-claim="fdr_q">0.1</span> and p&nbsp;&lt;&nbsp;<span data-claim="fdr_threshold_p">0.002</span>.</p>
+    </details>
     </div>
             </div>
           </div>
@@ -153,12 +157,13 @@
     <div class="kicker">Does it travel?</div>
           <div class="section-grid">
             <div>
-              <h2>A walk-forward check across weekly windows.</h2>
+              <h2>I repeated the check week by week.</h2>
             </div>
             <div>
               <div class="prose">
-    <p>This is a separate check from the leakage screen above. Of the <span data-claim="weekly_eligible">652</span> campaigns with enough weekly volume, <span data-claim="weekly_positive">93</span> stayed consistently above baseline, <span data-claim="weekly_negative">473</span> stayed consistently at or below it, and <span data-claim="weekly_mixed">86</span> flipped sides. Read those first two numbers as <span>one result, not opposing ones</span>: 87% had a stable weekly signal, whichever side of baseline they landed on. Week-one agreement with the full-sample verdict was <span data-claim="week1_agreement_pct">88.4%</span>, which is <em class="caveat">the honest result for a real dataset, not a perfect one.</em></p>
-    <p><strong>The prediction written before analysis did not fully match what happened.</strong> The first eligible week agreed with the full-sample verdict 88.4% of the time. I kept that original weekly prediction in the record instead of rewriting it after seeing the result; the mismatch is <span>part of the evidence</span>, not an inconvenience to hide.</p>
+    <p>This is a separate check from the late-information screen above. Of the <span data-claim="weekly_eligible">652</span> campaigns with enough weekly activity, <span data-claim="weekly_positive">93</span> stayed consistently above the comparison line, <span data-claim="weekly_negative">473</span> stayed at or below it, and <span data-claim="weekly_mixed">86</span> moved between the two.</p>
+    <p>Read the first two numbers as <span>one result, not opposing ones</span>: 87% stayed on the same side week after week. The first week agreed with the full-data answer <span data-claim="week1_agreement_pct">88.4%</span> of the time—<em class="caveat">the honest result for a real dataset, not a perfect one.</em></p>
+    <p><strong>The prediction written before analysis did not fully match what happened.</strong> I kept that original prediction in the record instead of rewriting it after seeing the result; the mismatch is <span>part of the evidence</span>, not an inconvenience to hide.</p>
     </div>
             </div>
           </div>
@@ -169,11 +174,12 @@
     <div class="kicker">Who is left after the correction?</div>
           <div class="section-grid">
             <div>
-              <h2>The campaigns that survive skew toward a specific profile.</h2>
+              <h2>The campaigns that survived had something in common.</h2>
             </div>
             <div>
               <div class="prose">
-    <p>Surviving campaigns run at <span data-claim="survivor_impressions_ratio">2.62</span>&times; the impression volume, <span data-claim="survivor_ctr_ratio">1.27</span>&times; the click-through rate, and <span data-claim="survivor_cpa_ratio">0.16</span>&times; the cost per customer of the ones that do not survive. Their volume sits around the <span data-claim="survivor_volume_percentile">77.3%</span> percentile—higher than roughly three quarters of campaigns. The correction is not one-size-fits-all; <strong>it has a shape</strong>, and that shape is worth knowing before applying it elsewhere.</p>
+    <p><strong>The campaigns that survived were larger and attracted more clicks.</strong> They ran at <span data-claim="survivor_impressions_ratio">2.62</span>&times; the number of ad views, <span data-claim="survivor_ctr_ratio">1.27</span>&times; the click rate, and <span data-claim="survivor_cpa_ratio">0.16</span>&times; the cost per customer of the campaigns that did not survive.</p>
+    <p>Their volume sat around the <span data-claim="survivor_volume_percentile">77.3%</span> percentile—higher than roughly three quarters of campaigns. The correction is not one-size-fits-all; <strong>it has a shape</strong>, and that shape matters before applying it elsewhere.</p>
     </div>
             </div>
           </div>
@@ -183,7 +189,7 @@
   <div class="section-shell">
     <div class="kicker">Supporting charts</div>
     <h2>Five checks, read <span class="heading-focus">as a set</span> rather than in isolation.</h2>
-    <p class="section-intro">Each asks a different question: does the finding hold over time, weaken with thin data, depend on one attribution model, survive many comparisons, and match the timing mechanism?</p>
+    <p class="section-intro">Each asks a different question: does the finding hold over time, weaken when there is less data, depend on how credit is assigned, survive a false-winner check, and match the timing story?</p>
     <div class="media-grid analysis-grid">
     <figure class="media-block">
     <img src="images/growth/growth-weekly-stability.png" width="1311" height="615" alt="Of 652 weekly campaign checks, 473 moved in the expected direction, 93 moved the other way, and 86 were mixed." loading="lazy" data-lightbox="true">
@@ -195,7 +201,7 @@
     </figure>
     <figure class="media-block">
     <img src="images/growth/growth-last-click-vs-multitouch.png" width="1491" height="552" alt="Changing the attribution model changed the verdict for 45 campaigns; 100 were retained under last-click and 81 under multi-touch." loading="lazy" data-lightbox="true">
-    <figcaption><strong>Does one attribution model decide the answer?</strong> Switching from last-click to multi-touch changes the verdict on <span data-claim="attribution_flips">45</span> campaigns. That sensitivity belongs in the decision, not in a footnote.</figcaption>
+    <figcaption><strong>Does the credit rule decide the answer?</strong> Switching from last-click credit to shared credit changes the verdict on <span data-claim="attribution_flips">45</span> campaigns. That sensitivity belongs in the decision, not in a footnote.</figcaption>
     </figure>
     <figure class="media-block">
     <img src="images/growth/growth-fdr-before-after.png" width="1311" height="615" alt="A false-discovery correction reduced the apparent winner count from 530 to 480 across 616 eligible campaigns." loading="lazy" data-lightbox="true">
@@ -203,20 +209,24 @@
     </figure>
     <figure class="media-block">
     <img src="images/growth/growth-click-conversion-timeline.png" width="1558" height="552" alt="Only 39 percent of credited conversions were visible at the budget decision; 61 percent arrived later." loading="lazy" data-lightbox="true">
-    <figcaption><strong>Does the proposed mechanism exist?</strong> Only <span data-claim="share_credited_at_gate">39%</span> of credited conversions were visible at the decision; <span data-claim="share_credited_after_gate">61%</span> arrived later. That is the room in which the reporting problem can happen.</figcaption>
+    <figcaption><strong>Does the timing problem actually exist?</strong> Only <span data-claim="share_credited_at_gate">39%</span> of credited conversions were visible at the decision; <span data-claim="share_credited_after_gate">61%</span> arrived later. That is the room in which the reporting problem can happen.</figcaption>
     </figure>
     </div>
   </div>
 </section>
 <section class="site-section" data-intent="reading" data-template="reading" data-lead="stack" data-tone="base" data-attention="prose" id="reproduce">
   <div class="section-shell">
-    <div class="kicker">Provenance</div>
+    <div class="kicker">Build record</div>
           <div class="section-grid">
             <div>
               <h2>A real, tested pipeline, not a one-off script.</h2>
             </div>
             <div>
-              <p class="section-intro">The study runs as a 21-script pipeline against a public Criteo advertising dataset: <strong>seven ordered stages from capture through decision</strong>, then separate scripts for the placebo, weekly stability, and other documented checks, plus a test suite that must pass before a number is trusted. The source dataset, decision-run identifier, and schema-verification status are all in the receipt below. This is a public-benchmark study, so nothing here is redacted. The public page shows the checked summary; the raw working record remains private. The analysis plan was written before the placebo results were known. During the final clean rerun, a provenance-order concern was corrected and every later output was regenerated without rewriting that plan.</p>
+              <div class="prose scan-list">
+                <p><strong>The build:</strong> 21 scripts run against a public Criteo advertising dataset, with seven ordered stages from collecting the data through making the decision.</p>
+                <p><strong>The checks:</strong> separate steps test false alarms, week-to-week stability, and the other questions shown above. Automated tests must pass before a number is trusted.</p>
+                <p><strong>The record:</strong> the dataset, run identifier, and data-shape check are kept with the evidence. The analysis plan was written before the false-alarm results were known; when a final rerun exposed an ordering concern, every later output was regenerated without rewriting the plan.</p>
+              </div>
             </div>
           </div>
   </div>
@@ -230,7 +240,7 @@
     </div>
     <div class="ending-response">
     <div class="prose">
-    <p>A plan written before analysis and a public benchmark are what it takes to trust a result. <strong>That standard travels to any measurement problem</strong>.</p>
+    <p>A plan written before analysis and a public dataset are what make this result checkable. <strong>That standard travels to any measurement problem</strong>.</p>
     </div>
     <div class="action-row">
     <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Let’s talk on LinkedIn →</a>

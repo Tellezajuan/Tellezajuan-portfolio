@@ -21,7 +21,7 @@
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=79064869b1">
+  <link rel="stylesheet" href="style.css?v=8ccb5fdb6b">
 </head>
 <body data-route="cutting-room.html" data-recipe="case-study">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -83,12 +83,21 @@
         <div class="intro-grid">
           <div class="intro-copy">
             <p class="intro-subtitle">It finds clips, narrows the review set, builds drafts, checks the output, and leaves release approval to me.</p>
-            <p class="intro-lede">Over a <span data-claim="cr_window_days">32</span>-day production window, <span data-claim="cr_clips">33,365</span> clips entered the funnel; the run recorded <span data-claim="cr_videos">85</span> published output records. The operation keeps moving when a source fails and stops a video when its final checks do not pass.</p>
+            <p class="intro-lede">Over a <span data-claim="cr_window_days">32</span>-day production window, <span data-claim="cr_clips">33,365</span> clips entered the search pool and <span data-claim="cr_reviewed">150</span> reached me for review. A separate production record counts <span data-claim="cr_videos">85</span> published outputs; it is not the next step in that same funnel. The system keeps moving when one source fails and stops a video when its final checks do not pass.</p>
             <p class="caption">Production window: July 22–August 23, 2026.</p>
             <div class="action-row">
   <a class="button button-primary" href="#workflow">See the workflow</a>
   <a class="button button-secondary" href="#receipt">See the evidence</a>
   </div>        </div>
+          <figure class="story-snapshot">
+            <span class="visual-label">Where volume gives way to judgment</span>
+            <div class="story-steps">
+              <div class="story-step"><span class="story-marker">01</span><span><strong><span data-claim="cr_clips">33,365</span> collected</strong><small>The repetitive discovery work</small></span></div>
+              <div class="story-step is-decision"><span class="story-marker">02</span><span><strong><span data-claim="cr_reviewed">150</span> reviewed by me</strong><small>Taste and quality enter here</small></span></div>
+              <div class="story-step is-outcome"><span class="story-marker">03</span><span><strong><span data-claim="cr_approved">53</span> approved</strong><small>Only the clips that clear human review</small></span></div>
+            </div>
+            <figcaption>Published output records are tracked separately; they are not another funnel stage.</figcaption>
+          </figure>
         </div>
         <div class="feature-callout">
   <span class="callout-label">The record</span>
@@ -107,7 +116,7 @@
   </div>
   <div class="metric">
   <strong data-claim="cr_videos">85</strong>
-  <span>published output records</span>
+  <span>published outputs tracked in a separate record</span>
   </div>
   <div class="metric">
   <strong>40–90 min</strong>
@@ -122,7 +131,7 @@
     <a href="#workflow">Workflow</a>
     <a href="#what-it-took">What it took</a>
     <a href="#audience">Audience</a>
-    <a href="#receipt">Evidence receipt</a>
+    <a href="#receipt">Evidence record</a>
   </div>
 </nav>
 <section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" id="purpose">
@@ -137,6 +146,15 @@
     <p>The two tiers are intentional: broad category search finds channels I would never know to look for, while the 117-creator watchlist keeps channels I trust visible. The design goal is not to remove taste. It is to give taste a much better starting point.</p>
     </div>
     </div>
+
+    <figure class="media-block system-visual">
+      <div class="process-flow" aria-label="From raw clips to an owner-approved output">
+        <article class="process-stage"><span class="process-stage-label">01 · Collect</span><strong>Raw material</strong><span>A large, noisy pool arrives automatically.</span></article>
+        <article class="process-stage is-outcome"><span class="process-stage-label">02 · Assemble</span><strong>Draft output</strong><span>The system ranks, crops, combines, and checks.</span></article>
+        <article class="process-stage is-decision"><span class="process-stage-label">03 · Decide</span><strong>Owner review</strong><span>I decide whether the moment is actually worth publishing.</span></article>
+      </div>
+      <figcaption><strong>The automation ends before the consequential choice.</strong> The system prepares the candidate; taste and release approval stay human.</figcaption>
+    </figure>
   </div>
 </section>
 <section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="component" id="workflow">
@@ -151,8 +169,8 @@
       <article class="process-stage is-decision"><span class="process-stage-label">04 · I review</span><strong><span data-claim="cr_reviewed">150</span></strong><span>clips received a human taste and quality check</span></article>
       <article class="process-stage is-outcome"><span class="process-stage-label">05 · Approve</span><strong><span data-claim="cr_approved">53</span></strong><span>clips cleared that human review</span></article>
     </div>
-    <div class="visual-note"><strong><span data-claim="cr_videos">85</span> published output records</strong><span>This is a production-ledger total, not the next stage after the 53 approvals shown above. Review decisions and output records measure different populations.</span></div>
-    <figcaption><strong>Volume is handled before taste is asked for.</strong> Rules removed 31,971 clips before review; I rejected another <span data-claim="cr_rejected_hand">97</span> by hand. Seven systems underneath these five stages handle discovery, scoring, video analysis, assembly, metadata, review, and shipping.</figcaption>
+    <div class="visual-note"><strong><span data-claim="cr_videos">85</span> published outputs in a separate record</strong><span>This is not the next stage after the 53 approvals shown above. The review decisions and published-output count cover different groups.</span></div>
+    <figcaption><strong>Volume is handled before taste is asked for.</strong> Rules removed 31,971 clips before review; I rejected another <span data-claim="cr_rejected_hand">97</span> by hand. Seven parts underneath these five stages handle discovery, ranking, video analysis, assembly, titles and descriptions, review, and publishing.</figcaption>
     </figure>
   </div>
 </section>
@@ -160,7 +178,7 @@
   <div class="section-shell">
     <div class="kicker">What it actually took to build</div>
     <h2>Seven systems make the five-stage story work.</h2>
-    <p class="section-intro">The macro diagram keeps the story easy to follow; this is the complete operating chain underneath it.</p>
+    <p class="section-intro">The five-step overview keeps the story easy to follow; this is the complete operating chain underneath it.</p>
     <div class="steps">
     <div class="step">
     <strong>01</strong>
@@ -170,17 +188,17 @@
     <div class="step">
     <strong>02</strong>
     <span>
-    <strong>Cutting the noise.</strong> A scoring model over view velocity, clip density, streamer weighting, language, and dozens of title keywords.</span>
+    <strong>Cutting the noise.</strong> A ranking rule weighs how quickly views are growing, how often a channel produces clips, the creator, language, and dozens of title keywords.</span>
     </div>
     <div class="step">
     <strong>03</strong>
     <span>
-    <strong>Watching the video itself.</strong> Scene detection and action scoring pick the moment. A camera-box detector finds the streamer's face so the vertical crop keeps their reaction in frame.</span>
+    <strong>Watching the video itself.</strong> The system finds scene changes and action, then picks the moment. It also finds the creator’s camera box so the vertical crop keeps the reaction in frame.</span>
     </div>
     <div class="step">
     <strong>04</strong>
     <span>
-    <strong>Making it publishable.</strong> Compositing stitches the video layers together; the overlay package and intro and outro cards frame the result; sound levels are balanced automatically.</span>
+    <strong>Making it publishable.</strong> The system stitches the video layers together, adds the frame and opening and closing cards, and balances the sound automatically.</span>
     </div>
     <div class="step">
     <strong>05</strong>
@@ -208,7 +226,7 @@
     <article class="debrief-item">
     <span class="card-label">Failure boundary</span>
     <h3>One bad source cannot stop the queue.</h3>
-    <p>Source errors are logged and isolated. A trim-duration check protects the approved lineup, and the release gate has survived 3,752 logged errors.</p>
+    <p>Source errors are logged and isolated. A video-length check protects the approved lineup, and the final check has kept working through 3,752 logged errors.</p>
     </article>
     <article class="debrief-item">
     <span class="card-label">Build conditions</span>
@@ -217,8 +235,8 @@
     </article>
     <article class="debrief-item">
     <span class="card-label">Next iteration</span>
-    <h3>Make every ledger’s scope explicit earlier.</h3>
-    <p>Review decisions and production outputs should never be mistaken for the same population.</p>
+    <h3>Label each group of numbers earlier.</h3>
+    <p>Review decisions and published outputs should never be mistaken for the same group.</p>
     </article>
     </div>
     <div class="feature-callout">
@@ -258,23 +276,23 @@
     <span>subscribers, first month</span>
     </div>
     </div>
-    <p class="caption">Self-reported from YouTube Studio, first 28 days the channel was live. Kept separate from the production receipt on purpose: that receipt proves the pipeline is real and selective; this shows what the channel did with it.</p>
+    <p class="caption">Self-reported from YouTube Studio for the first 28 days the channel was live. Kept separate from the production evidence on purpose: the production record shows that the workflow is real and selective; this shows what the audience did afterward.</p>
   </div>
 </section>
 <section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" id="receipt">
   <div class="section-shell">
-    <div class="kicker">Evidence receipt</div>
-    <h2>The receipt behind the production result.</h2>
+    <div class="kicker">Evidence record</div>
+    <h2>The checked numbers behind the production result.</h2>
     <details>
-    <summary>Open the workflow receipt</summary>
-    <p>The receipt supports the production result: how broad the pool was, what reached review, and what was approved or used. Audience figures are self-reported from YouTube Studio, dated separately below, and kept apart from the pipeline counts on purpose. The public page shows the checked summary; the raw working record remains private.
+    <summary>Open the checked workflow evidence</summary>
+    <p>This public record shows how broad the clip pool was, what reached review, and what was approved or used. Audience figures come from YouTube Studio, are dated separately below, and stay apart from the production counts on purpose. The checked summary stays public; the larger working record remains private.
     </p>
-    <p class="caption"><strong>Read the scopes separately:</strong> 53 approvals, 97 hand-rejections, 150 reviewed, and 1,244 pending are decisions on 1,394 review-list entries. The 81 source clips marked used and 85 published output records come from separate production tables, so they are not a one-to-one conversion. The 33,284 remainder means clips not marked used in output records (33,365 minus 81); it includes items still pending review.</p>
-    <p class="caption"><strong>Operational effort:</strong> the ledger logged <span data-claim="cr_errors">3,752</span> source or processing errors over the snapshot. The pipeline isolates a failing source rather than treating every error as a failed run.</p>
+    <p class="caption"><strong>Read the groups separately:</strong> 53 approvals, 97 hand-rejections, 150 reviewed, and 1,244 pending describe the 1,394 review-list entries. The 81 source clips marked used and 85 published outputs come from separate production tables, so they are not a one-to-one conversion. The 33,284 remainder means clips not marked used in an output record (33,365 minus 81); it includes clips still waiting for review.</p>
+    <p class="caption"><strong>Operational effort:</strong> the system logged <span data-claim="cr_errors">3,752</span> source or processing errors during the snapshot. It isolates one failing source rather than treating every error as a failed run.</p>
     <div class="receipt-overview">
-    <div class="receipt-overview-item"><h3>The claim</h3><p><strong class="metric-value">33,365</strong> clips entered the funnel; 150 reached owner review and 85 became published output records.</p></div>
+    <div class="receipt-overview-item"><h3>The claim</h3><p><strong class="metric-value">33,365</strong> clips entered the pool; 150 reached my review and a separate record counted 85 published outputs.</p></div>
     <div class="receipt-overview-item"><h3>The checks</h3><p>Hand review, pending work, source failures, and the owner release decision.</p></div>
-    <div class="receipt-overview-item"><h3>The scale</h3><p>Sources monitored, production days, languages, and the separate review and production populations.</p></div>
+    <div class="receipt-overview-item"><h3>The scale</h3><p>Sources monitored, production days, languages, and the separate groups used for review and publishing.</p></div>
     </div>
     <div class="receipt-grid">
     <div class="receipt-item">
@@ -338,7 +356,7 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_videos">85</strong>
-    <span>published output records</span>
+    <span>published outputs, separate record</span>
     </div>
     </div>
     </details>

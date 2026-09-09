@@ -1,4 +1,4 @@
-/* V4.7 PRESENTATION CONTRACT
+/* V4.9 PRESENTATION CONTRACT
    Content declares meaning. Recipes select complete templates. Templates own
    width, alignment, spacing, responsive behavior, and state. Public blocks do
    not choose layout and no route gets a private presentation correction.
@@ -469,6 +469,11 @@ button {
   grid-template-columns: minmax(0, 1fr) minmax(220px, var(--portrait));
 }
 
+.intro-grid:has(.story-snapshot) {
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+  align-items: stretch;
+}
+
 .intro-grid > * {
   min-width: 0;
 }
@@ -514,6 +519,140 @@ button {
   color: var(--muted);
   font-size: 0.78rem;
 }
+
+/* Story snapshots orient a casual reader before the full evidence begins.
+   They use responsive HTML for sequences and one real screenshot for product work. */
+.story-snapshot {
+  min-width: 0;
+  margin: 0;
+  padding: clamp(18px, 2.5vw, 24px);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.story-snapshot > * + * {
+  margin-top: 16px;
+}
+
+.story-snapshot .decision-window {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.story-snapshot .visual-stat-pair {
+  grid-template-columns: 1fr;
+}
+
+.story-snapshot .visual-stat {
+  padding: 13px 14px;
+}
+
+.story-snapshot figcaption {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.story-steps {
+  display: grid;
+  gap: 9px;
+}
+
+.story-step {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 12px 13px;
+  border-left: 3px solid var(--line-strong);
+  background: var(--paper);
+}
+
+.story-step.is-decision {
+  border-left-color: var(--accent);
+}
+
+.story-step.is-outcome {
+  border-left-color: var(--signal);
+}
+
+.story-marker {
+  color: var(--muted);
+  font: 700 0.67rem/1.5 var(--mono);
+  letter-spacing: 0.07em;
+}
+
+.story-step strong,
+.story-step small {
+  display: block;
+}
+
+.story-step strong {
+  color: var(--ink);
+  font: 700 1rem/1.25 var(--display);
+}
+
+.story-step.is-decision strong {
+  color: var(--accent);
+}
+
+.story-step.is-outcome strong {
+  color: var(--signal-strong);
+}
+
+.story-step small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.story-image {
+  align-self: start;
+  overflow: hidden;
+  padding: 0;
+  border-top-color: var(--accent);
+}
+
+.story-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--surface-soft);
+  cursor: zoom-in;
+}
+
+.story-image figcaption {
+  margin: 0;
+  padding: 15px 17px 17px;
+}
+
+.scan-list {
+  display: grid;
+  gap: 10px;
+}
+
+.scan-list p,
+.scan-list p + p {
+  margin: 0;
+  padding: 13px 15px;
+  border-left: 3px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.scan-list p:last-child {
+  border-left-color: var(--accent);
+}
+
 
 .page-toc {
   display: flex;
@@ -724,7 +863,7 @@ li + li {
   margin-top: var(--space-text);
 }
 
-/* Emphasis grammar (V4.7): bold is the sentence's takeaway; italics are
+/* Emphasis grammar (V4.9): bold is the sentence's takeaway; italics are
    voice, nuance, a title, or a caveat; underline means clickable. Verification
    metadata ([data-claim]) is never itself a color/weight selector — it
    inherits from whatever component or prose context contains it. */
@@ -1085,6 +1224,81 @@ a.card:hover {
   border-top: 1px solid var(--line);
 }
 
+/* Visual project previews */
+
+.project-preview-card,
+.directory-tile {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-preview-card {
+  padding: 0;
+}
+
+.project-preview-card-body,
+.directory-tile-body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(22px, 3vw, 30px);
+}
+
+.project-preview-card-body > * + * {
+  margin-top: 12px;
+}
+
+.project-preview-card-body .text-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: var(--space-item);
+}
+
+.project-preview-media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: #f5f3ee;
+}
+
+.project-preview-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.project-preview-media.is-chart img {
+  object-fit: contain;
+  padding: clamp(12px, 2vw, 20px);
+}
+
+.project-preview-media.is-screenshot img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.featured-project-visual {
+  margin-top: var(--space-group);
+}
+
+.featured-project-visual-link {
+  display: block;
+  border-radius: var(--radius);
+  background: #f5f3ee;
+}
+
+.featured-project-visual-link img {
+  transition: transform 180ms ease;
+}
+
+.featured-project-visual-link:hover img,
+.featured-project-visual-link:focus-visible img {
+  transform: translateY(-2px);
+}
+
 /* Experience capabilities */
 
 .capability-list {
@@ -1241,9 +1455,6 @@ a.card:hover {
 .directory-tile {
   min-width: 0;
   min-height: 310px;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(22px, 3vw, 30px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -1553,6 +1764,85 @@ a.card:hover {
   line-height: 1.5;
 }
 
+.criteria-board,
+.comparison-states {
+  display: grid;
+  gap: 12px;
+}
+
+.criteria-board {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.criteria-item {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.criteria-item:nth-child(4) {
+  border-top-color: var(--accent);
+}
+
+.criteria-item strong,
+.criteria-item > span:last-child {
+  display: block;
+}
+
+.criteria-item strong {
+  margin-top: 12px;
+  font-family: var(--display);
+  line-height: 1.25;
+}
+
+.criteria-item > span:last-child {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.comparison-states {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.comparison-state {
+  min-width: 0;
+  padding: clamp(18px, 2.8vw, 25px);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.comparison-state.is-corrected {
+  border-top-color: var(--accent);
+}
+
+.comparison-state strong,
+.comparison-state > span:last-child {
+  display: block;
+}
+
+.comparison-state strong {
+  margin-top: 18px;
+  color: var(--ink);
+  font: 700 clamp(1.4rem, 3vw, 2rem)/1.15 var(--display);
+  font-variant-numeric: tabular-nums;
+}
+
+.comparison-state.is-corrected strong {
+  color: var(--accent);
+}
+
+.comparison-state > span:last-child {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
 .decision-window,
 .coverage-panel,
 .paper-ledger {
@@ -1698,6 +1988,7 @@ a.card:hover {
 }
 
 .ownership-step {
+  position: relative;
   min-width: 0;
   padding: 16px;
   border-top: 3px solid var(--line-strong);
@@ -1728,6 +2019,31 @@ a.card:hover {
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.45;
+}
+
+.career-timeline {
+  position: relative;
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  inset-block: 13px;
+  inset-inline-start: 24px;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.career-timeline .step {
+  position: relative;
+}
+
+.career-timeline .step > strong:first-child {
+  position: relative;
+  z-index: 1;
+  padding-block: 2px;
+  background: var(--paper);
+  color: var(--accent);
 }
 
 .chart-card {
@@ -1881,6 +2197,14 @@ ol {
 
 .site-section details[open] > summary::after {
   content: "−";
+}
+
+.site-section details.visual-details:not([open]) > .scan-list {
+  display: none;
+}
+
+.site-section details.visual-details[open] > .scan-list {
+  display: grid;
 }
 
 .site-section details > :not(summary) {
@@ -2339,6 +2663,7 @@ img[data-lightbox]:hover {
   }
 
   .intro-grid:has(.intro-portrait),
+  .intro-grid:has(.story-snapshot),
   .site-section[data-lead="split"] .section-grid,
   .site-section[data-lead="pair"] .section-grid,
   .ending-content {
@@ -2351,6 +2676,18 @@ img[data-lightbox]:hover {
 
   .metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-flow.flow-4,
+  .process-flow.flow-5,
+  .ownership-path,
+  .criteria-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-flow.flow-4 .process-stage:not(:last-child)::after,
+  .process-flow.flow-5 .process-stage:not(:last-child)::after {
+    display: none;
   }
 
   .card-grid.three-col,
@@ -2441,8 +2778,12 @@ img[data-lightbox]:hover {
   }
 
   .process-flow,
+  .process-flow.flow-4,
+  .process-flow.flow-5,
   .visual-stat-pair,
-  .ownership-path {
+  .ownership-path,
+  .criteria-board,
+  .comparison-states {
     grid-template-columns: 1fr;
   }
 
@@ -2456,6 +2797,11 @@ img[data-lightbox]:hover {
     right: 50%;
     bottom: calc(var(--visual-gap) * -1 - 11px);
     transform: translateX(50%);
+  }
+
+  .process-flow.flow-4 .process-stage:not(:last-child)::after,
+  .process-flow.flow-5 .process-stage:not(:last-child)::after {
+    display: grid;
   }
 
   .visual-note,

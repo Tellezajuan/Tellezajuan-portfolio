@@ -21,7 +21,7 @@
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=79064869b1">
+  <link rel="stylesheet" href="style.css?v=8ccb5fdb6b">
 </head>
 <body data-route="shortlist.html" data-recipe="case-study">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -90,6 +90,15 @@
   <a class="button button-secondary" href="#receipt">See the evidence</a>
   </div>
             <p class="caption">The 102 applications are cumulative across the full July 14–August 23 window. The 57 top-tier figure is a continuously refreshed snapshot, so the two numbers are not expected to match.</p>        </div>
+          <figure class="story-snapshot">
+            <span class="visual-label">From noise to a readable list</span>
+            <div class="story-steps">
+              <div class="story-step"><span class="story-marker">01</span><span><strong><span data-claim="sl_sourced">683</span> collected</strong><small>Roles from trusted sources</small></span></div>
+              <div class="story-step"><span class="story-marker">02</span><span><strong><span data-claim="sl_scored">615</span> scored</strong><small>Compared with the written profile</small></span></div>
+              <div class="story-step is-decision"><span class="story-marker">03</span><span><strong><span data-claim="sl_top_count">57</span> worth reading first</strong><small>The workflow stops; I decide what follows</small></span></div>
+            </div>
+            <figcaption><strong>The point:</strong> narrow the reading load, never automate the application decision.</figcaption>
+          </figure>
         </div>
         <div class="feature-callout">
   <span class="callout-label">The record</span>
@@ -120,7 +129,7 @@
     <a href="#purpose">Purpose</a>
     <a href="#workflow">Workflow</a>
     <a href="#scoring">Scoring</a>
-    <a href="#receipt">Evidence receipt</a>
+    <a href="#receipt">Evidence record</a>
   </div>
 </nav>
 <section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" id="purpose">
@@ -180,6 +189,15 @@
     </p>
     </div>
     </div>
+    <figure class="media-block system-visual profile-score-visual">
+    <div class="criteria-board" role="list" aria-label="The four kinds of written fit criteria used in the first-pass score">
+      <div class="criteria-item" role="listitem"><span class="story-marker">01</span><strong>Kind of work</strong><span>Does the role describe the work I am seeking?</span></div>
+      <div class="criteria-item" role="listitem"><span class="story-marker">02</span><strong>Ownership</strong><span>Is the expected level of responsibility visible?</span></div>
+      <div class="criteria-item" role="listitem"><span class="story-marker">03</span><strong>Channel evidence</strong><span>Does the posting name relevant experience?</span></div>
+      <div class="criteria-item" role="listitem"><span class="story-marker">04</span><strong>Practical fit</strong><span>Do the stated requirements fit the search?</span></div>
+    </div>
+    <figcaption><strong>The score counts visible matches; it does not infer hidden fit.</strong> The result is a reading order, not an application decision.</figcaption>
+    </figure>
     <div class="highlight">
     <strong>Why that is enough</strong>
     <span>It is not trying to be clever. It is trying to be a fast, honest first pass, which is exactly the part of the job that does not need me doing it by hand across 683 postings.</span>
@@ -200,16 +218,16 @@
 </section>
 <section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" id="receipt">
   <div class="section-shell">
-    <div class="kicker">Evidence receipt</div>
-    <h2>The receipt behind the shortlist.</h2>
+    <div class="kicker">Evidence record</div>
+    <h2>The checked numbers behind the shortlist.</h2>
     <details>
-    <summary>Open the workflow receipt</summary>
-    <p>Aggregate counts only. Company names, job titles, links, salaries, and any record of where I applied are deliberately excluded. The status split is 102 Applied, 1 Error, 5 Manual, and 575 New, which totals the 683 roles pulled. The public page shows the checked summary; the raw working record remains private.
+    <summary>Open the checked workflow evidence</summary>
+    <p>This public record contains totals only. Company names, job titles, links, salaries, and any record of where I applied are deliberately excluded. The status split is 102 Applied, 1 Error, 5 Manual, and 575 New, which totals the 683 roles pulled. The checked summary stays public; the larger working record remains private.
     </p>
     <div class="receipt-overview">
     <div class="receipt-overview-item"><h3>The claim</h3><p><strong class="metric-value">683</strong> roles pulled, 615 scored, and 57 worth reading first.</p></div>
-    <div class="receipt-overview-item"><h3>The checks</h3><p>Source coverage, scoring, status reconciliation, and the written-profile boundary.</p></div>
-    <div class="receipt-overview-item"><h3>The scale</h3><p>Sources, scrapers, dates, and the complete role-status split.</p></div>
+    <div class="receipt-overview-item"><h3>The checks</h3><p>Source coverage, scoring, whether every role status adds up, and the point where my judgment begins.</p></div>
+    <div class="receipt-overview-item"><h3>The scale</h3><p>Sources, automated collectors, dates, and the complete role-status split.</p></div>
     </div>
     <div class="receipt-grid">
     <div class="receipt-item">
@@ -222,7 +240,7 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_scrapers">31</strong>
-    <span>scrapers</span>
+    <span>automated source collectors</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_scored">615</strong>

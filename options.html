@@ -21,7 +21,7 @@
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=79064869b1">
+  <link rel="stylesheet" href="style.css?v=8ccb5fdb6b">
 </head>
 <body data-route="options.html" data-recipe="case-study">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -77,21 +77,31 @@
 <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">Options Research</li></ol></nav>
 <header class="page-intro container" data-block="intro">
   <div class="intro-head">
-          <p class="eyebrow">Options research · paper only · evidence gates</p>
+          <p class="eyebrow">Options research · simulations only · no real money</p>
           <h1>I test options ideas before they reach <span>real money</span>.</h1>
         </div>
         <div class="intro-grid">
           <div class="intro-copy">
             <p class="intro-subtitle">Every idea is written down, tested, checked, and kept on paper until the evidence is strong enough.</p>
-            <p class="intro-lede">I built a paper-only system to challenge promising ideas. It records each question, tests it against history and controls, and stays away from real money until the evidence is strong.</p>
+            <p class="intro-lede">I built a simulation-only system to challenge promising ideas. It records each question, replays it against historical data, and tries to break the result with fair comparisons before anything could reach real money.</p>
             <div class="action-row">
   <a class="button button-primary" href="#finding">Read the finding</a>
   <a class="button button-secondary" href="#receipt">See the evidence</a>
   </div>        </div>
+          <figure class="story-snapshot">
+            <span class="visual-label">The research boundary</span>
+            <div class="story-steps">
+              <div class="story-step"><span class="story-marker">01</span><span><strong>Write the idea</strong><small>Define the question before testing</small></span></div>
+              <div class="story-step"><span class="story-marker">02</span><span><strong>Replay history</strong><small>Keep the underlying test records</small></span></div>
+              <div class="story-step is-decision"><span class="story-marker">03</span><span><strong>Challenge the result</strong><small>Fair comparisons get a chance to end the idea</small></span></div>
+              <div class="story-step is-outcome"><span class="story-marker">04</span><span><strong>Stay on paper</strong><small>No result becomes real-money action</small></span></div>
+            </div>
+            <figcaption><strong>The point:</strong> a promising result earns another check, not a trade.</figcaption>
+          </figure>
         </div>
         <div class="feature-callout">
   <span class="callout-label">The record</span>
-  <strong class="callout-title"><span data-claim="opt_verdict_total">446</span> verdicts recorded; <span data-claim="opt_pass">11</span> cleared the research gate; the system remains <em>on paper.</em></strong>
+  <strong class="callout-title"><span data-claim="opt_verdict_total">446</span> conclusions recorded; <span data-claim="opt_pass">11</span> passed every research check; the system remains <em>on paper.</em></strong>
   <span class="callout-copy"><em class="caveat">Not one dollar of real money has ever been placed.</em> The system stops when the evidence is incomplete. Decision: <strong data-claim="opt_governance">STAY ON PAPER</strong>.</span>
   </div>
         <div class="metrics">
@@ -101,7 +111,7 @@
   </div>
   <div class="metric">
   <strong data-claim="opt_pass">11</strong>
-  <span>passed the research gate</span>
+  <span>passed every research check</span>
   </div>
   <div class="metric">
   <strong><span data-claim="opt_matrix_tested">220</span>/<span data-claim="opt_matrix_total">583</span></strong>
@@ -116,11 +126,11 @@
 <nav class="page-toc container" aria-label="On this page">
   <span>On this page</span>
   <div class="page-toc-links">
-    <a href="#lifecycle">Lifecycle</a>
+    <a href="#lifecycle">How it works</a>
     <a href="#problem">Problem</a>
     <a href="#finding">Finding</a>
-    <a href="#controls">Controls</a>
-    <a href="#receipt">Evidence receipt</a>
+    <a href="#controls">System checks</a>
+    <a href="#receipt">Evidence record</a>
   </div>
 </nav>
 <section class="site-section tone-soft" data-intent="sequence" data-template="timeline" data-lead="stack" data-tone="soft" data-attention="component" id="lifecycle">
@@ -132,7 +142,7 @@
     <div class="step"><strong>02</strong><span><strong>Decide what would prove it wrong.</strong> Set the comparison and failure rule before running the test.</span></div>
     <div class="step"><strong>03</strong><span><strong>Run the historical check.</strong> Replay the question against past data and keep the underlying records.</span></div>
     <div class="step"><strong>04</strong><span><strong>Challenge the result.</strong> Compare it with a simpler explanation and keep the trade on paper.</span></div>
-    <div class="step"><strong>05</strong><span><strong>Record what happened.</strong> Pass, fail, noise, or not enough data all stay in the ledger.</span></div>
+    <div class="step"><strong>05</strong><span><strong>Record what happened.</strong> Pass, fail, noise, or not enough data all stay in the dated record.</span></div>
     <div class="step"><strong>06</strong><span><strong>Reconcile before the next run.</strong> Check what changed and keep real-money decisions out of the loop.</span></div>
     </div>
   </div>
@@ -154,33 +164,33 @@
 <section class="site-section" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" id="finding">
   <div class="section-shell">
     <div class="kicker">The finding</div>
-    <h2>Most ideas do not survive contact with a control group.</h2>
+    <h2>Most ideas do not survive a fair comparison.</h2>
     <figure class="media-block system-visual">
     <div class="process-flow">
-      <article class="process-stage"><span class="process-stage-label">01 · Recorded</span><strong><span data-claim="opt_verdict_total">446</span></strong><span>research verdicts written into the ledger</span></article>
+      <article class="process-stage"><span class="process-stage-label">01 · Recorded</span><strong><span data-claim="opt_verdict_total">446</span></strong><span>research conclusions written into the record</span></article>
       <article class="process-stage is-decision"><span class="process-stage-label">02 · Still plausible</span><strong>38</strong><span>were not negative or incomplete after the first cut</span></article>
-      <article class="process-stage is-outcome"><span class="process-stage-label">03 · Passed</span><strong><span data-claim="opt_pass">11</span></strong><span>cleared the full research gate</span></article>
+      <article class="process-stage is-outcome"><span class="process-stage-label">03 · Passed</span><strong><span data-claim="opt_pass">11</span></strong><span>passed the full set of checks</span></article>
     </div>
     <div class="visual-note"><strong><span data-claim="opt_negative_total">408</span> stopped early</strong><span>Another 27 looked better or repeated successfully but still did not qualify as a clean pass.</span></div>
-    <figcaption><strong>Passing is a high bar on purpose.</strong> A result can look interesting, beat the comparison, or repeat on a second run and still not clear the research gate.</figcaption>
+    <figcaption><strong>Passing is a high bar on purpose.</strong> A result can look interesting, beat one comparison, or repeat on a second run and still fail the full set of checks.</figcaption>
     </figure>
     <div class="card-grid">
     <div class="card">
     <span class="card-label">446 · RECORDED</span>
     <strong><span data-claim="opt_negative_share">91.5%</span> come back negative or incomplete.</strong>
-    <span>Of <span data-claim="opt_verdict_total">446</span> verdicts logged, <span data-claim="opt_negative_total">408</span> failed, looked like noise, or did not have enough data to judge. Only <span data-claim="opt_pass">11</span> passed the research gate.</span>
+    <span>Of <span data-claim="opt_verdict_total">446</span> conclusions logged, <span data-claim="opt_negative_total">408</span> failed, looked like noise, or did not have enough data to judge. Only <span data-claim="opt_pass">11</span> passed every research check.</span>
     </div>
     <div class="card">
     <span class="card-label">STATUS · <span data-claim="opt_status_date">2026-08-16 20:33</span></span>
     <strong>The operating decision stays conservative on purpose.</strong>
-    <span>Decision at the receipt snapshot: <strong data-claim="opt_governance">STAY ON PAPER</strong>. Nothing here has been sized for real capital.</span>
+    <span>Decision in the dated evidence record: <strong data-claim="opt_governance">STAY ON PAPER</strong>. Nothing here has been sized for real money.</span>
     </div>
     </div>
     <details>
     <summary>Open the detailed verdict distribution</summary>
     <figure class="media-block">
     <img src="images/options/options-verdict-distribution.png" width="1663" height="809" alt="Most of 446 options-research verdicts were noise, unusable data, or failed tests; 11 passed." loading="lazy" data-lightbox="true">
-    <figcaption>The full ledger keeps every outcome visible: better, passed, repeated, weaker, noise, failed, or no usable data.</figcaption>
+    <figcaption>The full record keeps every outcome visible: better, passed, repeated, weaker, noise, failed, or no usable data.</figcaption>
     </figure>
     </details>
   </div>
@@ -190,10 +200,10 @@
     <div class="section-grid">
     <div class="lead-heading">
     <div class="kicker">The scale of the check</div>
-    <h2>The verdicts rest on a much <span class="heading-focus">larger evidence set.</span></h2>
+    <h2>The conclusions rest on a much <span class="heading-focus">larger evidence set.</span></h2>
     </div>
     <div class="lead-body prose">
-    <p><span data-claim="opt_backtest_results">15,412</span> historical-test results and <span data-claim="opt_per_trade">988,538</span> individual simulated-trade records fed into those 446 verdicts, over <span data-claim="opt_engine_hours">6,479.2</span> hours of computer time. <strong>The verdicts are the conclusions; these are the records underneath them.</strong></p>
+    <p><span data-claim="opt_backtest_results">15,412</span> historical-test results and <span data-claim="opt_per_trade">988,538</span> individual simulated-trade records fed into those 446 conclusions, over <span data-claim="opt_engine_hours">6,479.2</span> hours of computer time. <strong>The conclusions are the short answer; these are the records underneath them.</strong></p>
     </div>
     </div>
     <figure class="media-block system-visual">
@@ -227,25 +237,25 @@
     <div class="card">
     <span class="card-label">TESTS</span>
     <strong>
-    <span data-claim="opt_tests">952</span> passing, <span data-claim="opt_coverage">48.8</span>% line coverage.</strong>
-    <span>Not full coverage. Line coverage on a research engine is a floor, not a target.</span>
+    <span data-claim="opt_tests">952</span> automated tests passing; <span data-claim="opt_coverage">48.8</span>% of code lines exercised.</strong>
+    <span>That is not full coverage. The number is a minimum safety check, not a finish line.</span>
     </div>
     <div class="card">
     <span class="card-label">INCIDENTS</span>
     <strong>
-    <span data-claim="opt_incidents">11</span> logged, median time-to-detect <span data-claim="opt_mttd">24.0</span> hours.</strong>
+    <span data-claim="opt_incidents">11</span> problems logged; the middle one was noticed in <span data-claim="opt_mttd">24.0</span> hours.</strong>
     <span>
     Each incident stays in the internal log with what broke and when the system caught it. This portfolio shows the count and one sanitized example because hidden failures do not make a research engine more trustworthy.</span>
     </div>
     <div class="card">
     <span class="card-label">ONE INCIDENT, SANITIZED</span>
-    <strong>A broken run stayed out of the verdict ledger.</strong>
+    <strong>A broken run stayed out of the result record.</strong>
     <span>A scheduled run produced incomplete evidence, so the health check stopped it before a conclusion could be recorded. After the missing coverage was repaired, the run was repeated and the incident remained in the log.</span>
     </div>
     <div class="card">
     <span class="card-label">AUTOMATION</span>
     <strong>
-    <span data-claim="opt_cron">34</span> scheduled jobs keep the pipeline moving.</strong>
+    <span data-claim="opt_cron">34</span> scheduled tasks keep the system moving.</strong>
     <span>The research can run on a normal cadence without the owner watching every stage constantly. That changes the workload, not the decision boundary.</span>
     </div>
     </div>
@@ -254,10 +264,10 @@
 <section class="site-section" data-intent="categories" data-template="horizontal-rows" data-lead="stack" data-tone="base" data-attention="component" id="what-it-took">
   <div class="section-shell">
     <div class="kicker">What it took</div>
-    <h2>The useful result is the refusal to overread a pass.</h2>
+    <h2>A passing result is still not proof.</h2>
     <div class="detail-list takeaway-list">
       <article class="detail-row"><span class="card-label">Time and scale</span><div class="detail-row-copy"><span>15,412 historical-test results, 988,538 individual simulated-trade records, and a recurring operating cadence made the evidence expensive enough to respect.</span></div></article>
-      <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>One incomplete run was stopped before it could enter the verdict ledger; the incident stayed visible after repair.</span></div></article>
+      <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>One incomplete run was stopped before it could enter the result record; the problem stayed visible after repair.</span></div></article>
       <article class="detail-row"><span class="card-label">Next time</span><div class="detail-row-copy"><span>I would surface coverage gaps even earlier and keep the “not enough evidence” path as prominent as the pass path.</span></div></article>
       <article class="detail-row"><span class="card-label">Why it belongs</span><div class="detail-row-copy"><span>The system makes a conservative decision—stay on paper—while showing exactly how the checks and failures shaped it.</span></div></article>
     </div>
@@ -265,25 +275,25 @@
 </section>
 <section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" id="receipt">
   <div class="section-shell">
-    <div class="kicker">Evidence receipt</div>
-    <h2>The receipt behind the research result.</h2>
+    <div class="kicker">Evidence record</div>
+    <h2>The checked numbers behind the research decision.</h2>
     <details>
-    <summary>Open the research receipt</summary>
-    <p>Counts and process metrics only. Strategy names, underlyings, thresholds, position sizing, and every positive edge value are deliberately excluded. The public page shows the checked summary; the raw working record remains private.
+    <summary>Open the checked research evidence</summary>
+    <p>This public record contains counts and process measures only. Strategy names, assets tested, cutoffs, position sizing, and every positive edge value are deliberately excluded. The checked summary stays public; the larger working record remains private.
     </p>
     <div class="receipt-overview">
-    <div class="receipt-overview-item"><h3>The claim</h3><p>Verdicts recorded, the research gate, and the paper-only governance decision.</p></div>
-    <div class="receipt-overview-item"><h3>The checks</h3><p>Controls, incidents, coverage, and the sanitized failure that stayed out of the ledger.</p></div>
-    <div class="receipt-overview-item"><h3>The scale</h3><p>Backtest rows, matrix coverage, engine time, and operating cadence.</p></div>
+    <div class="receipt-overview-item"><h3>The claim</h3><p>Conclusions recorded, how many passed every check, and the final decision to stay on paper.</p></div>
+    <div class="receipt-overview-item"><h3>The checks</h3><p>Fair comparisons, system problems, automated-test coverage, and the broken run that stayed out of the record.</p></div>
+    <div class="receipt-overview-item"><h3>The scale</h3><p>Historical-test results, planned combinations completed, computer time, and scheduled tasks.</p></div>
     </div>
     <div class="receipt-grid">
     <div class="receipt-item">
     <strong data-claim="opt_verdict_total">446</strong>
-    <span>verdicts recorded</span>
+    <span>conclusions recorded</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_pass">11</strong>
-    <span>passed the gate</span>
+    <span>passed every check</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_negative_total">408</strong>
@@ -295,11 +305,11 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_backtest_results">15,412</strong>
-    <span>backtest results</span>
+    <span>historical-test results</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_per_trade">988,538</strong>
-    <span>per-trade rows</span>
+    <span>simulated trade records</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_engine_hours">6,479.2</strong>
@@ -307,11 +317,11 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_matrix_tested">220</strong>
-    <span>matrix cells tested</span>
+    <span>planned combinations checked</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_matrix_total">583</strong>
-    <span>matrix cells planned</span>
+    <span>planned combinations total</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_tests">952</strong>
@@ -319,7 +329,7 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_coverage">48.8</strong>
-    <span>% line coverage</span>
+    <span>% of code lines exercised</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_incidents">11</strong>
@@ -327,15 +337,15 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_mttd">24.0</strong>
-    <span>median MTTD hours</span>
+    <span>middle time to notice, hours</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_cron">34</strong>
-    <span>cron jobs</span>
+    <span>scheduled tasks</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_governance">STAY ON PAPER</strong>
-    <span>governance verdict</span>
+    <span>final decision</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_status_date">2026-08-16 20:33</strong>
@@ -368,7 +378,7 @@
     <div class="card-grid">
     <a class="card" href="sports.html">
     <strong>Sports research</strong>
-    <span>The same falsifier discipline, applied to a different domain</span>
+    <span>The same rejection-rule discipline, applied to a different subject</span>
     <span class="action-label">See sports research →</span>
     </a>
     <a class="card" href="proof-system.html">
