@@ -194,24 +194,32 @@
     var track = group.querySelector(".carousel-track, .tour-track");
     if (!track) return;
     var slides = Array.prototype.slice.call(track.querySelectorAll(".carousel-slide, .tour-slide"));
-    var slide = slides[0];
-    var amount = function () { return (slide ? slide.getBoundingClientRect().width : 280) + 18; };
     var previous = group.querySelector(".carousel-prev, .tour-prev");
     var next = group.querySelector(".carousel-next, .tour-next");
     var status = group.querySelector(".gallery-status");
     var motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     var behavior = function () { return motion.matches ? "auto" : "smooth"; };
-    var updateStatus = function () {
-      if (!status || !slides.length) return;
+    var nearestIndex = function () {
+      if (!slides.length) return 0;
       var trackLeft = track.getBoundingClientRect().left;
-      var nearest = slides.reduce(function (best, item, index) {
+      return slides.reduce(function (best, item, index) {
         var distance = Math.abs(item.getBoundingClientRect().left - trackLeft);
         return distance < best.distance ? { index: index, distance: distance } : best;
-      }, { index: 0, distance: Infinity });
-      status.textContent = (nearest.index + 1) + " of " + slides.length;
+      }, { index: 0, distance: Infinity }).index;
     };
-    if (previous) previous.addEventListener("click", function () { track.scrollBy({ left: -amount(), behavior: behavior() }); });
-    if (next) next.addEventListener("click", function () { track.scrollBy({ left: amount(), behavior: behavior() }); });
+    var updateStatus = function () {
+      if (!status || !slides.length) return;
+      status.textContent = (nearestIndex() + 1) + " of " + slides.length;
+    };
+    var moveBy = function (delta) {
+      if (!slides.length) return;
+      var targetIndex = Math.max(0, Math.min(slides.length - 1, nearestIndex() + delta));
+      var trackLeft = track.getBoundingClientRect().left;
+      var targetLeft = slides[targetIndex].getBoundingClientRect().left - trackLeft + track.scrollLeft;
+      track.scrollTo({ left: targetLeft, behavior: behavior() });
+    };
+    if (previous) previous.addEventListener("click", function () { moveBy(-1); });
+    if (next) next.addEventListener("click", function () { moveBy(1); });
     if (status) {
       var queued = false;
       track.addEventListener("scroll", function () {
