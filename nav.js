@@ -24,14 +24,20 @@
     if (themeMeta) themeMeta.setAttribute("content", dark ? "#121619" : "#f5f3ee");
   }
 
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
   syncTheme();
   themeButtons.forEach(function (button) {
     button.addEventListener("click", function () {
       var next = isDark() ? "light" : "dark";
-      if (next === "dark") root.setAttribute("data-theme", "dark");
-      else root.removeAttribute("data-theme");
-      try { localStorage.setItem("theme", next); } catch (error) {}
-      syncTheme();
+      var apply = function () {
+        if (next === "dark") root.setAttribute("data-theme", "dark");
+        else root.removeAttribute("data-theme");
+        try { localStorage.setItem("theme", next); } catch (error) {}
+        syncTheme();
+      };
+      if (document.startViewTransition && !reducedMotion.matches) document.startViewTransition(apply);
+      else apply();
     });
   });
 
@@ -125,7 +131,9 @@
 
   function lightboxGroup(image) {
     var scope = image.closest(".carousel, .tour, .media-grid, .site-section") || document;
-    return Array.prototype.slice.call(scope.querySelectorAll("img[data-lightbox]"));
+    return Array.prototype.slice.call(scope.querySelectorAll("img[data-lightbox]")).filter(function (item) {
+      return item.getClientRects().length > 0;
+    });
   }
 
   function imageCaption(image) {
@@ -138,7 +146,16 @@
     if (!dialogItems.length || !dialogImage) return;
     dialogIndex = (index + dialogItems.length) % dialogItems.length;
     var image = dialogItems[dialogIndex];
-    dialogImage.src = image.currentSrc || image.src;
+    var source = image.currentSrc || image.src;
+    if (dialog.open && dialogImage.src !== source) {
+      dialogImage.classList.add("is-swapping");
+      dialogImage.onload = function () { dialogImage.classList.remove("is-swapping"); };
+    }
+    dialogImage.src = source;
+    [dialogIndex - 1, dialogIndex + 1].forEach(function (index) {
+      var neighbour = dialogItems[(index + dialogItems.length) % dialogItems.length];
+      if (neighbour && neighbour !== image) new Image().src = neighbour.currentSrc || neighbour.src;
+    });
     dialogImage.alt = image.alt || "Expanded portfolio image";
     if (dialogCaption) dialogCaption.textContent = imageCaption(image);
     var multiple = dialogItems.length > 1;
@@ -172,6 +189,16 @@
   if (dialogNext) dialogNext.addEventListener("click", function () { showDialogItem(dialogIndex + 1); });
   if (dialog) dialog.addEventListener("click", function (event) {
     if (event.target === dialog) closeDialog();
+  });
+  var swipeStart = null;
+  if (dialog) dialog.addEventListener("pointerdown", function (event) {
+    swipeStart = event.pointerType === "mouse" ? null : event.clientX;
+  });
+  if (dialog) dialog.addEventListener("pointerup", function (event) {
+    if (swipeStart === null || dialogItems.length < 2) return;
+    var distance = event.clientX - swipeStart;
+    swipeStart = null;
+    if (Math.abs(distance) > 48) showDialogItem(dialogIndex + (distance < 0 ? 1 : -1));
   });
   if (dialog) dialog.addEventListener("keydown", function (event) {
     if (event.key === "ArrowLeft") {
@@ -233,4 +260,57 @@
       updateStatus();
     }
   });
+
+  function sketch(illustration) {
+    Array.prototype.forEach.call(illustration.children, function (shape, index) {
+      shape.style.setProperty("--i", Math.min(index, 30));
+    });
+    illustration.classList.add("is-drawing");
+  }
+
+  // Give each part of a diagram its order so it can step in after the one before.
+  var DIAGRAM_PARTS = ".process-flow > *, .report-snapshots > *, .verdict-distribution > *, .posting-checks > *, " +
+    ".metrics > *, .visual-stat-pair > *, .evidence-stack > *, .rule-card > *, .career-path > .career-stop, .posting-card mark";
+  function orderParts(scope) {
+    scope.querySelectorAll(DIAGRAM_PARTS).forEach(function (part) {
+      part.style.setProperty("--i", Array.prototype.indexOf.call(part.parentElement.children, part));
+    });
+    scope.querySelectorAll(".posting-card").forEach(function (card) {
+      card.querySelectorAll("mark").forEach(function (mark, index) { mark.style.setProperty("--i", index); });
+    });
+    scope.querySelectorAll(".nested-scale").forEach(function (nest) {
+      nest.querySelectorAll(".nested-layer").forEach(function (layer, depth) { layer.style.setProperty("--i", depth); });
+    });
+  }
+
+  if (root.classList.contains("motion-ready")) {
+    orderParts(document);
+    document.querySelectorAll(".page-intro .illo").forEach(sketch);
+    var fold = window.innerHeight * 0.92;
+    var candidates = document.querySelectorAll(
+      ".section-shell > :not(.card-grid):not(.media-grid):not(.project-directory):not(.compare-table-wrap), " +
+      ".section-shell .card-grid > *, .section-shell .media-grid > *, .project-tile-grid > *, .compare-table tbody tr"
+    );
+    var reveal = new IntersectionObserver(function (entries) {
+      var order = 0;
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var element = entry.target;
+        element.style.setProperty("--reveal-order", Math.min(order++, 5));
+        element.setAttribute("data-reveal", "shown");
+        element.querySelectorAll(".illo").forEach(sketch);
+        reveal.unobserve(element);
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    Array.prototype.forEach.call(candidates, function (element) {
+      if (element.parentElement.closest("[data-reveal]") || element.getBoundingClientRect().top < fold) return;
+      element.setAttribute("data-reveal", "pending");
+      reveal.observe(element);
+    });
+    window.addEventListener("beforeprint", function () {
+      document.querySelectorAll('[data-reveal="pending"]').forEach(function (element) {
+        element.setAttribute("data-reveal", "shown");
+      });
+    });
+  }
 })();

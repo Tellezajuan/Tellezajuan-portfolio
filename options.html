@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}</script>
+  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window)document.documentElement.classList.add("motion-ready");}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ee">
-  <title>Options research — A paper-only testing system</title>
-  <meta name="description" content="A paper-only options research system that writes down ideas, tests them, checks the evidence, and stays away from real money when evidence is incomplete.">
+  <title>Options research — Juan Tellez</title>
+  <meta name="description" content="A research lab that tests stock-market ideas with simulated money: 446 ideas tested, 11 passed every check, and no real dollars.">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Options research — A paper-only testing system">
-  <meta property="og:description" content="A paper-only options research system that writes down ideas, tests them, checks the evidence, and stays away from real money when evidence is incomplete.">
+  <meta property="og:title" content="Options research — Juan Tellez">
+  <meta property="og:description" content="A research lab that tests stock-market ideas with simulated money: 446 ideas tested, 11 passed every check, and no real dollars.">
   <meta property="og:url" content="https://www.tellezajuan.com/options.html">
   <link rel="canonical" href="https://www.tellezajuan.com/options.html">
   <meta property="og:image" content="https://www.tellezajuan.com/images/social/options.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Preview card: Options research — Juan Tellez">
+  <meta property="og:site_name" content="Juan Tellez">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Options research — A paper-only testing system">
-  <meta name="twitter:description" content="A paper-only options research system that writes down ideas, tests them, checks the evidence, and stays away from real money when evidence is incomplete.">
+  <meta name="twitter:title" content="Options research — Juan Tellez">
+  <meta name="twitter:description" content="A research lab that tests stock-market ideas with simulated money: 446 ideas tested, 11 passed every check, and no real dollars.">
   <meta name="twitter:image" content="https://www.tellezajuan.com/images/social/options.png">
+  <meta name="twitter:image:alt" content="Preview card: Options research — Juan Tellez">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"All Projects","item":"https://www.tellezajuan.com/projects.html"},{"@type":"ListItem","position":2,"name":"Options Research","item":"https://www.tellezajuan.com/options.html"}]}</script>
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=77d0fbd540">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=773516ed30">
 </head>
 <body data-route="options.html" data-recipe="case-study" data-route-role="project">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -32,16 +38,16 @@
     <a class="brand" href="index.html" aria-label="Juan Tellez home">JT<span>.</span></a>
     <nav class="desktop-nav" aria-label="Primary">
       <a class="nav-link" data-page="index.html" href="index.html">Home</a>
-      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life around the work.</span></a>
-<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years of media, measurement, and lead-quality work.</span></a>
-<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>Choices, process, and where AI fits.</span></a>
-<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important claims stay tied to sources.</span></a></div></details>
-      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>Choose a project by the kind of problem it solves.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>How late-arriving conversion credit changed a campaign decision.</span></a></div>
-<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html"><strong>Job Search Workflow</strong><span>How 683 postings became a checked shortlist worth reading.</span></a>
-<a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Workflow</strong><span>A clip-sifting and editing system with an owner release check.</span></a></div>
-<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html" aria-current="page"><strong>Options Research</strong><span>A paper-only system designed to make weak ideas fail safely.</span></a>
-<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>A written testing process with explicit rejection rules.</span></a></div>
-<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon prototype built around returning.</span></a></div></div></div></details>
+      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life outside work.</span></a>
+<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years planning ads and fixing the reports.</span></a>
+<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>How I use AI, and where I make the call.</span></a>
+<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important numbers stay tied to their sources.</span></a></div></details>
+      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All six, grouped by the kind of problem they solve.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look too cheap.</span></a></div>
+<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html"><strong>Job Search Tool</strong><span>Sorting hundreds of job posts down to the best fits.</span></a>
+<a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Channel</strong><span>Finding the gaming clips worth posting.</span></a></div>
+<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html" aria-current="page"><strong>Options Research</strong><span>Testing stock-market ideas with simulated money.</span></a>
+<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>Writing down how a prediction could be wrong, first.</span></a></div>
+<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon game prototype.</span></a></div></div></div></details>
       <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </nav>
     <div class="header-tools desktop-tools">
@@ -57,8 +63,8 @@
         <a data-page="about-me.html" href="about-me.html">About Juan</a>
         <a data-page="experience.html" href="experience.html">Experience</a>
         <details class="mobile-nav-group" open><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html">Marketing Measurement</a></div>
-<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html">Job Search Workflow</a>
-<a data-page="cutting-room.html" href="cutting-room.html">YouTube Workflow</a></div>
+<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html">Job Search Tool</a>
+<a data-page="cutting-room.html" href="cutting-room.html">YouTube Channel</a></div>
 <div class="mobile-project-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html" aria-current="page">Options Research</a>
 <a data-page="sports.html" href="sports.html">Sports Research</a></div>
 <div class="mobile-project-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html">Delve</a></div></div></details>
@@ -77,88 +83,99 @@
 <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">Options Research</li></ol></nav>
 <header class="page-intro container" data-block="intro">
   <div class="intro-head">
-          <p class="eyebrow">Options research · simulations only · no real money</p>
-          <h1>I test options ideas before they reach <span>real money</span>.</h1>
+          <p class="eyebrow">Options research · simulation only</p>
+          <h1>I built a research lab that tests stock-market ideas <span>without risking a dollar</span>.</h1>
         </div>
         <div class="intro-grid">
           <div class="intro-copy">
-            <p class="intro-subtitle" data-intro-role="primary">Every idea is written down, tested, checked, and kept on paper until the evidence is strong enough.</p>
-            <p class="intro-lede" data-intro-role="supporting">I built a simulation-only system to challenge promising ideas. It records each question, replays it against historical data, and tries to break the result with fair comparisons before anything could reach real money.</p>
+            <p class="intro-subtitle" data-intro-role="primary">It studies options, contracts that let someone buy or sell a stock at a set price later. Each idea is written down, replayed against past market data, and challenged by fair comparisons. Most ideas fail, and that is the point.</p>
+            <p class="intro-lede" data-intro-role="supporting">It has run <span data-claim="opt_backtest_results">15,412</span> historical tests, about <span data-claim="est_opt_engine_days">270</span> days of nonstop computer time. By my rough estimate it needs about <span data-claim="est_opt_minutes_with_system">15</span> minutes of my attention a day.</p>
             <div class="action-row" data-intro-role="action">
   <a class="button button-primary" href="#finding">Read the finding</a>
   <a class="button button-secondary" href="#receipt">See the evidence</a>
-  </div>        </div>
-          <figure class="story-snapshot" data-intro-role="visual">
-            <span class="visual-label">The research boundary</span>
-            <div class="story-steps">
-              <div class="story-step"><span class="story-marker">01</span><span><strong>Write the idea</strong><small>Define the question before testing</small></span></div>
-              <div class="story-step"><span class="story-marker">02</span><span><strong>Replay history</strong><small>Keep the underlying test records</small></span></div>
-              <div class="story-step is-decision"><span class="story-marker">03</span><span><strong>Challenge the result</strong><small>Fair comparisons get a chance to end the idea</small></span></div>
-              <div class="story-step is-outcome"><span class="story-marker">04</span><span><strong>Stay on paper</strong><small>No result becomes real-money action</small></span></div>
-            </div>
-            <figcaption><strong>The point:</strong> a promising result earns another check, not a trade.</figcaption>
+  </div>
+          </div>
+          <figure class="story-illustration" data-intro-role="visual">
+            <svg class="illo" viewBox="0 0 640 340" role="img" aria-label="An open research notebook with a hand-drawn market chart sits on the left. Below it, a row of idea light bulbs: most are crossed out and one carries a check mark. A dashed line with a padlock separates the notebook from a wallet on the right, which stays out of reach.">
+  <path class="illo-sheet" d="M40 60 H198 Q214 60 214 74 V226 H40 Z"/>
+  <path class="illo-sheet" d="M214 74 Q214 60 230 60 H388 V226 H214 Z"/>
+  <path class="illo-faint" d="M62 90H192M62 112H192M62 134H192M62 156H192M62 178H192M62 200H192"/>
+  <path class="illo-faint" d="M240 90H366M240 112H366M240 134H366M240 156H366M240 178H366M240 200H366"/>
+  <path class="illo-line" d="M244 190 L268 164 L286 176 L310 128 L330 150 L360 102"/>
+  <circle class="illo-line" cx="310" cy="128" r="24"/>
+  <path class="illo-line" d="M327 145 L348 166"/>
+  <path class="illo-text" d="M66 102h58M66 124h92M66 146h40"/>
+  <g>
+    <circle class="illo-sheet" cx="72" cy="266" r="16"/>
+    <path class="illo-line" d="M66 284h12M67 290h10"/>
+    <path class="illo-faint" d="M58 252 L86 280M86 252 L58 280"/>
+    <circle class="illo-sheet" cx="136" cy="266" r="16"/>
+    <path class="illo-line" d="M130 284h12M131 290h10"/>
+    <path class="illo-faint" d="M122 252 L150 280M150 252 L122 280"/>
+    <circle class="illo-sheet" cx="200" cy="266" r="16"/>
+    <path class="illo-line" d="M194 284h12M195 290h10"/>
+    <path class="illo-faint" d="M186 252 L214 280M214 252 L186 280"/>
+    <circle class="illo-tint" cx="264" cy="266" r="16"/>
+    <path class="illo-line" d="M258 284h12M259 290h10"/>
+    <circle class="illo-signal" cx="280" cy="252" r="10"/>
+    <path class="illo-check-light" d="M275 252l4 4 6-7"/>
+    <circle class="illo-sheet" cx="328" cy="266" r="16"/>
+    <path class="illo-line" d="M322 284h12M323 290h10"/>
+    <path class="illo-faint" d="M314 252 L342 280M342 252 L314 280"/>
+  </g>
+  <path class="illo-accent-dashes" d="M452 40 V310"/>
+  <rect class="illo-accent" x="434" y="162" width="36" height="30" rx="5"/>
+  <path class="illo-line" d="M442 162 V150 Q452 134 462 150 V162"/>
+  <circle class="illo-sheet" cx="452" cy="176" r="4"/>
+  <path class="illo-faint-box" d="M500 138 H600 Q612 138 612 150 V226 Q612 238 600 238 H500 Q488 238 488 226 V150 Q488 138 500 138 Z"/>
+  <path class="illo-faint" d="M488 162 H612M580 188 H616 V214 H580 Q568 214 568 201 Q568 188 580 188 Z"/>
+  <path class="illo-faint" d="M504 120 H588 L596 138 H496 Z"/>
+</svg>
+            <figcaption><strong>The idea in one picture:</strong> every idea gets tested in a research notebook first. Most are crossed out, a rare one earns a check mark, and real money stays locked on the other side of the line.</figcaption>
           </figure>
         </div>
         <div class="feature-callout">
-  <span class="callout-label">The record</span>
-  <strong class="callout-title"><span data-claim="opt_verdict_total">446</span> conclusions recorded; <span data-claim="opt_pass">11</span> passed every research check; the system remains <em>on paper.</em></strong>
-  <span class="callout-copy"><em class="caveat">Not one dollar of real money has ever been placed.</em> The system stops when the evidence is incomplete. Decision: <strong data-claim="opt_governance">STAY ON PAPER</strong>.</span>
-  </div>
-        <div class="metrics">
-  <div class="metric">
-  <strong data-claim="opt_backtest_results">15,412</strong>
-  <span>historical test results</span>
-  </div>
-  <div class="metric">
-  <strong data-claim="opt_pass">11</strong>
-  <span>passed every research check</span>
-  </div>
-  <div class="metric">
-  <strong><span data-claim="opt_matrix_tested">220</span>/<span data-claim="opt_matrix_total">583</span></strong>
-  <span>of the planned test combinations have been run</span>
-  </div>
-  <div class="metric">
-  <strong data-claim="opt_incidents">11</strong>
-  <span>incidents logged and retained</span>
-  </div>
+  <span class="callout-label">The result</span>
+  <strong class="callout-title"><span data-claim="opt_verdict_total">446</span> ideas tested; <span data-claim="opt_pass">11</span> passed every check.</strong>
+  <span class="callout-copy">Not one dollar of real money has ever been placed. The standing decision is to keep everything on paper.</span>
   </div>
 </header>
 <details class="page-toc container">
-  <summary>On this page · 5 sections</summary>
+  <summary>On this page · 5 sections · 5 min read</summary>
   <nav class="page-toc-links" aria-label="On this page">
-    <span class="page-toc-label" aria-hidden="true">On this page</span>
-    <a href="#lifecycle">How it works</a>
+    <span class="page-toc-label" aria-hidden="true">On this page · 5 min</span>
     <a href="#problem">Problem</a>
+    <a href="#lifecycle">How it works</a>
     <a href="#finding">Finding</a>
+    <a href="#scale">Scale</a>
     <a href="#controls">System checks</a>
-    <a href="#receipt">Evidence record</a>
   </nav>
 </details>
-<section class="site-section tone-soft" data-intent="sequence" data-template="timeline" data-lead="stack" data-tone="soft" data-attention="component" data-depth="primary" id="lifecycle">
-  <div class="section-shell">
-    <div class="kicker">The ordinary-language version</div>
-    <h2>An idea has to survive the whole loop.</h2>
-    <div class="steps">
-    <div class="step"><strong>01</strong><span><strong>Write the question.</strong> Say what the idea is supposed to explain.</span></div>
-    <div class="step"><strong>02</strong><span><strong>Decide what would prove it wrong.</strong> Set the comparison and failure rule before running the test.</span></div>
-    <div class="step"><strong>03</strong><span><strong>Run the historical check.</strong> Replay the question against past data and keep the underlying records.</span></div>
-    <div class="step"><strong>04</strong><span><strong>Challenge the result.</strong> Compare it with a simpler explanation and keep the trade on paper.</span></div>
-    <div class="step"><strong>05</strong><span><strong>Record what happened.</strong> Pass, fail, noise, or not enough data all stay in the dated record.</span></div>
-    <div class="step"><strong>06</strong><span><strong>Reconcile before the next run.</strong> Check what changed and keep real-money decisions out of the loop.</span></div>
-    </div>
-  </div>
-</section>
 <section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" data-depth="primary" id="problem">
   <div class="section-shell">
     <div class="section-grid">
     <div class="lead-heading">
     <div class="kicker">The problem</div>
-    <h2>Finding something interesting is easy. Knowing whether it is real is <span class="heading-focus">the job.</span></h2>
+    <h2>Finding something interesting is easy. Knowing whether it's real is <span class="heading-focus">the job.</span></h2>
     </div>
     <div class="lead-body prose">
-    <p>A historical test can produce a beautiful line and still answer a question nobody wrote down in advance. The danger is not that the result is ugly. It is that the result becomes <span>persuasive before anyone asks what produced it</span> by accident.</p>
-    <p>This project makes the challenge part of the system: finite questions, explicit controls, paper execution, and <span>a record of what got rejected</span>. Markets are the harshest place to learn that <span>a persuasive chart can be nothing</span>. That is the same lesson a campaign dashboard teaches, only faster and with a scoreboard.</p>
+    <p>A test on past market data can draw a beautiful line that means nothing, especially when nobody wrote the question down first. A convincing chart isn't proof.</p>
+    <p><strong>This project makes challenging the result part of the routine</strong>: a limited list of questions, fair comparisons, simulated money only, and a record of everything that got rejected.</p>
     </div>
+    </div>
+  </div>
+</section>
+<section class="site-section tone-soft" data-intent="sequence" data-template="timeline" data-lead="stack" data-tone="soft" data-attention="component" data-depth="primary" id="lifecycle">
+  <div class="section-shell">
+    <div class="kicker">In plain terms</div>
+    <h2>An idea has to survive the whole loop.</h2>
+    <div class="steps is-compact">
+    <div class="step"><strong>01</strong><span><strong>Write the question.</strong> Say exactly what the idea should explain.</span></div>
+    <div class="step"><strong>02</strong><span><strong>Decide what would prove it wrong.</strong> Set the comparison and failure rule first.</span></div>
+    <div class="step"><strong>03</strong><span><strong>Replay history.</strong> Test against past market data and keep the records.</span></div>
+    <div class="step"><strong>04</strong><span><strong>Challenge the result.</strong> Compare it with a simpler explanation, simulated money only.</span></div>
+    <div class="step"><strong>05</strong><span><strong>Record what happened.</strong> Pass, fail, no real pattern, or too little data, all dated.</span></div>
+    <div class="step"><strong>06</strong><span><strong>Check before the next run.</strong> See what changed, and keep real money out.</span></div>
     </div>
   </div>
 </section>
@@ -168,38 +185,27 @@
     <h2>Most ideas do not survive a fair comparison.</h2>
     <figure class="media-block system-visual">
     <div class="process-flow">
-      <article class="process-stage"><span class="process-stage-label">01 · Recorded</span><strong><span data-claim="opt_verdict_total">446</span></strong><span>research conclusions written into the record</span></article>
+      <article class="process-stage"><span class="process-stage-label">01 · Tested</span><strong><span data-claim="opt_verdict_total">446</span></strong><span>ideas tested and written into the record</span></article>
       <article class="process-stage is-decision"><span class="process-stage-label">02 · Still plausible</span><strong>38</strong><span>were not negative or incomplete after the first cut</span></article>
-      <article class="process-stage is-outcome"><span class="process-stage-label">03 · Passed</span><strong><span data-claim="opt_pass">11</span></strong><span>passed the full set of checks</span></article>
+      <article class="process-stage is-outcome"><span class="process-stage-label">03 · Passed</span><strong><span data-claim="opt_pass">11</span></strong><span>passed every check</span></article>
     </div>
     <div class="visual-note"><strong><span data-claim="opt_negative_total">408</span> stopped early</strong><span>Another 27 looked better or repeated successfully but still did not qualify as a clean pass.</span></div>
-    <figcaption><strong>Passing is a high bar on purpose.</strong> A result can look interesting, beat one comparison, or repeat on a second run and still fail the full set of checks.</figcaption>
+    <figcaption><strong>Passing is a high bar on purpose.</strong> <span data-claim="opt_negative_share">91.5%</span> came back negative or incomplete. An idea can look interesting, beat one comparison, or repeat once and still fail the full set of checks.</figcaption>
     </figure>
-    <div class="card-grid">
-    <div class="card">
-    <span class="card-label">446 · RECORDED</span>
-    <strong><span data-claim="opt_negative_share">91.5%</span> come back negative or incomplete.</strong>
-    <span>Of <span data-claim="opt_verdict_total">446</span> conclusions logged, <span data-claim="opt_negative_total">408</span> failed, looked like noise, or did not have enough data to judge. Only <span data-claim="opt_pass">11</span> passed every research check.</span>
-    </div>
-    <div class="card">
-    <span class="card-label">STATUS · <span data-claim="opt_status_date">2026-08-16 20:33</span></span>
-    <strong>The operating decision stays conservative on purpose.</strong>
-    <span>Decision in the dated evidence record: <strong class="decision-stamp" data-claim="opt_governance">STAY ON PAPER</strong>. Nothing here has been sized for real money.</span>
-    </div>
-    </div>
+    <p class="section-outro"><span class="card-label">Status as of <span data-claim="opt_status_date">August 16, 2026</span></span> The decision in the dated record: <strong class="decision-stamp" data-claim="opt_governance">STAY ON PAPER</strong>. Nothing here has been sized for real money.</p>
     <details>
-    <summary>Compare every recorded verdict</summary>
+    <summary>See every recorded result</summary>
     <figure class="media-block">
-    <div class="verdict-distribution" role="img" aria-label="Distribution of all 446 recorded verdicts. Noise is the largest group at 190; 11 passed every check.">
-      <div class="verdict-row"><span>Noise</span><meter min="0" max="190" value="190">190 of 190</meter><strong>190</strong></div>
-      <div class="verdict-row"><span>No usable data</span><meter min="0" max="190" value="102">102 of 190</meter><strong>102</strong></div>
-      <div class="verdict-row"><span>Failed</span><meter min="0" max="190" value="79">79 of 190</meter><strong>79</strong></div>
-      <div class="verdict-row"><span>Weaker than comparison</span><meter min="0" max="190" value="37">37 of 190</meter><strong>37</strong></div>
-      <div class="verdict-row"><span>Better, not a clean pass</span><meter min="0" max="190" value="16">16 of 190</meter><strong>16</strong></div>
-      <div class="verdict-row"><span>Repeated, not a clean pass</span><meter min="0" max="190" value="11">11 of 190</meter><strong>11</strong></div>
-      <div class="verdict-row is-pass"><span>Passed every check</span><meter min="0" max="190" value="11">11 of 190</meter><strong>11</strong></div>
+    <div class="verdict-distribution" role="img" aria-label="All 446 recorded results. No real pattern is the largest group at 190; 11 passed every check.">
+      <div class="verdict-row"><span>No real pattern</span><meter min="0" max="446" value="190">190 of 446</meter><strong>190</strong></div>
+      <div class="verdict-row"><span>No usable data</span><meter min="0" max="446" value="102">102 of 446</meter><strong>102</strong></div>
+      <div class="verdict-row"><span>Failed</span><meter min="0" max="446" value="79">79 of 446</meter><strong>79</strong></div>
+      <div class="verdict-row"><span>Weaker than the comparison</span><meter min="0" max="446" value="37">37 of 446</meter><strong>37</strong></div>
+      <div class="verdict-row"><span>Better, not a clean pass</span><meter min="0" max="446" value="16">16 of 446</meter><strong>16</strong></div>
+      <div class="verdict-row"><span>Repeated, not a clean pass</span><meter min="0" max="446" value="11">11 of 446</meter><strong>11</strong></div>
+      <div class="verdict-row is-pass"><span>Passed every check</span><meter min="0" max="446" value="11">11 of 446</meter><strong>11</strong></div>
     </div>
-    <figcaption>The full record keeps every outcome visible: better, passed, repeated, weaker, noise, failed, or no usable data.</figcaption>
+    <figcaption>Every outcome stays visible, drawn against all 446 ideas: no real pattern, no usable data, failed, weaker, better, repeated, or passed.</figcaption>
     </figure>
     </details>
   </div>
@@ -209,31 +215,36 @@
     <div class="section-grid">
     <div class="lead-heading">
     <div class="kicker">The scale of the check</div>
-    <h2>The conclusions rest on a much <span class="heading-focus">larger evidence set.</span></h2>
+    <h2>Each conclusion rests on a much <span class="heading-focus">bigger pile of tests.</span></h2>
     </div>
     <div class="lead-body prose">
-    <p><span data-claim="opt_backtest_results">15,412</span> historical-test results and <span data-claim="opt_per_trade">988,538</span> individual simulated-trade records fed into those 446 conclusions, over <span data-claim="opt_engine_hours">6,479.2</span> hours of computer time. <strong>The conclusions are the short answer; these are the records underneath them.</strong></p>
+    <p>Every conclusion sits on top of thousands of historical tests, run over <span data-claim="opt_engine_hours">6,479.2</span> hours of computer time. <strong>That is about <span data-claim="est_opt_engine_days">270</span> days of a computer working nonstop.</strong></p>
     </div>
     </div>
     <figure class="media-block system-visual">
-    <div class="evidence-stack" aria-label="Evidence supporting the options research verdicts">
-      <div class="evidence-row"><span>Final research conclusions</span><strong><span data-claim="opt_verdict_total">446</span> verdicts</strong></div>
-      <div class="evidence-row"><span>Results from historical simulations</span><strong><span data-claim="opt_backtest_results">15,412</span> results</strong></div>
-      <div class="evidence-row"><span>Individual simulated trades inspected underneath the results</span><strong><span data-claim="opt_per_trade">988,538</span> records</strong></div>
+    <div class="nested-scale" role="img" aria-label="Three nested layers: 988,538 simulated trades inside 15,412 historical tests, which sit behind 446 final conclusions.">
+      <div class="nested-layer">
+        <span class="nested-label"><strong><span data-claim="opt_per_trade">988,538</span></strong> simulated trades</span>
+        <div class="nested-layer">
+          <span class="nested-label"><strong><span data-claim="opt_backtest_results">15,412</span></strong> historical tests</span>
+          <div class="nested-layer is-core">
+            <span class="nested-label"><strong><span data-claim="opt_verdict_total">446</span></strong> final conclusions</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="visual-note"><strong><span data-claim="opt_engine_hours">6,479.2</span> computer hours</strong><span>Run time is evidence of scale, not proof that an idea works. The gate still decides what the system is allowed to claim.</span></div>
-    <figcaption>These are different layers of the same research process, not one funnel and not 988,538 separate experiments.</figcaption>
+    <figcaption><strong>Each box holds the next.</strong> Computer time shows effort, not that an idea works; the checks still decide what counts.</figcaption>
     </figure>
     <figure class="media-block system-visual">
     <div class="coverage-panel">
-      <span class="visual-label">Declared research plan covered so far</span>
+      <span class="visual-label">Research plan tested so far</span>
       <progress class="coverage-meter" max="583" value="220" aria-label="220 of 583 planned test combinations have evidence">220 of 583</progress>
       <div class="visual-stat-pair">
-        <div class="visual-stat is-accent"><strong><span data-claim="opt_matrix_tested">220</span></strong><span>planned test combinations with evidence</span></div>
-        <div class="visual-stat"><strong><span data-claim="opt_matrix_total">583</span></strong><span>planned test combinations in the full map</span></div>
+        <div class="visual-stat is-accent"><strong><span data-claim="opt_matrix_tested">220</span></strong><span>planned test combinations run so far</span></div>
+        <div class="visual-stat"><strong><span data-claim="opt_matrix_total">583</span></strong><span>planned test combinations in the full plan</span></div>
       </div>
     </div>
-    <figcaption><strong>Untested combinations are not evidence.</strong> Showing the full denominator makes the unfinished work visible.</figcaption>
+    <figcaption><strong>Untested combinations are not evidence.</strong> Showing the whole plan keeps the unfinished work visible.</figcaption>
     </figure>
   </div>
 </section>
@@ -241,31 +252,31 @@
   <div class="section-shell">
     <div class="kicker">System checks</div>
     <h2>The research is only as trustworthy as the system running it.</h2>
-    <p class="section-intro">A conclusion is only as good as the steps that produced it, so those steps are checked on a normal cadence—not just when a result looks surprising.</p>
+    <p class="section-intro">The steps that produce a conclusion get checked on a schedule, not only when a result looks surprising.</p>
     <div class="card-grid">
     <div class="card">
-    <span class="card-label">TESTS</span>
+    <span class="card-label">Tests</span>
     <strong>
-    <span data-claim="opt_tests">952</span> automated tests passing; <span data-claim="opt_coverage">48.8</span>% of code lines exercised.</strong>
-    <span>That is not full coverage. The number is a minimum safety check, not a finish line.</span>
+    <span data-claim="opt_tests">952</span> automated tests pass; they exercise <span data-claim="opt_coverage">48.8</span>% of the code.</strong>
+    <span>That's a safety net, not full coverage.</span>
     </div>
     <div class="card">
-    <span class="card-label">INCIDENTS</span>
+    <span class="card-label">Problems caught</span>
     <strong>
-    <span data-claim="opt_incidents">11</span> problems logged; the middle one was noticed in <span data-claim="opt_mttd">24.0</span> hours.</strong>
+    <span data-claim="opt_incidents">11</span> problems logged; the typical one was noticed within <span data-claim="opt_mttd">24.0</span> hours.</strong>
     <span>
-    Each incident stays in the internal log with what broke and when the system caught it. This portfolio shows the count and one sanitized example because hidden failures do not make a research engine more trustworthy.</span>
+    Each stays in the log with what broke and when it was caught.</span>
     </div>
     <div class="card">
-    <span class="card-label">ONE INCIDENT, SANITIZED</span>
-    <strong>A broken run stayed out of the result record.</strong>
-    <span>A scheduled run produced incomplete evidence, so the health check stopped it before a conclusion could be recorded. After the missing coverage was repaired, the run was repeated and the incident remained in the log.</span>
+    <span class="card-label">One example</span>
+    <strong>A broken run was kept out of the results.</strong>
+    <span>A health check stopped an incomplete run before any conclusion was recorded.</span>
     </div>
     <div class="card">
-    <span class="card-label">AUTOMATION</span>
+    <span class="card-label">Automation</span>
     <strong>
-    <span data-claim="opt_cron">34</span> scheduled tasks keep the system moving.</strong>
-    <span>The research can run on a normal cadence without the owner watching every stage constantly. That changes the workload, not the decision boundary.</span>
+    <span data-claim="opt_cron">34</span> scheduled tasks keep it running.</strong>
+    <span>I read results instead of watching every step; what the system may do stays the same.</span>
     </div>
     </div>
   </div>
@@ -275,30 +286,30 @@
     <div class="kicker">What it took</div>
     <h2>A passing result is still not proof.</h2>
     <div class="detail-list takeaway-list">
-      <article class="detail-row"><span class="card-label">Time and scale</span><div class="detail-row-copy"><span>15,412 historical-test results, 988,538 individual simulated-trade records, and a recurring operating cadence made the evidence expensive enough to respect.</span></div></article>
-      <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>One incomplete run was stopped before it could enter the result record; the problem stayed visible after repair.</span></div></article>
-      <article class="detail-row"><span class="card-label">Next time</span><div class="detail-row-copy"><span>I would surface coverage gaps even earlier and keep the “not enough evidence” path as prominent as the pass path.</span></div></article>
-      <article class="detail-row"><span class="card-label">Why it belongs</span><div class="detail-row-copy"><span>The system makes a conservative decision—stay on paper—while showing exactly how the checks and failures shaped it.</span></div></article>
+      <article class="detail-row"><span class="card-label">How long</span><div class="detail-row-copy"><span>Built mostly between late July and mid-September 2026, a rough estimate from the project's file dates. It keeps running on its own schedule.</span></div></article>
+      <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>An incomplete run. It was repeated after the fix, and the problem stayed in the log.</span></div></article>
+      <article class="detail-row"><span class="card-label">Do differently</span><div class="detail-row-copy"><span>Show the untested gaps sooner, and make "not enough evidence" as easy to see as a pass.</span></div></article>
     </div>
   </div>
 </section>
 <section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" data-depth="technical" id="receipt">
   <div class="section-shell">
     <div class="kicker">Evidence record</div>
-    <h2>The checked numbers behind the research decision.</h2>
+    <h2>Every number on this page, with its source.</h2>
     <details>
-    <summary>Open the checked research evidence</summary>
-    <p>This public record contains counts and process measures only. Strategy names, assets tested, cutoffs, position sizing, and every positive edge value are deliberately excluded. The checked summary stays public; the larger working record remains private.
+    <summary>Open the full evidence record</summary>
+    <p>This public record contains counts and process measures only. Strategy names, which stocks were tested, cutoffs, position sizes, and any result that could reveal a winning idea are deliberately left out. The checked summary stays public; the larger working record remains private.
     </p>
+    <p class="caption"><strong>One row is one recorded verdict, not one trade.</strong> A single idea can be tested many times, and every run is written down whether it passed or failed. Nothing here was sized for real money.</p>
     <div class="receipt-overview">
-    <div class="receipt-overview-item"><h3>The claim</h3><p>Conclusions recorded, how many passed every check, and the final decision to stay on paper.</p></div>
-    <div class="receipt-overview-item"><h3>The checks</h3><p>Fair comparisons, system problems, automated-test coverage, and the broken run that stayed out of the record.</p></div>
-    <div class="receipt-overview-item"><h3>The scale</h3><p>Historical-test results, planned combinations completed, computer time, and scheduled tasks.</p></div>
+    <div class="receipt-overview-item"><h3>The claim</h3><p>How many ideas were tested, how many passed every check, and the decision to stay on paper.</p></div>
+    <div class="receipt-overview-item"><h3>The checks</h3><p>Fair comparisons, problems the system caught, and how much of the code the tests cover.</p></div>
+    <div class="receipt-overview-item"><h3>The scale</h3><p>Historical tests, how much of the plan has run, computer time, and scheduled tasks.</p></div>
     </div>
     <div class="receipt-grid">
     <div class="receipt-item">
     <strong data-claim="opt_verdict_total">446</strong>
-    <span>conclusions recorded</span>
+    <span>ideas tested and recorded</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_pass">11</strong>
@@ -306,47 +317,47 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_negative_total">408</strong>
-    <span>negative total</span>
+    <span>negative, noise, or not enough data</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_negative_share">91.5%</strong>
-    <span>negative share</span>
+    <span>came back negative or incomplete</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_backtest_results">15,412</strong>
-    <span>historical-test results</span>
+    <span>historical tests</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_per_trade">988,538</strong>
-    <span>simulated trade records</span>
+    <span>simulated trades</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_engine_hours">6,479.2</strong>
-    <span>engine hours</span>
+    <span>hours of computer time</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_matrix_tested">220</strong>
-    <span>planned combinations checked</span>
+    <span>planned combinations tested</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_matrix_total">583</strong>
-    <span>planned combinations total</span>
+    <span>planned combinations in total</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_tests">952</strong>
-    <span>tests passing</span>
+    <span>automated tests passing</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_coverage">48.8</strong>
-    <span>% of code lines exercised</span>
+    <span>% of code exercised by tests</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_incidents">11</strong>
-    <span>incidents logged</span>
+    <span>problems logged</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_mttd">24.0</strong>
-    <span>middle time to notice, hours</span>
+    <span>typical hours until a problem was noticed</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_cron">34</strong>
@@ -354,11 +365,11 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_governance">STAY ON PAPER</strong>
-    <span>final decision</span>
+    <span>standing decision</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="opt_status_date">2026-08-16 20:33</strong>
-    <span>status generated</span>
+    <span>status record generated</span>
     </div>
     </div>
     </details>
@@ -377,25 +388,26 @@
     The system is built to say <span>"not enough evidence" without flinching</span>, a habit worth having on any team.</p>
     </div>
     <div class="action-row">
-    <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Let’s talk on LinkedIn →</a>
-    <a class="button button-secondary" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
-    </div>
+        <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        <a class="text-link resume-text-link" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
+      </div>
     </div>
     </div>
     <div class="read-next">
-    <span class="read-next-label">Keep going</span>
-    <div class="card-grid">
-    <a class="card" href="sports.html">
-    <strong>Sports research</strong>
-    <span>The same rejection-rule discipline, applied to a different subject</span>
-    <span class="action-label">See sports research →</span>
-    </a>
-    <a class="card" href="proof-system.html">
-    <strong>How I check the work</strong>
-    <span>How important claims stay tied to sources</span>
-    <span class="action-label">See how I check the work →</span>
-    </a>
-    </div>
+      <span class="read-next-label">Keep going</span>
+      <div class="card-grid">
+        <a class="card is-next" href="sports.html">
+          <span class="card-label">Next project</span>
+          <strong>Sports Research</strong>
+          <span>It writes down how each sports prediction could be proven wrong before testing it.</span>
+          <span class="action-label">See the research →</span>
+        </a>
+        <a class="card" href="projects.html">
+          <strong>All six projects</strong>
+          <span>Grouped by the kind of problem they solve.</span>
+          <span class="action-label">Browse the projects →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -404,7 +416,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <strong>Juan Tellez</strong>
-      <span>Demand-generation marketer who builds useful things.</span>
+      <span>Marketer in Houston who builds things to learn.</span>
     </div>
     <nav class="footer-links" aria-label="Explore">
       <strong>Explore</strong>
@@ -421,7 +433,7 @@
       <a href="#main-content">Back to top ↑</a>
     </nav>
     <div class="footer-meta">
-      <span>Updated September 2026 · each case study lists its own evidence date and current boundary.</span>
+      <span>Updated September 2026 · every project page lists where its numbers come from.</span>
     </div>
   </div>
 </footer>
@@ -439,6 +451,6 @@
       <span class="image-dialog-status" aria-live="polite"></span>
     </div>
   </dialog>
-  <script src="nav.js?v=06caa1c2fc" defer></script>
+  <script src="nav.js?v=e5f1ea1bd1" defer></script>
 </body>
 </html>

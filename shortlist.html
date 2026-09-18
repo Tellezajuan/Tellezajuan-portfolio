@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}</script>
+  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window)document.documentElement.classList.add("motion-ready");}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ee">
-  <title>Job search workflow — A shortlist worth reading</title>
-  <meta name="description" content="A checked job-search workflow that narrowed 683 roles to 57 worth reading against a written profile over five weeks.">
+  <title>Job search tool — Juan Tellez</title>
+  <meta name="description" content="A job search tool that sorts hundreds of job posts against a written checklist so only the closest matches get read.">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Job search workflow — A shortlist worth reading">
-  <meta property="og:description" content="A checked job-search workflow that narrowed 683 roles to 57 worth reading against a written profile over five weeks.">
+  <meta property="og:title" content="Job search tool — Juan Tellez">
+  <meta property="og:description" content="A job search tool that sorts hundreds of job posts against a written checklist so only the closest matches get read.">
   <meta property="og:url" content="https://www.tellezajuan.com/shortlist.html">
   <link rel="canonical" href="https://www.tellezajuan.com/shortlist.html">
   <meta property="og:image" content="https://www.tellezajuan.com/images/social/shortlist.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Preview card: Job search tool — Juan Tellez">
+  <meta property="og:site_name" content="Juan Tellez">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Job search workflow — A shortlist worth reading">
-  <meta name="twitter:description" content="A checked job-search workflow that narrowed 683 roles to 57 worth reading against a written profile over five weeks.">
+  <meta name="twitter:title" content="Job search tool — Juan Tellez">
+  <meta name="twitter:description" content="A job search tool that sorts hundreds of job posts against a written checklist so only the closest matches get read.">
   <meta name="twitter:image" content="https://www.tellezajuan.com/images/social/shortlist.png">
+  <meta name="twitter:image:alt" content="Preview card: Job search tool — Juan Tellez">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"All Projects","item":"https://www.tellezajuan.com/projects.html"},{"@type":"ListItem","position":2,"name":"Job Search Tool","item":"https://www.tellezajuan.com/shortlist.html"}]}</script>
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=77d0fbd540">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=773516ed30">
 </head>
 <body data-route="shortlist.html" data-recipe="case-study" data-route-role="project">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -32,16 +38,16 @@
     <a class="brand" href="index.html" aria-label="Juan Tellez home">JT<span>.</span></a>
     <nav class="desktop-nav" aria-label="Primary">
       <a class="nav-link" data-page="index.html" href="index.html">Home</a>
-      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life around the work.</span></a>
-<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years of media, measurement, and lead-quality work.</span></a>
-<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>Choices, process, and where AI fits.</span></a>
-<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important claims stay tied to sources.</span></a></div></details>
-      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>Choose a project by the kind of problem it solves.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>How late-arriving conversion credit changed a campaign decision.</span></a></div>
-<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html" aria-current="page"><strong>Job Search Workflow</strong><span>How 683 postings became a checked shortlist worth reading.</span></a>
-<a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Workflow</strong><span>A clip-sifting and editing system with an owner release check.</span></a></div>
-<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html"><strong>Options Research</strong><span>A paper-only system designed to make weak ideas fail safely.</span></a>
-<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>A written testing process with explicit rejection rules.</span></a></div>
-<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon prototype built around returning.</span></a></div></div></div></details>
+      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life outside work.</span></a>
+<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years planning ads and fixing the reports.</span></a>
+<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>How I use AI, and where I make the call.</span></a>
+<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important numbers stay tied to their sources.</span></a></div></details>
+      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All six, grouped by the kind of problem they solve.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look too cheap.</span></a></div>
+<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html" aria-current="page"><strong>Job Search Tool</strong><span>Sorting hundreds of job posts down to the best fits.</span></a>
+<a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Channel</strong><span>Finding the gaming clips worth posting.</span></a></div>
+<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html"><strong>Options Research</strong><span>Testing stock-market ideas with simulated money.</span></a>
+<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>Writing down how a prediction could be wrong, first.</span></a></div>
+<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon game prototype.</span></a></div></div></div></details>
       <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </nav>
     <div class="header-tools desktop-tools">
@@ -57,8 +63,8 @@
         <a data-page="about-me.html" href="about-me.html">About Juan</a>
         <a data-page="experience.html" href="experience.html">Experience</a>
         <details class="mobile-nav-group" open><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html">Marketing Measurement</a></div>
-<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html" aria-current="page">Job Search Workflow</a>
-<a data-page="cutting-room.html" href="cutting-room.html">YouTube Workflow</a></div>
+<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html" aria-current="page">Job Search Tool</a>
+<a data-page="cutting-room.html" href="cutting-room.html">YouTube Channel</a></div>
 <div class="mobile-project-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html">Options Research</a>
 <a data-page="sports.html" href="sports.html">Sports Research</a></div>
 <div class="mobile-project-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html">Delve</a></div></div></details>
@@ -74,107 +80,111 @@
   </div>
 </header>
   <main id="main-content">
-<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">Job Search Workflow</li></ol></nav>
+<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">Job Search Tool</li></ol></nav>
 <header class="page-intro container" data-block="intro">
   <div class="intro-head">
-          <p class="eyebrow">Job search workflow · written profile · shortlist</p>
-          <h1>I turned hundreds of job postings into a <span>shortlist worth reading</span>.</h1>
+          <p class="eyebrow">Job search tool · personal project</p>
+          <h1>I built a tool that reads hundreds of job posts <span>so I only read the closest matches</span>.</h1>
         </div>
         <div class="intro-grid">
           <div class="intro-copy">
-            <p class="intro-subtitle" data-intro-role="primary">A checked workflow turns roughly 120 new roles a week into a shortlist worth reading.</p>
-            <p class="intro-lede" data-intro-role="supporting">I built a workflow that collects roles from trusted sources and scores each one against a written profile. It narrows hundreds of postings down to the handful worth reading first. <em class="caveat">It stops at a shortlist; I read, choose, and decide what to do next.</em></p>
-            <p class="caption">Tracking window: July 14–August 23, 2026.</p>
+            <p class="intro-subtitle" data-intro-role="primary">Job boards post about <span data-claim="est_sl_roles_per_week">120</span> new roles a week that could fit my search. The tool gathers them from <span data-claim="sl_sources">33</span> sources, scores each one against a short written checklist, and puts the best fits at the top.</p>
+            <p class="intro-lede" data-intro-role="supporting">By my rough estimate, that turns about <span data-claim="est_sl_minutes_by_hand">35</span> minutes a day of skimming into about <span data-claim="est_sl_minutes_with_tool">10</span> minutes of reading the roles worth a closer look.</p>
             <div class="action-row" data-intro-role="action">
-  <a class="button button-primary" href="#workflow">See the workflow</a>
+  <a class="button button-primary" href="#workflow">See how it works</a>
   <a class="button button-secondary" href="#receipt">See the evidence</a>
   </div>
-            <p class="caption">The 102 applications are cumulative across the full July 14–August 23 window. The 57 top-tier figure is a continuously refreshed snapshot, so the two numbers are not expected to match.</p>        </div>
-          <figure class="story-snapshot" data-intro-role="visual">
-            <span class="visual-label">From noise to a readable list</span>
-            <div class="story-steps">
-              <div class="story-step"><span class="story-marker">01</span><span><strong><span data-claim="sl_sourced">683</span> collected</strong><small>Roles from trusted sources</small></span></div>
-              <div class="story-step"><span class="story-marker">02</span><span><strong><span data-claim="sl_scored">615</span> scored</strong><small>Compared with the written profile</small></span></div>
-              <div class="story-step is-decision"><span class="story-marker">03</span><span><strong><span data-claim="sl_top_count">57</span> worth reading first</strong><small>The workflow stops; I decide what follows</small></span></div>
-            </div>
-            <figcaption><strong>The point:</strong> narrow the reading load, never automate the application decision.</figcaption>
+          </div>
+          <figure class="story-illustration" data-intro-role="visual">
+            <svg class="illo" viewBox="0 0 640 340" role="img" aria-label="A tall, messy pile of job posts goes into a funnel with a written checklist clipped to it. Only a small, neat stack comes out the other side, with a pair of reading glasses resting on top.">
+  <rect class="illo-sheet" x="46" y="232" width="128" height="72" rx="8" transform="rotate(-7 110 268)"/>
+  <rect class="illo-sheet" x="58" y="206" width="128" height="72" rx="8" transform="rotate(6 122 242)"/>
+  <rect class="illo-sheet" x="40" y="180" width="128" height="72" rx="8" transform="rotate(-4 104 216)"/>
+  <rect class="illo-sheet" x="62" y="152" width="128" height="72" rx="8" transform="rotate(9 126 188)"/>
+  <rect class="illo-sheet" x="44" y="126" width="128" height="72" rx="8" transform="rotate(-10 108 162)"/>
+  <g transform="rotate(4 118 136)">
+    <rect class="illo-sheet" x="54" y="100" width="128" height="72" rx="8"/>
+    <path class="illo-text" d="M72 122h70M72 138h92M72 154h52"/>
+  </g>
+  <g transform="rotate(-6 106 104)">
+    <rect class="illo-sheet" x="42" y="68" width="128" height="72" rx="8"/>
+    <path class="illo-text" d="M60 90h60M60 106h88M60 122h44"/>
+  </g>
+  <g transform="rotate(16 262 56)">
+    <rect class="illo-sheet" x="232" y="36" width="60" height="38" rx="6"/>
+    <path class="illo-text" d="M242 50h30M242 62h40"/>
+  </g>
+  <path class="illo-faint-dots" d="M196 112 C 222 70, 250 60, 262 70"/>
+  <path class="illo-sheet" d="M258 98 H414 L360 196 V236 H312 V196 Z"/>
+  <path class="illo-faint" d="M282 118 H390"/>
+  <g transform="rotate(-8 402 92)">
+    <rect class="illo-tint" x="372" y="46" width="70" height="86" rx="7"/>
+    <rect class="illo-line" x="393" y="40" width="28" height="12" rx="4"/>
+    <path class="illo-signal-line" d="M384 72l5 5 9-10M384 94l5 5 9-10M384 116l5 5 9-10"/>
+    <path class="illo-text" d="M406 74h24M406 96h24M406 118h18"/>
+  </g>
+  <path class="illo-faint-dots" d="M336 244 C 340 272, 380 286, 430 280"/>
+  <rect class="illo-sheet" x="452" y="236" width="140" height="64" rx="8"/>
+  <rect class="illo-sheet" x="446" y="222" width="140" height="64" rx="8"/>
+  <rect class="illo-sheet" x="440" y="208" width="140" height="64" rx="8"/>
+  <path class="illo-accent-line" d="M458 230h78"/>
+  <path class="illo-text" d="M458 246h100M458 260h64"/>
+  <circle class="illo-line" cx="486" cy="186" r="17"/>
+  <circle class="illo-line" cx="534" cy="186" r="17"/>
+  <path class="illo-line" d="M503 184 Q510 176 517 184M469 182 L452 174M551 182 L566 170"/>
+</svg>
+            <figcaption><strong>The problem in one picture:</strong> a tall pile of job posts goes in. A written checklist sorts it, so only a short stack is left to read closely.</figcaption>
           </figure>
         </div>
         <div class="feature-callout">
-  <span class="callout-label">The record</span>
-  <strong class="callout-title">The workflow narrows the list; I own the <em>reading and application decision.</em></strong>
-  <span class="callout-copy">The system sources and scores continuously, then stops before a consequential choice.</span>
-  </div>
-        <div class="metrics">
-  <div class="metric">
-  <strong data-claim="sl_sourced">683</strong>
-  <span>roles pulled in five weeks</span>
-  </div>
-  <div class="metric">
-  <strong data-claim="sl_top_count">57</strong>
-  <span>top-tier matches of 615 scored roles</span>
-  </div>
-  <div class="metric">
-  <strong data-claim="sl_applied">102</strong>
-  <span>applications tracked across the full window</span>
-  </div>
-  <div class="metric">
-  <strong data-claim="sl_top_share">9.3</strong><span>% of scored roles make the top tier</span>
-  </div>
+  <span class="callout-label">The result</span>
+  <strong class="callout-title"><span data-claim="sl_sourced">683</span> job posts in under six weeks; <span data-claim="sl_top_count">57</span> made the top of the list.</strong>
+  <span class="callout-copy">That is <span data-claim="sl_top_share">9.3</span>% of the <span data-claim="sl_scored">615</span> posts the tool could score, tracked from July 14 to August 23, 2026.</span>
   </div>
 </header>
 <details class="page-toc container">
-  <summary>On this page · 4 sections</summary>
+  <summary>On this page · 5 sections · 4 min read</summary>
   <nav class="page-toc-links" aria-label="On this page">
-    <span class="page-toc-label" aria-hidden="true">On this page</span>
-    <a href="#purpose">Purpose</a>
+    <span class="page-toc-label" aria-hidden="true">On this page · 4 min</span>
     <a href="#workflow">Workflow</a>
+    <a href="#what-broke">What Broke</a>
     <a href="#scoring">Scoring</a>
+    <a href="#what-it-took">What it took</a>
     <a href="#receipt">Evidence record</a>
   </nav>
 </details>
-<section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" data-depth="primary" id="purpose">
+<section class="site-section" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="base" data-attention="heading" data-depth="primary" id="workflow">
   <div class="section-shell">
-    <div class="section-grid">
-    <div class="lead-heading">
     <div class="kicker">Why I built it</div>
     <h2>Scoring is cheap. <span class="heading-focus">Reading is not.</span></h2>
+    <p class="section-intro">Most of a job search is skimming: open a posting, realize it isn't close, move on, repeat. A written checklist can do that first pass, <strong>so the time I spend reading goes to the roles that actually fit</strong>.</p>
+    <figure class="media-block system-visual">
+    <div class="process-flow flow-4">
+      <article class="process-stage"><span class="process-stage-label">01 · Sources</span><strong><span data-claim="sl_sources">33</span></strong><span>job boards and feeds I trust</span></article>
+      <article class="process-stage"><span class="process-stage-label">02 · Collect</span><strong><span data-claim="sl_sourced">683</span></strong><span>job posts gathered during the tracked window</span></article>
+      <article class="process-stage"><span class="process-stage-label">03 · Score</span><strong><span data-claim="sl_scored">615</span></strong><span>posts scored against the written checklist</span></article>
+      <article class="process-stage is-decision"><span class="process-stage-label">04 · I read</span><strong><span data-claim="sl_top_count">57</span></strong><span>top-scoring posts worth opening first</span></article>
     </div>
-    <div class="lead-body prose">
-    <p>A job search is mostly repetitive triage: open a listing, skim it, decide it is not close enough, move on. That work is exactly what a written profile and a scoring pass can do instead: <strong>so the roles I spend time reading are the ones worth reading</strong>.</p>
-    <p>
-    The tool <span>sources broadly and scores consistently</span>, then stops at the top of the list. I read those, and I decide what to do next.</p>
-    </div>
-    </div>
+    <figcaption><strong>Most posts never reach my reading list.</strong> Of 615 scored roles, 558 sat outside the top tier. Each post's source, date, and score stay logged, so the short list can't hide what dropped out.</figcaption>
+    </figure>
   </div>
 </section>
-<section class="site-section" data-intent="reading" data-template="reading" data-lead="stack" data-tone="base" data-attention="heading" data-depth="supporting" id="what-broke">
+<section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="heading" data-depth="supporting" id="what-broke">
   <div class="section-shell">
     <div class="kicker">What broke first</div>
     <div class="section-grid">
     <div>
-    <h2>The first run found six ways to <span class="heading-focus">lose a good result.</span></h2>
+    <h2>The first run found six ways to <span class="heading-focus">lose a good posting.</span></h2>
     </div>
     <div class="prose">
-    <p>The first pipeline run pulled thousands of postings from 117 boards, but only four survived as usable jobs. The problem was not a lack of sources. Six separate filters were quietly discarding good records: source-field mapping, location classification, age filtering, title filtering, board coverage, and formula-based deduplication.</p>
-    <p>Each failure was diagnosed and fixed before the shortlist became useful. That is the professional lesson: reliable prioritization is as much about <em class="caveat">checking what disappeared</em> as ranking what remains.</p>
+    <p>The very first run searched 117 job boards and kept only four jobs. There were plenty of postings; six separate filters were quietly throwing good ones away.</p>
+    <p>I traced and fixed each one before trusting the list. The lesson: a short list only means something if you <em class="caveat">check what disappeared</em>.</p>
     </div>
     </div>
-  </div>
-</section>
-<section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="component" data-depth="primary" id="workflow">
-  <div class="section-shell">
-    <div class="kicker">The workflow</div>
-    <h2>Collect → Score → Read. The system stops before the application decision.</h2>
-    <figure class="media-block system-visual">
-    <div class="process-flow flow-4">
-      <article class="process-stage"><span class="process-stage-label">01 · Sources</span><strong><span data-claim="sl_sources">33</span></strong><span>trusted job boards and feeds</span></article>
-      <article class="process-stage"><span class="process-stage-label">02 · Collect</span><strong><span data-claim="sl_sourced">683</span></strong><span>roles pulled during the tracked window</span></article>
-      <article class="process-stage"><span class="process-stage-label">03 · Score</span><strong><span data-claim="sl_scored">615</span></strong><span>compared with a written profile</span></article>
-      <article class="process-stage is-decision"><span class="process-stage-label">04 · I read</span><strong><span data-claim="sl_top_count">57</span></strong><span>top-score roles worth opening first</span></article>
-    </div>
-    <div class="visual-note"><strong><span data-claim="sl_applied">102</span> applications tracked</strong><span>This is a full-window activity total, not the next step after today's 57-role snapshot. The workflow narrows; I decide whether to apply.</span></div>
-    <figcaption><strong>Everything before I read is narrowing, not deciding.</strong> Of 615 scored roles, 558 sat outside the top tier. The source, timestamp, score, and outcome stay logged so a small shortlist cannot hide where records disappeared.</figcaption>
+    <figure class="media-block leak-list">
+    <span class="visual-label">The six filters that dropped good posts</span>
+    <ol class="tool-chips is-numbered"><li>How each board's fields were read</li><li>How locations were sorted</li><li>The age cutoff</li><li>The job-title match</li><li>Which boards were covered</li><li>Duplicate removal</li></ol>
+    <figcaption><strong>Every one of these looked reasonable on its own.</strong> They only showed up as a problem once I counted what never reached the list.</figcaption>
     </figure>
   </div>
 </section>
@@ -182,58 +192,71 @@
   <div class="section-shell">
     <div class="section-grid">
     <div class="lead-heading">
-    <div class="kicker">What "written profile" actually means</div>
+    <div class="kicker">What the checklist is</div>
     <h2>Not a black box. <span class="heading-focus">A list and a count.</span></h2>
     </div>
     <div class="lead-body prose">
-    <p>The profile is a short list of written fit criteria: the kind of work, level of ownership, channel experience, and practical requirements that matter to me. The score is how many of those criteria show up in a posting's title or description, capped at 10. A posting that <strong>clearly matches several written criteria</strong> scores higher than one that mentions a single keyword in passing.
-    </p>
+    <p>The checklist is a short list of what matters to me: the kind of work, the level of ownership, the marketing channels involved, and practical requirements. A post's score is simply how many of those show up in its title or description. A post that <strong>clearly matches several items</strong> beats one that mentions a single keyword in passing.</p>
     </div>
     </div>
-    <figure class="media-block system-visual profile-score-visual">
-    <div class="criteria-board" role="list" aria-label="The four kinds of written fit criteria used in the first-pass score">
-      <div class="criteria-item" role="listitem"><span class="story-marker">01</span><strong>Kind of work</strong><span>Does the role describe the work I am seeking?</span></div>
-      <div class="criteria-item" role="listitem"><span class="story-marker">02</span><strong>Ownership</strong><span>Is the expected level of responsibility visible?</span></div>
-      <div class="criteria-item" role="listitem"><span class="story-marker">03</span><strong>Channel evidence</strong><span>Does the posting name relevant experience?</span></div>
-      <div class="criteria-item" role="listitem"><span class="story-marker">04</span><strong>Practical fit</strong><span>Do the stated requirements fit the search?</span></div>
+    <figure class="media-block system-visual example-posting">
+    <span class="visual-label">An invented example, not a real posting</span>
+    <div class="posting-card">
+      <strong class="posting-title"><mark class="posting-match">Demand generation</mark> manager</strong>
+      <p><mark class="posting-match">Own the budget</mark> for <mark class="posting-match">paid search and paid social</mark>, build weekly reports, and work with Sales on lead quality. <mark class="posting-match">Remote within the U.S.</mark></p>
     </div>
-    <figcaption><strong>The score counts visible matches; it does not infer hidden fit.</strong> The result is a reading order, not an application decision.</figcaption>
+    <ul class="posting-checks">
+      <li class="is-match"><strong>Kind of work</strong><span>demand generation</span></li>
+      <li class="is-match"><strong>Ownership</strong><span>owns the budget</span></li>
+      <li class="is-match"><strong>Channels</strong><span>paid search and social</span></li>
+      <li class="is-match"><strong>Practical fit</strong><span>location works</span></li>
+    </ul>
+    <figcaption><strong>The score counts what a post actually says.</strong> This example would score 4, the top score in the tracked window. It sets the reading order; it doesn't guess at hidden fit.</figcaption>
+    </figure>
+    <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
+    <div class="verdict-distribution" role="img" aria-label="Of 615 scored posts, 49 scored 0, 53 scored 1, 318 scored 2, 138 scored 3, and 57 scored 4.">
+      <div class="verdict-row"><span>Score 0</span><meter min="0" max="615" value="49">49 of 615</meter><strong>49</strong></div>
+      <div class="verdict-row"><span>Score 1</span><meter min="0" max="615" value="53">53 of 615</meter><strong>53</strong></div>
+      <div class="verdict-row"><span>Score 2 · median</span><meter min="0" max="615" value="318">318 of 615</meter><strong>318</strong></div>
+      <div class="verdict-row is-attention"><span>Score 3</span><meter min="0" max="615" value="138">138 of 615</meter><strong>138</strong></div>
+      <div class="verdict-row is-selected"><span>Score 4 · read first</span><meter min="0" max="615" value="57">57 of 615</meter><strong>57</strong></div>
+    </div>
+    <figcaption><strong>A top score is rare.</strong> Real scores in the tracked window ran from 0 to 4 (the scale allows up to 10). The middle score was <span data-claim="sl_median">2.0</span>, and 57 of 615 scored posts reached 4.</figcaption>
     </figure>
     <div class="highlight">
     <strong>Why that is enough</strong>
-    <span>It is not trying to be clever. It is trying to be a fast, honest first pass, which is exactly the part of the job that does not need me doing it by hand across 683 postings.</span>
+    <span>It isn't trying to be clever. It's a fast, honest first pass through 683 posts, the part of the search that doesn't need me.</span>
     </div>
   </div>
 </section>
 <section class="site-section" data-intent="categories" data-template="horizontal-rows" data-lead="stack" data-tone="base" data-attention="component" data-depth="supporting" id="what-it-took">
   <div class="section-shell">
     <div class="kicker">What it took</div>
-    <h2>A useful shortlist needed more than a score.</h2>
+    <h2>A useful list needed more than a score.</h2>
     <div class="detail-list takeaway-list">
-      <article class="detail-row"><span class="card-label">Repair work</span><div class="detail-row-copy"><span>The first run lost good records in six different places, so I traced each filter and repaired the handoff before trusting the ranking.</span></div></article>
-      <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>Source fields, location rules, age filters, title filters, board coverage, and deduplication each removed useful jobs.</span></div></article>
-      <article class="detail-row"><span class="card-label">Next time</span><div class="detail-row-copy"><span>I would measure and log every discard earlier, so a small shortlist never looks like a good result until the missing records are explained.</span></div></article>
-      <article class="detail-row"><span class="card-label">Why it belongs</span><div class="detail-row-copy"><span>The result is a readable 57-role snapshot from 615 scored roles, backed by a workflow that shows what disappeared and why.</span></div></article>
+      <article class="detail-row"><span class="card-label">How long</span><div class="detail-row-copy"><span>Built between early July and mid-August 2026, a rough estimate from the project's file dates.</span></div></article>
+      <article class="detail-row"><span class="card-label">Time it saves</span><div class="detail-row-copy"><span>About <span data-claim="est_sl_minutes_with_tool">10</span> minutes a day of reading instead of about <span data-claim="est_sl_minutes_by_hand">35</span> minutes of skimming. That is my rough estimate: roughly 17 new posts a day at a couple of minutes each.</span></div></article>
+      <article class="detail-row"><span class="card-label">Do differently</span><div class="detail-row-copy"><span>Log every post a filter throws away from day one, so a short list never looks good before the missing ones are explained.</span></div></article>
     </div>
   </div>
 </section>
 <section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" data-depth="technical" id="receipt">
   <div class="section-shell">
     <div class="kicker">Evidence record</div>
-    <h2>The checked numbers behind the shortlist.</h2>
+    <h2>Every number on this page, with its source.</h2>
     <details>
-    <summary>Open the checked workflow evidence</summary>
-    <p>This public record contains totals only. Company names, job titles, links, salaries, and any record of where I applied are deliberately excluded. The status split is 102 Applied, 1 Error, 5 Manual, and 575 New, which totals the 683 roles pulled. The checked summary stays public; the larger working record remains private.
-    </p>
+    <summary>Open the full evidence record</summary>
+    <p>This public record contains totals only. Company names, job titles, links, and salaries are deliberately left out. The checked summary stays public; the larger working record remains private.</p>
+    <p class="caption"><strong>One row is one job posting, counted once.</strong> Postings gathered, postings scored, and postings worth reading first are narrowing stages of the same pile, so the smaller numbers are always inside the larger ones.</p>
     <div class="receipt-overview">
-    <div class="receipt-overview-item"><h3>The claim</h3><p><strong class="metric-value">683</strong> roles pulled, 615 scored, and 57 worth reading first.</p></div>
-    <div class="receipt-overview-item"><h3>The checks</h3><p>Source coverage, scoring, whether every role status adds up, and the point where my judgment begins.</p></div>
-    <div class="receipt-overview-item"><h3>The scale</h3><p>Sources, automated collectors, dates, and the complete role-status split.</p></div>
+    <div class="receipt-overview-item"><h3>The claim</h3><p><strong class="metric-value">683</strong> job posts gathered, 615 scored, and 57 worth reading first.</p></div>
+    <div class="receipt-overview-item"><h3>The checks</h3><p>Where posts came from, how they were scored, and where my own reading begins.</p></div>
+    <div class="receipt-overview-item"><h3>The scale</h3><p>Sources, automated collectors, and the tracking dates.</p></div>
     </div>
     <div class="receipt-grid">
     <div class="receipt-item">
     <strong data-claim="sl_sourced">683</strong>
-    <span>roles pulled</span>
+    <span>job posts gathered</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_sources">33</strong>
@@ -241,69 +264,34 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_scrapers">31</strong>
-    <span>automated source collectors</span>
+    <span>automated collectors</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_scored">615</strong>
-    <span>roles scored</span>
+    <span>posts scored</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_top_count">57</strong>
-    <span>top-tier matches</span>
+    <span>top-scoring posts</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_top_share">9.3</strong>
-    <span>% top-tier share</span>
+    <span>% of scored posts reached the top score</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_median">2.0</strong>
-    <span>median score</span>
-    </div>
-    <div class="receipt-item">
-    <strong data-claim="sl_applied">102</strong>
-    <span>applications tracked across full window</span>
-    </div>
-    <div class="receipt-item">
-    <strong data-claim="sl_applied_share">14.9</strong>
-    <span>% of pulled roles applied to</span>
-    </div>
-    <div class="receipt-item">
-    <strong data-claim="sl_new">575</strong>
-    <span>roles still untouched</span>
-    </div>
-    <div class="receipt-item">
-    <strong data-claim="sl_error">1</strong>
-    <span>error status</span>
-    </div>
-    <div class="receipt-item">
-    <strong data-claim="sl_manual">5</strong>
-    <span>manual status</span>
-    </div>
-    <div class="receipt-item">
-    <strong data-claim="sl_status_total">683</strong>
-    <span>status total across pulled roles</span>
+    <span>middle score</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_window_start">2026-07-14</strong>
-    <span>window start</span>
+    <span>tracking started</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="sl_window_end">2026-08-23</strong>
-    <span>window end</span>
+    <span>tracking ended</span>
     </div>
     </div>
     </details>
-    <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
-    <div class="verdict-distribution" role="img" aria-label="Of 615 scored roles, 49 scored 0, 53 scored 1, 318 scored 2, 138 scored 3, and 57 scored 4.">
-      <div class="verdict-row"><span>Score 0</span><meter min="0" max="318" value="49">49 of 318</meter><strong>49</strong></div>
-      <div class="verdict-row"><span>Score 1</span><meter min="0" max="318" value="53">53 of 318</meter><strong>53</strong></div>
-      <div class="verdict-row"><span>Score 2 · median</span><meter min="0" max="318" value="318">318 of 318</meter><strong>318</strong></div>
-      <div class="verdict-row is-attention"><span>Score 3</span><meter min="0" max="318" value="138">138 of 318</meter><strong>138</strong></div>
-      <div class="verdict-row is-selected"><span>Score 4 · read first</span><meter min="0" max="318" value="57">57 of 318</meter><strong>57</strong></div>
-    </div>
-    <figcaption><strong>The top score is intentionally rare.</strong> On the 0-to-4 scale, the median is <span data-claim="sl_median">2.0</span>; 57 of 615 scored roles reached 4 and were worth reading first.</figcaption>
-    </figure>
-    <p class="caption">More applications (102) than the current top-tier snapshot (57) is expected: applications span the full tracked window, while the top tier is scored continuously as new roles arrive.</p>
   </div>
 </section>
 <section class="site-section tone-inverse" data-intent="ending" data-template="split-ending" data-lead="stack" data-tone="inverse" data-attention="action" data-depth="primary" id="talk">
@@ -319,25 +307,26 @@
     <span>If that overlaps with what you’re building</span>, I’d like to hear about it.</p>
     </div>
     <div class="action-row">
-    <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Let’s talk on LinkedIn →</a>
-    <a class="button button-secondary" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
-    </div>
+        <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        <a class="text-link resume-text-link" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
+      </div>
     </div>
     </div>
     <div class="read-next">
-    <span class="read-next-label">Keep going</span>
-    <div class="card-grid">
-    <a class="card" href="proof-system.html">
-    <strong>How I check the work</strong>
-    <span>How important claims stay tied to sources</span>
-    <span class="action-label">See how I check the work →</span>
-    </a>
-    <a class="card" href="projects.html">
-    <strong>All projects</strong>
-    <span>Six projects, one route through them</span>
-    <span class="action-label">Browse projects →</span>
-    </a>
-    </div>
+      <span class="read-next-label">Keep going</span>
+      <div class="card-grid">
+        <a class="card is-next" href="cutting-room.html">
+          <span class="card-label">Next project</span>
+          <strong>YouTube Channel</strong>
+          <span>It sorts tens of thousands of game clips down to the ones worth a look.</span>
+          <span class="action-label">See the video system →</span>
+        </a>
+        <a class="card" href="projects.html">
+          <strong>All six projects</strong>
+          <span>Grouped by the kind of problem they solve.</span>
+          <span class="action-label">Browse the projects →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -346,7 +335,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <strong>Juan Tellez</strong>
-      <span>Demand-generation marketer who builds useful things.</span>
+      <span>Marketer in Houston who builds things to learn.</span>
     </div>
     <nav class="footer-links" aria-label="Explore">
       <strong>Explore</strong>
@@ -363,7 +352,7 @@
       <a href="#main-content">Back to top ↑</a>
     </nav>
     <div class="footer-meta">
-      <span>Updated September 2026 · each case study lists its own evidence date and current boundary.</span>
+      <span>Updated September 2026 · every project page lists where its numbers come from.</span>
     </div>
   </div>
 </footer>
@@ -381,6 +370,6 @@
       <span class="image-dialog-status" aria-live="polite"></span>
     </div>
   </dialog>
-  <script src="nav.js?v=06caa1c2fc" defer></script>
+  <script src="nav.js?v=e5f1ea1bd1" defer></script>
 </body>
 </html>

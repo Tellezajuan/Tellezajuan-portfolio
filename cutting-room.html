@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}</script>
+  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window)document.documentElement.classList.add("motion-ready");}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ee">
-  <title>YouTube workflow — From clips to publish-ready videos</title>
-  <meta name="description" content="A repeatable video pipeline that turns daily clip discovery into publish-ready videos with checks and a clear release decision.">
+  <title>YouTube channel system — Juan Tellez</title>
+  <meta name="description" content="A system that searches thousands of gaming clips a day and turns the best into videos, with a person approving every one.">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="YouTube workflow — From clips to publish-ready videos">
-  <meta property="og:description" content="A repeatable video pipeline that turns daily clip discovery into publish-ready videos with checks and a clear release decision.">
+  <meta property="og:title" content="YouTube channel system — Juan Tellez">
+  <meta property="og:description" content="A system that searches thousands of gaming clips a day and turns the best into videos, with a person approving every one.">
   <meta property="og:url" content="https://www.tellezajuan.com/cutting-room.html">
   <link rel="canonical" href="https://www.tellezajuan.com/cutting-room.html">
   <meta property="og:image" content="https://www.tellezajuan.com/images/social/cutting-room.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Preview card: YouTube channel system — Juan Tellez">
+  <meta property="og:site_name" content="Juan Tellez">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="YouTube workflow — From clips to publish-ready videos">
-  <meta name="twitter:description" content="A repeatable video pipeline that turns daily clip discovery into publish-ready videos with checks and a clear release decision.">
+  <meta name="twitter:title" content="YouTube channel system — Juan Tellez">
+  <meta name="twitter:description" content="A system that searches thousands of gaming clips a day and turns the best into videos, with a person approving every one.">
   <meta name="twitter:image" content="https://www.tellezajuan.com/images/social/cutting-room.png">
+  <meta name="twitter:image:alt" content="Preview card: YouTube channel system — Juan Tellez">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"All Projects","item":"https://www.tellezajuan.com/projects.html"},{"@type":"ListItem","position":2,"name":"YouTube Channel","item":"https://www.tellezajuan.com/cutting-room.html"}]}</script>
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=77d0fbd540">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=773516ed30">
 </head>
 <body data-route="cutting-room.html" data-recipe="case-study" data-route-role="project">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -32,16 +38,16 @@
     <a class="brand" href="index.html" aria-label="Juan Tellez home">JT<span>.</span></a>
     <nav class="desktop-nav" aria-label="Primary">
       <a class="nav-link" data-page="index.html" href="index.html">Home</a>
-      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life around the work.</span></a>
-<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years of media, measurement, and lead-quality work.</span></a>
-<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>Choices, process, and where AI fits.</span></a>
-<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important claims stay tied to sources.</span></a></div></details>
-      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>Choose a project by the kind of problem it solves.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>How late-arriving conversion credit changed a campaign decision.</span></a></div>
-<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html"><strong>Job Search Workflow</strong><span>How 683 postings became a checked shortlist worth reading.</span></a>
-<a data-page="cutting-room.html" href="cutting-room.html" aria-current="page"><strong>YouTube Workflow</strong><span>A clip-sifting and editing system with an owner release check.</span></a></div>
-<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html"><strong>Options Research</strong><span>A paper-only system designed to make weak ideas fail safely.</span></a>
-<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>A written testing process with explicit rejection rules.</span></a></div>
-<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon prototype built around returning.</span></a></div></div></div></details>
+      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life outside work.</span></a>
+<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years planning ads and fixing the reports.</span></a>
+<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>How I use AI, and where I make the call.</span></a>
+<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important numbers stay tied to their sources.</span></a></div></details>
+      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All six, grouped by the kind of problem they solve.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look too cheap.</span></a></div>
+<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html"><strong>Job Search Tool</strong><span>Sorting hundreds of job posts down to the best fits.</span></a>
+<a data-page="cutting-room.html" href="cutting-room.html" aria-current="page"><strong>YouTube Channel</strong><span>Finding the gaming clips worth posting.</span></a></div>
+<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html"><strong>Options Research</strong><span>Testing stock-market ideas with simulated money.</span></a>
+<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>Writing down how a prediction could be wrong, first.</span></a></div>
+<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon game prototype.</span></a></div></div></div></details>
       <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </nav>
     <div class="header-tools desktop-tools">
@@ -57,8 +63,8 @@
         <a data-page="about-me.html" href="about-me.html">About Juan</a>
         <a data-page="experience.html" href="experience.html">Experience</a>
         <details class="mobile-nav-group" open><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html">Marketing Measurement</a></div>
-<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html">Job Search Workflow</a>
-<a data-page="cutting-room.html" href="cutting-room.html" aria-current="page">YouTube Workflow</a></div>
+<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html">Job Search Tool</a>
+<a data-page="cutting-room.html" href="cutting-room.html" aria-current="page">YouTube Channel</a></div>
 <div class="mobile-project-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html">Options Research</a>
 <a data-page="sports.html" href="sports.html">Sports Research</a></div>
 <div class="mobile-project-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html">Delve</a></div></div></details>
@@ -74,65 +80,77 @@
   </div>
 </header>
   <main id="main-content">
-<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">YouTube Workflow</li></ol></nav>
+<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">YouTube Channel</li></ol></nav>
 <header class="page-intro container" data-block="intro">
   <div class="intro-head">
-          <p class="eyebrow">YouTube video workflow · production operations · release checks</p>
-          <h1>I turned a noisy clip collection into <span>a repeatable video pipeline</span>.</h1>
+          <p class="eyebrow">YouTube channel · ClipSurgeGG</p>
+          <h1>My system searches thousands of game clips <span>so I only review the ones worth a look</span>.</h1>
         </div>
         <div class="intro-grid">
           <div class="intro-copy">
-            <p class="intro-subtitle" data-intro-role="primary">It finds clips, narrows the review set, builds drafts, checks the output, and leaves release approval to me.</p>
-            <p class="intro-lede" data-intro-role="supporting">Over a <span data-claim="cr_window_days">32</span>-day production window, <span data-claim="cr_clips">33,365</span> clips entered the search pool and <span data-claim="cr_reviewed">150</span> reached me for review. A separate production record counts <span data-claim="cr_videos">85</span> published outputs; it is not the next step in that same funnel. The system keeps moving when one source fails and stops a video when its final checks do not pass.</p>
-            <p class="caption">Production window: July 22–August 23, 2026.</p>
+            <p class="intro-subtitle" data-intro-role="primary">It scans gaming streams for short, shareable moments, turns the best candidates into ready-to-post vertical videos, and leaves the final yes or no to me.</p>
+            <p class="intro-lede" data-intro-role="supporting">That is about <span data-claim="est_cr_clips_per_day">1,000</span> clips a day. By my rough estimate, my review takes about <span data-claim="est_cr_minutes_with_system">30</span> minutes a day, where finding and editing the same videos by hand would take about <span data-claim="est_cr_hours_by_hand">3</span> hours.</p>
             <div class="action-row" data-intro-role="action">
-  <a class="button button-primary" href="#workflow">See the workflow</a>
+  <a class="button button-primary" href="#workflow">See how it works</a>
   <a class="button button-secondary" href="#receipt">See the evidence</a>
-  </div>        </div>
-          <figure class="story-snapshot" data-intro-role="visual">
-            <span class="visual-label">Where volume gives way to judgment</span>
-            <div class="story-steps">
-              <div class="story-step"><span class="story-marker">01</span><span><strong><span data-claim="cr_clips">33,365</span> collected</strong><small>The repetitive discovery work</small></span></div>
-              <div class="story-step is-decision"><span class="story-marker">02</span><span><strong><span data-claim="cr_reviewed">150</span> reviewed by me</strong><small>Taste and quality enter here</small></span></div>
-              <div class="story-step is-outcome"><span class="story-marker">03</span><span><strong><span data-claim="cr_approved">53</span> approved</strong><small>Only the clips that clear human review</small></span></div>
-            </div>
-            <figcaption>Published output records are tracked separately; they are not another funnel stage.</figcaption>
+  </div>
+          </div>
+          <figure class="story-illustration" data-intro-role="visual">
+            <svg class="illo" viewBox="0 0 640 340" role="img" aria-label="A scattered heap of small video clips feeds a film strip into a machine with a camera lens that watches each clip. Out comes one short vertical video on a phone, next to a checklist where a person approves it and picks a thumbnail.">
+  <rect class="illo-faint-box" x="28" y="54" width="46" height="32" rx="5" transform="rotate(-8 51 70)"/>
+  <rect class="illo-faint-box" x="86" y="42" width="46" height="32" rx="5" transform="rotate(6 109 58)"/>
+  <rect class="illo-faint-box" x="144" y="60" width="46" height="32" rx="5" transform="rotate(-4 167 76)"/>
+  <rect class="illo-faint-box" x="34" y="104" width="46" height="32" rx="5" transform="rotate(5 57 120)"/>
+  <rect class="illo-sheet" x="92" y="96" width="46" height="32" rx="5" transform="rotate(-9 115 112)"/>
+  <path class="illo-line" d="M110 104 l10 7 -10 7 Z" transform="rotate(-9 115 112)"/>
+  <rect class="illo-faint-box" x="150" y="110" width="46" height="32" rx="5" transform="rotate(8 173 126)"/>
+  <rect class="illo-faint-box" x="26" y="156" width="46" height="32" rx="5" transform="rotate(-3 49 172)"/>
+  <rect class="illo-faint-box" x="84" y="150" width="46" height="32" rx="5" transform="rotate(10 107 166)"/>
+  <rect class="illo-sheet" x="142" y="162" width="46" height="32" rx="5" transform="rotate(-6 165 178)"/>
+  <path class="illo-line" d="M160 170 l10 7 -10 7 Z" transform="rotate(-6 165 178)"/>
+  <rect class="illo-faint-box" x="40" y="206" width="46" height="32" rx="5" transform="rotate(7 63 222)"/>
+  <rect class="illo-faint-box" x="98" y="204" width="46" height="32" rx="5" transform="rotate(-11 121 220)"/>
+  <rect class="illo-faint-box" x="30" y="252" width="46" height="32" rx="5" transform="rotate(-5 53 268)"/>
+  <rect class="illo-faint-box" x="90" y="258" width="46" height="32" rx="5" transform="rotate(4 113 274)"/>
+  <path class="illo-faint-dots" d="M204 150 C 232 162, 244 186, 258 208"/>
+  <path class="illo-faint-dots" d="M196 214 C 220 212, 240 216, 258 226"/>
+  <path class="illo-faint-dots" d="M150 290 C 196 288, 232 272, 258 250"/>
+  <rect class="illo-sheet" x="262" y="170" width="118" height="110" rx="14"/>
+  <circle class="illo-tint" cx="321" cy="222" r="30"/>
+  <circle class="illo-line" cx="321" cy="222" r="15"/>
+  <circle class="illo-accent" cx="321" cy="222" r="5"/>
+  <path class="illo-line" d="M280 188h22M352 188h10"/>
+  <path class="illo-faint-dots" d="M380 226 C 398 222, 410 214, 420 204"/>
+  <rect class="illo-sheet" x="424" y="96" width="98" height="186" rx="16"/>
+  <rect class="illo-soft" x="436" y="116" width="74" height="138" rx="6"/>
+  <path class="illo-accent" d="M462 166 l26 17 -26 17 Z"/>
+  <path class="illo-line" d="M462 268h22"/>
+  <rect class="illo-tint" x="540" y="140" width="76" height="104" rx="8"/>
+  <path class="illo-signal-line" d="M552 162l5 5 10-11"/>
+  <path class="illo-text" d="M576 164h28"/>
+  <rect class="illo-line" x="552" y="186" width="16" height="12" rx="2"/>
+  <rect class="illo-signal-line" x="573" y="184" width="18" height="16" rx="2"/>
+  <rect class="illo-line" x="596" y="186" width="12" height="12" rx="2"/>
+  <path class="illo-text" d="M552 218h52M552 230h34"/>
+</svg>
+            <figcaption><strong>The problem in one picture:</strong> a huge, messy pile of clips goes in. The system watches each one, builds a vertical video from the best moments, and hands it to me to approve and pick a thumbnail.</figcaption>
           </figure>
         </div>
         <div class="feature-callout">
-  <span class="callout-label">The record</span>
-  <strong class="callout-title">A noisy clip collection became <em>a repeatable path to publish-ready output.</em>
-  </strong>
-  <span class="callout-copy">The system does the volume work and the owner reviews the narrowed lineup before making the release call.</span>
-  </div>
-        <div class="metrics">
-  <div class="metric">
-  <strong data-claim="cr_clips">33,365</strong>
-  <span>clips harvested in 32 days</span>
-  </div>
-  <div class="metric">
-  <strong data-claim="cr_window_days">32</strong>
-  <span>days in the production window</span>
-  </div>
-  <div class="metric">
-  <strong data-claim="cr_videos">85</strong>
-  <span>published outputs tracked in a separate record</span>
-  </div>
-  <div class="metric">
-  <strong>40–90 min</strong>
-  <span>daily work window before repetition compounds</span>
-  </div>
+  <span class="callout-label">The result</span>
+  <strong class="callout-title"><span data-claim="cr_clips">33,365</span> clips in <span data-claim="cr_window_days">32</span> days; <span data-claim="cr_reviewed">150</span> reached my review.</strong>
+  <span class="callout-copy">Real people watched, too: the channel drew <span data-claim="cr_views">47.4K</span> views in its first 28 days live, self-reported from YouTube Studio.</span>
   </div>
 </header>
 <details class="page-toc container">
-  <summary>On this page · 5 sections</summary>
+  <summary>On this page · 5 sections · 4 min read</summary>
   <nav class="page-toc-links" aria-label="On this page">
-    <span class="page-toc-label" aria-hidden="true">On this page</span>
+    <span class="page-toc-label" aria-hidden="true">On this page · 4 min</span>
     <a href="#purpose">Purpose</a>
     <a href="#workflow">Workflow</a>
-    <a href="#what-it-took">What it took</a>
+    <a href="#output">Thumbnails</a>
     <a href="#audience">Audience</a>
-    <a href="#receipt">Evidence record</a>
+    <a href="#what-it-took">What it took</a>
   </nav>
 </details>
 <section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" data-depth="primary" id="purpose">
@@ -143,19 +161,10 @@
     <h2>Find more. <span class="heading-focus">Watch less.</span></h2>
     </div>
     <div class="lead-body prose">
-    <p>A gaming channel built from raw clips turns into a chore fast: thousands of files and no reliable way to tell which five minutes are worth watching back. I wanted a system that does the tedious narrowing automatically and leaves the judgment call, <em class="caveat">is this moment actually good</em>, to me.</p>
-    <p>The two tiers are intentional: broad category search finds channels I would never know to look for, while the 117-creator watchlist keeps channels I trust visible. The design goal is not to remove taste. It is to give taste a much better starting point.</p>
+    <p>Running a gaming clips channel by hand is a grind: hours of streams to scrub through and no quick way to tell which five minutes are worth sharing. I wanted the system to do the digging and leave the judgment, <em class="caveat">is this moment actually good?</em>, to me.</p>
+    <p>It searches broadly for channels I'd never think to check and keeps a watchlist of creators I already like. <strong>The system prepares; I decide.</strong> Every clip that goes out is one I approve.</p>
     </div>
     </div>
-
-    <figure class="media-block system-visual">
-      <div class="process-flow" aria-label="From raw clips to an owner-approved output">
-        <article class="process-stage"><span class="process-stage-label">01 · Collect</span><strong>Raw material</strong><span>A large, noisy pool arrives automatically.</span></article>
-        <article class="process-stage is-outcome"><span class="process-stage-label">02 · Assemble</span><strong>Draft output</strong><span>The system ranks, crops, combines, and checks.</span></article>
-        <article class="process-stage is-decision"><span class="process-stage-label">03 · Decide</span><strong>Owner review</strong><span>I decide whether the moment is actually worth publishing.</span></article>
-      </div>
-      <figcaption><strong>The automation ends before the consequential choice.</strong> The system prepares the candidate; taste and release approval stay human.</figcaption>
-    </figure>
   </div>
 </section>
 <section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="component" data-depth="primary" id="workflow">
@@ -164,87 +173,36 @@
     <h2>Discover → Collect → Narrow → Review → Approve.</h2>
     <figure class="media-block system-visual">
     <div class="process-flow flow-5">
-      <article class="process-stage"><span class="process-stage-label">01 · Discover</span><strong><span data-claim="cr_streamers">16,479</span></strong><span>channels surfaced across three platforms</span></article>
-      <article class="process-stage"><span class="process-stage-label">02 · Collect</span><strong><span data-claim="cr_clips">33,365</span></strong><span>clips entered the production window</span></article>
-      <article class="process-stage"><span class="process-stage-label">03 · Narrow</span><strong><span data-claim="cr_queued">1,394</span></strong><span>clips reached the owner-review queue</span></article>
-      <article class="process-stage is-decision"><span class="process-stage-label">04 · I review</span><strong><span data-claim="cr_reviewed">150</span></strong><span>clips received a human taste and quality check</span></article>
-      <article class="process-stage is-outcome"><span class="process-stage-label">05 · Approve</span><strong><span data-claim="cr_approved">53</span></strong><span>clips cleared that human review</span></article>
+      <article class="process-stage"><span class="process-stage-label">01 · Discover</span><strong><span data-claim="cr_streamers">16,479</span></strong><span>channels found across three platforms</span></article>
+      <article class="process-stage"><span class="process-stage-label">02 · Collect</span><strong><span data-claim="cr_clips">33,365</span></strong><span>clips gathered in the production window</span></article>
+      <article class="process-stage"><span class="process-stage-label">03 · Narrow</span><strong><span data-claim="cr_queued">1,394</span></strong><span>clips made it into my review queue</span></article>
+      <article class="process-stage is-decision"><span class="process-stage-label">04 · I review</span><strong><span data-claim="cr_reviewed">150</span></strong><span>clips got a human look for taste and quality</span></article>
+      <article class="process-stage is-outcome"><span class="process-stage-label">05 · Approve</span><strong><span data-claim="cr_approved">53</span></strong><span>clips I approved</span></article>
     </div>
-    <div class="visual-note"><strong><span data-claim="cr_videos">85</span> published outputs in a separate record</strong><span>This is not the next stage after the 53 approvals shown above. The review decisions and published-output count cover different groups.</span></div>
-    <figcaption><strong>Volume is handled before taste is asked for.</strong> Rules removed 31,971 clips before review; I rejected another <span data-claim="cr_rejected_hand">97</span> by hand. Seven parts underneath these five stages handle discovery, ranking, video analysis, assembly, titles and descriptions, review, and publishing.</figcaption>
+    <figcaption><strong>The machine handles volume before my taste is needed.</strong> Rules removed 31,971 clips before review; I rejected another <span data-claim="cr_rejected_hand">97</span> by hand.</figcaption>
     </figure>
   </div>
 </section>
-<section class="site-section" data-intent="sequence" data-template="timeline" data-lead="stack" data-tone="base" data-attention="component" data-depth="supporting" id="what-it-took">
+<section class="site-section" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="base" data-attention="heading" data-depth="primary" id="output">
   <div class="section-shell">
-    <div class="kicker">What it actually took to build</div>
-    <h2>Seven systems make the five-stage story work.</h2>
-    <p class="section-intro">The five-step overview keeps the story easy to follow; this is the complete operating chain underneath it.</p>
-    <div class="steps">
-    <div class="step">
-    <strong>01</strong>
-    <span>
-    <strong>Finding the material.</strong> Three platforms, <span data-claim="cr_streamers">16,479</span> channels surfaced by broad search, plus <span data-claim="cr_watched">117</span> creators I deliberately keep on the watchlist.</span>
+    <div class="kicker">What viewers see first</div>
+    <h2>Every video gets a thumbnail drafted from <span class="heading-focus">its own best moment.</span></h2>
+    <p class="section-intro">The system finds the action in each clip, applies the channel's design, and drafts a set of thumbnail options. I pick the one that goes live.</p>
+    <div class="media-grid video-grid">
+      <figure class="media-block">
+        <img src="images/cutting-room/thumb-rust-2026-08-a.jpg" width="960" height="540" alt="ClipSurgeGG Rust thumbnail: a first-person firefight with flames, the Rust logo, an inventory panel, and the words Best Highlights." loading="lazy" decoding="async" data-lightbox="true">
+      </figure>
+      <figure class="media-block">
+        <img src="images/cutting-room/thumb-valorant-2026-08-a.jpg" width="960" height="540" alt="ClipSurgeGG Valorant thumbnail: a first-person shot in a purple-lit room, the Valorant logo, a five-kill feed, and the words Best Highlights." loading="lazy" decoding="async" data-lightbox="true">
+      </figure>
+      <figure class="media-block">
+        <img src="images/cutting-room/thumb-rust-2026-08-b.jpg" width="960" height="540" alt="ClipSurgeGG Rust thumbnail: a snowy hillside seen over a wooden wall, with the Rust logo, an inventory panel, and the words Best Highlights." loading="lazy" decoding="async" data-lightbox="true">
+      </figure>
+      <figure class="media-block">
+        <img src="images/cutting-room/thumb-valorant-2026-09-a.jpg" width="960" height="540" alt="ClipSurgeGG Valorant thumbnail: a first-person shot across an orange courtyard, the Valorant logo, a five-kill feed, and the words Best Highlights." loading="lazy" decoding="async" data-lightbox="true">
+      </figure>
     </div>
-    <div class="step">
-    <strong>02</strong>
-    <span>
-    <strong>Cutting the noise.</strong> A ranking rule weighs how quickly views are growing, how often a channel produces clips, the creator, language, and dozens of title keywords.</span>
-    </div>
-    <div class="step">
-    <strong>03</strong>
-    <span>
-    <strong>Watching the video itself.</strong> The system finds scene changes and action, then picks the moment. It also finds the creator’s camera box so the vertical crop keeps the reaction in frame.</span>
-    </div>
-    <div class="step">
-    <strong>04</strong>
-    <span>
-    <strong>Making it publishable.</strong> The system stitches the video layers together, adds the frame and opening and closing cards, and balances the sound automatically.</span>
-    </div>
-    <div class="step">
-    <strong>05</strong>
-    <span>
-    <strong>Naming it.</strong> Titles, descriptions, tags, and ranked thumbnail candidates, generated automatically.</span>
-    </div>
-    <div class="step">
-    <strong>06</strong>
-    <span>
-    <strong>Owner review.</strong> The shortlist lands in a spreadsheet. Approve, reject, pick a thumbnail.</span>
-    </div>
-    <div class="step">
-    <strong>07</strong>
-    <span>
-    <strong>Shipping it.</strong> Upload to YouTube and TikTok, scheduled to go out on its own once I have approved it.</span>
-    </div>
-    </div>
-    <div class="sequence-debrief">
-    <div class="debrief-grid">
-    <article class="debrief-item">
-    <span class="card-label">Work removed</span>
-    <h3>Repetitive narrowing, not judgment.</h3>
-    <p>The pipeline handles discovery, assembly, and routine checks. I still review the shortlist, approve clips, and choose the thumbnail.</p>
-    </article>
-    <article class="debrief-item">
-    <span class="card-label">Failure boundary</span>
-    <h3>One bad source cannot stop the queue.</h3>
-    <p>Source errors are logged and isolated. A video-length check protects the approved lineup, and the final check has kept working through 3,752 logged errors.</p>
-    </article>
-    <article class="debrief-item">
-    <span class="card-label">Build conditions</span>
-    <h3>Three constraints shaped the system.</h3>
-    <p>A limited daily work window, a noisy source pool, and a human approval gate determined what needed automation and what needed me.</p>
-    </article>
-    <article class="debrief-item">
-    <span class="card-label">Next iteration</span>
-    <h3>Label each group of numbers earlier.</h3>
-    <p>Review decisions and published outputs should never be mistaken for the same group.</p>
-    </article>
-    </div>
-    <div class="feature-callout">
-    <strong>Why it earns a place</strong>
-    <span>The pipeline turns repetitive discovery into an owner-approved production queue while keeping the final taste and release call human.</span>
-    </div>
-    </div>
+    <p class="caption"><strong>Real thumbnails from the channel.</strong> The gameplay comes from the clips each video features; no creator names or faces are shown. Tap one to see it larger.</p>
   </div>
 </section>
 <section class="site-section" data-intent="metrics" data-template="metric-strip" data-lead="split" data-tone="base" data-attention="component" data-depth="primary" id="audience">
@@ -252,11 +210,10 @@
     <div class="section-grid">
     <div class="lead-heading">
     <div class="kicker">The audience result</div>
-    <h2>The channel is young, and it started from a standing start.</h2>
+    <h2>What happened once the channel went live.</h2>
     </div>
     <div class="lead-body prose">
-    <p>The pipeline above is the production discipline. This is what the channel did with it in its first 28 days live. Growth this fast is <span>normal for a brand-new channel</span> before the curve settles; it is <em>not a claim</em> that this rate holds.
-    </p>
+    <p>In its first 28 days live, the channel's videos drew real viewers. These are self-reported YouTube Studio numbers, kept apart from the production counts above. <strong>They show a real audience, not a promise that growth continues.</strong></p>
     </div>
     </div>
     <div class="metrics">
@@ -266,39 +223,96 @@
     </div>
     <div class="metric">
     <strong data-claim="cr_watch_hours">304.7</strong>
-    <span>watch-time hours, first 28 days</span>
+    <span>hours watched, first 28 days</span>
     </div>
     <div class="metric">
     <strong data-claim="cr_views_per_day">1,693</strong>
-    <span>average views per day</span>
+    <span>views a day on average</span>
     </div>
     <div class="metric">
     <strong data-claim="cr_subs_gained">+20</strong>
     <span>subscribers, first month</span>
     </div>
     </div>
-    <p class="caption">Self-reported from YouTube Studio for the first 28 days the channel was live. Kept separate from the production evidence on purpose: the production record shows that the workflow is real and selective; this shows what the audience did afterward.</p>
+  </div>
+</section>
+<section class="site-section tone-soft" data-intent="sequence" data-template="timeline" data-lead="stack" data-tone="soft" data-attention="component" data-depth="supporting" id="what-it-took">
+  <div class="section-shell">
+    <div class="kicker">What it took to build</div>
+    <h2>Seven parts work together behind those five steps.</h2>
+    <div class="steps is-compact">
+    <div class="step">
+    <strong>01</strong>
+    <span><strong>Finding.</strong> Three platforms, <span data-claim="cr_streamers">16,479</span> channels searched, <span data-claim="cr_watched">117</span> creators on a watchlist.</span>
+    </div>
+    <div class="step">
+    <strong>02</strong>
+    <span><strong>Ranking.</strong> Weighs view growth, clip frequency, creator, language, and title keywords.</span>
+    </div>
+    <div class="step">
+    <strong>03</strong>
+    <span><strong>Watching.</strong> Picks the moment of action and keeps the streamer's reaction in frame.</span>
+    </div>
+    <div class="step">
+    <strong>04</strong>
+    <span><strong>Assembling.</strong> Stitches clips, adds opening and closing cards, and balances the sound.</span>
+    </div>
+    <div class="step">
+    <strong>05</strong>
+    <span><strong>Naming.</strong> Drafts titles, descriptions, tags, and a ranked set of thumbnail options.</span>
+    </div>
+    <div class="step">
+    <strong>06</strong>
+    <span><strong>My review.</strong> I approve, reject, and pick a thumbnail in one spreadsheet.</span>
+    </div>
+    <div class="step">
+    <strong>07</strong>
+    <span><strong>Posting.</strong> Uploads to YouTube and TikTok on a schedule once I approve.</span>
+    </div>
+    </div>
+    <div class="sequence-debrief">
+    <div class="debrief-grid">
+    <article class="debrief-item">
+    <span class="card-label">Work removed</span>
+    <h3>Repetitive digging, not judgment.</h3>
+    <p>The system handles finding, assembling, and routine checks. I still approve clips and choose the thumbnail.</p>
+    </article>
+    <article class="debrief-item">
+    <span class="card-label">When things break</span>
+    <h3>One bad source can't stop the queue.</h3>
+    <p>Errors are logged and skipped, not treated as a failed day: <span data-claim="cr_errors">3,752</span> so far.</p>
+    </article>
+    <article class="debrief-item">
+    <span class="card-label">Time it saves</span>
+    <h3>About half an hour instead of an afternoon.</h3>
+    <p>By my rough estimate, about <span data-claim="est_cr_minutes_with_system">30</span> minutes of review a day, versus roughly <span data-claim="est_cr_hours_by_hand">3</span> hours by hand.</p>
+    </article>
+    <article class="debrief-item">
+    <span class="card-label">Do differently</span>
+    <h3>Track review and posting in one place.</h3>
+    <p>Review decisions and published videos live in separate records, so the numbers are hard to compare.</p>
+    </article>
+    </div>
+    </div>
   </div>
 </section>
 <section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" data-depth="technical" id="receipt">
   <div class="section-shell">
     <div class="kicker">Evidence record</div>
-    <h2>The checked numbers behind the production result.</h2>
+    <h2>Every number on this page, with its source.</h2>
     <details>
-    <summary>Open the checked workflow evidence</summary>
-    <p>This public record shows how broad the clip pool was, what reached review, and what was approved or used. Audience figures come from YouTube Studio, are dated separately below, and stay apart from the production counts on purpose. The checked summary stays public; the larger working record remains private.
-    </p>
-    <p class="caption"><strong>Read the groups separately:</strong> 53 approvals, 97 hand-rejections, 150 reviewed, and 1,244 pending describe the 1,394 review-list entries. The 81 source clips marked used and 85 published outputs come from separate production tables, so they are not a one-to-one conversion. The 33,284 remainder means clips not marked used in an output record (33,365 minus 81); it includes clips still waiting for review.</p>
-    <p class="caption"><strong>Operational effort:</strong> the system logged <span data-claim="cr_errors">3,752</span> source or processing errors during the snapshot. It isolates one failing source rather than treating every error as a failed run.</p>
+    <summary>Open the full evidence record</summary>
+    <p>This record shows how big the clip pool was, what reached my review, and what was approved or used. Audience numbers come from YouTube Studio and are dated separately. The checked summary stays public; the larger working record remains private.</p>
+    <p class="caption"><strong>These counts describe different groups.</strong> The 53 approvals, 97 hand-rejections, 150 reviewed, and 1,244 pending add up to the 1,394 clips in my review queue. The 81 clips marked used and the 85 published videos come from separate production records, so they do not line up one-to-one. The 33,284 remainder is every collected clip not marked used (33,365 minus 81), including clips still waiting for review.</p>
     <div class="receipt-overview">
-    <div class="receipt-overview-item"><h3>The claim</h3><p><strong class="metric-value">33,365</strong> clips entered the pool; 150 reached my review and a separate record counted 85 published outputs.</p></div>
-    <div class="receipt-overview-item"><h3>The checks</h3><p>Hand review, pending work, source failures, and the owner release decision.</p></div>
-    <div class="receipt-overview-item"><h3>The scale</h3><p>Sources monitored, production days, languages, and the separate groups used for review and publishing.</p></div>
+    <div class="receipt-overview-item"><h3>The claim</h3><p><strong class="metric-value">33,365</strong> clips collected; 150 reached my review.</p></div>
+    <div class="receipt-overview-item"><h3>The checks</h3><p>What I approved or rejected by hand, what is still waiting, and source errors.</p></div>
+    <div class="receipt-overview-item"><h3>The scale</h3><p>Channels monitored, production days, languages, and the separate publishing record.</p></div>
     </div>
     <div class="receipt-grid">
     <div class="receipt-item">
     <strong data-claim="cr_watched">117</strong>
-    <span>creators explicitly on the watchlist</span>
+    <span>creators on my watchlist</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_window_days">32</strong>
@@ -310,7 +324,7 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_clips">33,365</strong>
-    <span>clips harvested</span>
+    <span>clips collected</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_used">81</strong>
@@ -345,11 +359,11 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_streamers">16,479</strong>
-    <span>sources monitored</span>
+    <span>channels monitored</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_reviewed">150</strong>
-    <span>reviewed by the owner</span>
+    <span>reviewed by me</span>
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_rejected_hand">97</strong>
@@ -357,7 +371,7 @@
     </div>
     <div class="receipt-item">
     <strong data-claim="cr_videos">85</strong>
-    <span>published outputs, separate record</span>
+    <span>published videos (separate record)</span>
     </div>
     </div>
     </details>
@@ -372,28 +386,29 @@
     </div>
     <div class="ending-response">
     <div class="prose">
-    <p>The same discipline applies well beyond video: narrow with rules, and <strong>keep the owner on the final call</strong>.</p>
+    <p>The same discipline applies well beyond video: narrow with rules, and <strong>keep a person on the final call</strong>.</p>
     </div>
     <div class="action-row">
-    <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Let’s talk on LinkedIn →</a>
-    <a class="button button-secondary" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
-    </div>
+        <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        <a class="text-link resume-text-link" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
+      </div>
     </div>
     </div>
     <div class="read-next">
-    <span class="read-next-label">Keep going</span>
-    <div class="card-grid">
-    <a class="card" href="proof-system.html">
-    <strong>How I check the work</strong>
-    <span>How important claims stay tied to sources</span>
-    <span class="action-label">See how I check the work →</span>
-    </a>
-    <a class="card" href="projects.html">
-    <strong>All projects</strong>
-    <span>Six projects, one route through them</span>
-    <span class="action-label">Browse projects →</span>
-    </a>
-    </div>
+      <span class="read-next-label">Keep going</span>
+      <div class="card-grid">
+        <a class="card is-next" href="options.html">
+          <span class="card-label">Next project</span>
+          <strong>Options Research</strong>
+          <span>A research lab that tests stock-market ideas without risking a dollar.</span>
+          <span class="action-label">See the research →</span>
+        </a>
+        <a class="card" href="projects.html">
+          <strong>All six projects</strong>
+          <span>Grouped by the kind of problem they solve.</span>
+          <span class="action-label">Browse the projects →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -402,7 +417,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <strong>Juan Tellez</strong>
-      <span>Demand-generation marketer who builds useful things.</span>
+      <span>Marketer in Houston who builds things to learn.</span>
     </div>
     <nav class="footer-links" aria-label="Explore">
       <strong>Explore</strong>
@@ -419,7 +434,7 @@
       <a href="#main-content">Back to top ↑</a>
     </nav>
     <div class="footer-meta">
-      <span>Updated September 2026 · each case study lists its own evidence date and current boundary.</span>
+      <span>Updated September 2026 · every project page lists where its numbers come from.</span>
     </div>
   </div>
 </footer>
@@ -437,6 +452,6 @@
       <span class="image-dialog-status" aria-live="polite"></span>
     </div>
   </dialog>
-  <script src="nav.js?v=06caa1c2fc" defer></script>
+  <script src="nav.js?v=e5f1ea1bd1" defer></script>
 </body>
 </html>

@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}</script>
+  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window)document.documentElement.classList.add("motion-ready");}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ee">
-  <title>How I tested it — Marketing measurement technical appendix</title>
-  <meta name="description" content="A plain-language technical appendix with the planned checks and source record behind the Marketing Measurement study.">
+  <title>How I tested it — Juan Tellez</title>
+  <meta name="description" content="The checks behind the marketing measurement study, in plain language: luck, credit rules, false winners, and week-to-week swings.">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="How I tested it — Marketing measurement technical appendix">
-  <meta property="og:description" content="A plain-language technical appendix with the planned checks and source record behind the Marketing Measurement study.">
+  <meta property="og:title" content="How I tested it — Juan Tellez">
+  <meta property="og:description" content="The checks behind the marketing measurement study, in plain language: luck, credit rules, false winners, and week-to-week swings.">
   <meta property="og:url" content="https://www.tellezajuan.com/growth-method.html">
   <link rel="canonical" href="https://www.tellezajuan.com/growth-method.html">
   <meta property="og:image" content="https://www.tellezajuan.com/images/social/growth-method.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Preview card: How I tested it — Juan Tellez">
+  <meta property="og:site_name" content="Juan Tellez">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How I tested it — Marketing measurement technical appendix">
-  <meta name="twitter:description" content="A plain-language technical appendix with the planned checks and source record behind the Marketing Measurement study.">
+  <meta name="twitter:title" content="How I tested it — Juan Tellez">
+  <meta name="twitter:description" content="The checks behind the marketing measurement study, in plain language: luck, credit rules, false winners, and week-to-week swings.">
   <meta name="twitter:image" content="https://www.tellezajuan.com/images/social/growth-method.png">
+  <meta name="twitter:image:alt" content="Preview card: How I tested it — Juan Tellez">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"All Projects","item":"https://www.tellezajuan.com/projects.html"},{"@type":"ListItem","position":2,"name":"Marketing Measurement","item":"https://www.tellezajuan.com/growth.html"},{"@type":"ListItem","position":3,"name":"Technical appendix","item":"https://www.tellezajuan.com/growth-method.html"}]}</script>
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230d2130'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23e08c46' font-family='Arial' font-weight='bold'>JT</text></svg>">
-  <link rel="stylesheet" href="style.css?v=77d0fbd540">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=773516ed30">
 </head>
 <body data-route="growth-method.html" data-recipe="appendix" data-route-role="appendix">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -32,16 +38,16 @@
     <a class="brand" href="index.html" aria-label="Juan Tellez home">JT<span>.</span></a>
     <nav class="desktop-nav" aria-label="Primary">
       <a class="nav-link" data-page="index.html" href="index.html">Home</a>
-      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life around the work.</span></a>
-<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years of media, measurement, and lead-quality work.</span></a>
-<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>Choices, process, and where AI fits.</span></a>
-<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important claims stay tied to sources.</span></a></div></details>
-      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>Choose a project by the kind of problem it solves.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>How late-arriving conversion credit changed a campaign decision.</span></a></div>
-<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html"><strong>Job Search Workflow</strong><span>How 683 postings became a checked shortlist worth reading.</span></a>
-<a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Workflow</strong><span>A clip-sifting and editing system with an owner release check.</span></a></div>
-<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html"><strong>Options Research</strong><span>A paper-only system designed to make weak ideas fail safely.</span></a>
-<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>A written testing process with explicit rejection rules.</span></a></div>
-<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon prototype built around returning.</span></a></div></div></div></details>
+      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life outside work.</span></a>
+<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years planning ads and fixing the reports.</span></a>
+<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>How I use AI, and where I make the call.</span></a>
+<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important numbers stay tied to their sources.</span></a></div></details>
+      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All six, grouped by the kind of problem they solve.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look too cheap.</span></a></div>
+<div class="project-menu-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html"><strong>Job Search Tool</strong><span>Sorting hundreds of job posts down to the best fits.</span></a>
+<a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Channel</strong><span>Finding the gaming clips worth posting.</span></a></div>
+<div class="project-menu-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html"><strong>Options Research</strong><span>Testing stock-market ideas with simulated money.</span></a>
+<a data-page="sports.html" href="sports.html"><strong>Sports Research</strong><span>Writing down how a prediction could be wrong, first.</span></a></div>
+<div class="project-menu-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon game prototype.</span></a></div></div></div></details>
       <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </nav>
     <div class="header-tools desktop-tools">
@@ -57,8 +63,8 @@
         <a data-page="about-me.html" href="about-me.html">About Juan</a>
         <a data-page="experience.html" href="experience.html">Experience</a>
         <details class="mobile-nav-group" open><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing-measurement"><span>Marketing &amp; Measurement</span><a data-page="growth.html" href="growth.html">Marketing Measurement</a></div>
-<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html">Job Search Workflow</a>
-<a data-page="cutting-room.html" href="cutting-room.html">YouTube Workflow</a></div>
+<div class="mobile-project-group" data-project-group="automation-operations"><span>Automation &amp; Operations</span><a data-page="shortlist.html" href="shortlist.html">Job Search Tool</a>
+<a data-page="cutting-room.html" href="cutting-room.html">YouTube Channel</a></div>
 <div class="mobile-project-group" data-project-group="research-systems"><span>Research Systems</span><a data-page="options.html" href="options.html">Options Research</a>
 <a data-page="sports.html" href="sports.html">Sports Research</a></div>
 <div class="mobile-project-group" data-project-group="product-creative"><span>Product &amp; Creative</span><a data-page="delve.html" href="delve.html">Delve</a></div></div></details>
@@ -77,32 +83,62 @@
 <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li><a href="growth.html">Marketing Measurement</a></li><li aria-current="page">Technical appendix</li></ol></nav>
 <header class="page-intro container" data-block="intro">
   <div class="intro-head">
-          <p class="eyebrow">Marketing Measurement → Technical appendix</p>
-          <h1>How I tested whether campaign reports counted <span>late-arriving conversions</span>.</h1>
+          <p class="eyebrow">Marketing measurement → How I tested it</p>
+          <h1>How I tried to make the finding <span>disappear</span> before I trusted it.</h1>
         </div>
         <div class="intro-grid">
           <div class="intro-copy">
-            <p class="intro-subtitle" data-intro-role="primary">The short answer: I tried to make the finding disappear before I trusted it.</p>
-            <p class="intro-lede" data-intro-role="supporting">I scrambled the timing, changed who received credit, checked for false winners, and repeated the comparison week by week. The finding did not depend on one convenient chart.</p>
+            <p class="intro-subtitle" data-intro-role="primary">Four tough questions about the marketing study, each with its answer attached.</p>
+            <p class="intro-lede" data-intro-role="supporting">I scrambled the timing, changed how credit was assigned, checked for false winners, and compared week by week. The finding held up, though not perfectly, and the imperfections stay in the record.</p>
             <div class="action-row" data-intro-role="action">
-  <a class="button button-primary" href="growth.html">Back to Marketing Measurement</a>
-  <a class="button button-secondary" href="#plain-language">See the four checks</a>
-  </div>        </div>
-        </div>
-        <div class="feature-callout">
-          <span class="callout-label">The finding</span>
-  <strong class="callout-title">The timing result survived a second check with <em>999</em> additional scrambles.</strong>
-  <span class="callout-copy">The first check scrambled the timing 20 times under a plan written in advance. The confirmation repeated that challenge 999 more times.</span>
+  <a class="button button-primary" href="#plain-language">See the four answers</a>
+  <a class="button button-secondary" href="growth.html">Back to the marketing study →</a>
   </div>
+          </div>
+          <figure class="story-illustration" data-intro-role="visual">
+            <svg class="illo" viewBox="0 0 640 340" role="img" aria-label="Three low, messy piles of shuffled cards sit on the left, each with a curved shuffle arrow above it. On the right stands one tall, neat stack with a check mark, far taller than any shuffled pile.">
+  <line class="illo-faint" x1="30" y1="292" x2="610" y2="292"/>
+  <g>
+    <rect class="illo-sheet" x="44" y="264" width="80" height="24" rx="4" transform="rotate(-5 84 276)"/>
+    <rect class="illo-sheet" x="50" y="246" width="80" height="24" rx="4" transform="rotate(7 90 258)"/>
+    <path class="illo-faint-dots" d="M58 226 C 72 196, 104 196, 118 222"/>
+    <path class="illo-faint" d="M110 214 L118 224 L106 226"/>
+  </g>
+  <g>
+    <rect class="illo-sheet" x="164" y="266" width="80" height="24" rx="4" transform="rotate(4 204 278)"/>
+    <rect class="illo-sheet" x="170" y="250" width="80" height="24" rx="4" transform="rotate(-8 210 262)"/>
+    <rect class="illo-sheet" x="160" y="232" width="80" height="24" rx="4" transform="rotate(3 200 244)"/>
+    <path class="illo-faint-dots" d="M176 212 C 190 182, 222 182, 236 208"/>
+    <path class="illo-faint" d="M228 200 L236 210 L224 212"/>
+  </g>
+  <g>
+    <rect class="illo-sheet" x="284" y="266" width="80" height="24" rx="4" transform="rotate(-3 324 278)"/>
+    <path class="illo-faint-dots" d="M296 246 C 310 216, 342 216, 356 242"/>
+    <path class="illo-faint" d="M348 234 L356 244 L344 246"/>
+  </g>
+  <path class="illo-accent-dashes" d="M404 232 H612"/>
+  <rect class="illo-sheet" x="452" y="268" width="112" height="24" rx="4"/>
+  <rect class="illo-sheet" x="452" y="244" width="112" height="24" rx="4"/>
+  <rect class="illo-sheet" x="452" y="220" width="112" height="24" rx="4"/>
+  <rect class="illo-sheet" x="452" y="196" width="112" height="24" rx="4"/>
+  <rect class="illo-sheet" x="452" y="172" width="112" height="24" rx="4"/>
+  <rect class="illo-sheet" x="452" y="148" width="112" height="24" rx="4"/>
+  <rect class="illo-sheet" x="452" y="124" width="112" height="24" rx="4"/>
+  <rect class="illo-tint" x="452" y="100" width="112" height="24" rx="4"/>
+  <circle class="illo-signal" cx="508" cy="64" r="22"/>
+  <path class="illo-check-light" d="M497 64l8 8 14-16"/>
+</svg>
+            <figcaption><strong>The idea in one picture:</strong> shuffled versions of the data (the low piles) never came close to the real result (the tall stack), no matter how many times they were shuffled.</figcaption>
+          </figure>
+        </div>
 </header>
 <details class="page-toc container">
-  <summary>On this page · 5 sections</summary>
+  <summary>On this page · 4 sections · 4 min read</summary>
   <nav class="page-toc-links" aria-label="On this page">
-    <span class="page-toc-label" aria-hidden="true">On this page</span>
-    <a href="#plain-language">Plain language</a>
-    <a href="#main-result">The timing problem</a>
-    <a href="#technical-details">Inspect the reasoning</a>
-    <a href="#supporting-charts">Supporting comparisons</a>
+    <span class="page-toc-label" aria-hidden="true">On this page · 4 min</span>
+    <a href="#plain-language">Four answers</a>
+    <a href="#main-result">Luck check</a>
+    <a href="#technical-details">The reasoning</a>
     <a href="#reproduce">Build record</a>
   </nav>
 </details>
@@ -111,86 +147,90 @@
     <div class="kicker">The 30-second answer</div>
     <h2>Four questions, with the answer <span class="heading-focus">already attached.</span></h2>
     <div class="card-grid">
-    <div class="card"><span class="card-label">Could it be luck?</span><strong>No scrambled run reached the real result.</strong><span>Across <span data-claim="placebo_hr_permutations">999</span> timing shuffles, the highest count was <span data-claim="placebo_hr_max">4</span>; the real timing produced <span data-claim="placebo_observed">33</span>.</span></div>
-    <div class="card"><span class="card-label">Did the credit rule matter?</span><strong>Yes—<span data-claim="attribution_flips">45</span> campaign decisions changed.</strong><span>Giving all credit to the last click and sharing credit across touches did not tell the same story.</span></div>
-    <div class="card"><span class="card-label">Did many tests create false winners?</span><strong>Most remained after the stricter check.</strong><span><span data-claim="fdr_bh">480</span> of <span data-claim="fdr_raw">530</span> apparent winners remained; the adjustment is still part of the record.</span></div>
-    <div class="card"><span class="card-label">Did it hold week to week?</span><strong>Mostly, but not perfectly.</strong><span>The first week agreed with the full result <span data-claim="week1_agreement_pct">88.4%</span> of the time, and the disagreement stays visible.</span></div>
+    <div class="card"><span class="card-label">Could it be luck?</span><strong>No shuffled run came close.</strong><span>Across <span data-claim="placebo_hr_permutations">999</span> timing shuffles, the highest count was <span data-claim="placebo_hr_max">4</span>; the real timing found <span data-claim="placebo_observed">33</span>.</span></div>
+    <div class="card"><span class="card-label">Did the credit rule matter?</span><strong>Yes: <span data-claim="attribution_flips">45</span> campaign decisions changed.</strong><span>Giving all the credit to the last click and sharing it across clicks didn't tell the same story.</span></div>
+    <div class="card"><span class="card-label">Could testing so many create false winners?</span><strong>Most apparent winners held up.</strong><span><span data-claim="fdr_bh">480</span> of <span data-claim="fdr_raw">530</span> remained after a stricter check, which stays part of the record.</span></div>
+    <div class="card"><span class="card-label">Did it hold week to week?</span><strong>Mostly, but not perfectly.</strong><span>The first week agreed with the full answer <span data-claim="week1_agreement_pct">88.4%</span> of the time, and the disagreements stay visible.</span></div>
     </div>
   </div>
 </section>
 <section class="site-section" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="base" data-attention="heading" data-depth="primary" id="main-result">
   <div class="section-shell">
-    <div class="kicker">The timing problem</div>
-    <h2>Most conversion credit arrived <span class="heading-focus">after the decision.</span></h2>
-    <p class="section-intro">The campaign report kept changing after the budget choice had already been made. That is the gap the rest of the checks investigate.</p>
-    <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
-      <div class="decision-window" role="img" aria-label="39 percent of conversion credit was visible at the budget decision and 61 percent arrived later.">
-        <span class="visual-label">Credit visible when the budget choice was due</span>
-        <progress class="share-meter" max="100" value="39">39%</progress>
-        <div class="visual-stat-pair">
-          <div class="visual-stat is-accent"><strong><span data-claim="share_credited_at_gate">39%</span></strong><span>visible at the decision</span></div>
-          <div class="visual-stat is-signal"><strong><span data-claim="share_credited_after_gate">61%</span></strong><span>arrived later</span></div>
-        </div>
-      </div>
-      <figcaption><strong>The report knew less than half of its eventual credit when the decision was due.</strong> The late 61% can improve the old report without changing what the marketer actually knew at the time.</figcaption>
+    <div class="kicker">The most important check</div>
+    <h2>Could it just be luck? <span class="heading-focus">Not even close.</span></h2>
+    <p class="section-intro">I shuffled the timing and re-ran the whole test, first <span data-claim="placebo_permutations">20</span> times under the written plan, then <span data-claim="placebo_hr_permutations">999</span> more times to confirm. If the finding were luck, some shuffled runs would land near the real result.</p>
+    <figure class="media-block system-visual shuffle-check" data-visual-role="evidence" data-visual-format="html">
+    <span class="visual-label">What 999 shuffled runs found</span>
+    <div class="verdict-distribution" role="img" aria-label="How many campaigns each of 999 shuffled runs found: 834 runs found 0, 120 runs found 1, 29 runs found 2, 15 runs found 3, 1 runs found 4, and no run found 5 or more. The real dates found 33.">
+      <div class="verdict-row"><span>Found 0 campaigns</span><meter min="0" max="999" value="834">834 of 999</meter><strong data-claim="placebo_hr_bin_0">834</strong></div>
+      <div class="verdict-row"><span>Found 1 campaign</span><meter min="0" max="999" value="120">120 of 999</meter><strong data-claim="placebo_hr_bin_1">120</strong></div>
+      <div class="verdict-row"><span>Found 2 campaigns</span><meter min="0" max="999" value="29">29 of 999</meter><strong data-claim="placebo_hr_bin_2">29</strong></div>
+      <div class="verdict-row"><span>Found 3 campaigns</span><meter min="0" max="999" value="15">15 of 999</meter><strong data-claim="placebo_hr_bin_3">15</strong></div>
+      <div class="verdict-row"><span>Found 4 campaigns</span><meter min="0" max="999" value="1">1 of 999</meter><strong data-claim="placebo_hr_bin_4">1</strong></div>
+      <div class="verdict-row is-empty"><span>Found 5 or more</span><meter min="0" max="999" value="0">0 of 999</meter><strong>0</strong></div>
+    </div>
+    <div class="shuffle-real">
+      <span class="visual-label">The real dates</span>
+      <strong><span data-claim="placebo_observed">33</span> campaigns</strong>
+      <span>earned another experiment. The shuffled runs stopped at <span data-claim="placebo_hr_max">4</span>, with a middle result of <span data-claim="placebo_hr_median">0</span>.</span>
+    </div>
+    <figcaption><strong>If the result were luck, the real run would sit inside the pile. It isn't close.</strong> None of the 999 shuffles matched or beat 33 (p = <span data-claim="placebo_hr_p">0.001</span>).</figcaption>
     </figure>
   </div>
 </section>
-<section class="site-section" data-intent="reading" data-template="reading" data-lead="stack" data-tone="base" data-attention="heading" data-depth="technical" id="technical-details">
+<section class="site-section" data-intent="reading" data-template="reading" data-lead="stack" data-tone="base" data-attention="heading" data-depth="supporting" id="technical-details">
   <div class="section-shell">
     <div class="kicker">If you want the reasoning</div>
     <h2>Open the question you want to <span class="heading-focus">inspect.</span></h2>
-    <p class="section-intro">These details preserve the deeper evidence without making every visitor read a statistical report.</p>
-    <div class="technical-disclosures">
+    <p class="section-intro">Each one holds the full answer and its chart, in normal text that stays readable on a phone.</p>
+    <div class="technical-disclosures supporting-visuals">
       <details>
         <summary>Did changing who gets credit change the answer?</summary>
         <div class="prose">
-          <p><strong>Yes—<span data-claim="attribution_flips">45</span> campaign decisions changed.</strong> On the same corrected data, <span data-claim="attribution_last_click">100</span> passed when the final click received all credit and <span data-claim="attribution_multitouch">81</span> passed when credit was shared across several touches.</p>
+          <p><strong>Yes: <span data-claim="attribution_flips">45</span> campaign decisions changed.</strong> On the same corrected data, <span data-claim="attribution_last_click">100</span> campaigns passed when the final click got all the credit and <span data-claim="attribution_multitouch">81</span> passed when credit was shared across several clicks.</p>
         </div>
+        <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
+          <div class="comparison-states" role="img" aria-label="100 campaigns passed when the last click got all the credit and 81 passed when credit was shared; 45 decisions changed.">
+            <div class="comparison-state"><span class="visual-label">Last click gets all the credit</span><strong><span data-claim="attribution_last_click">100</span> passed</strong><span>One click receives the whole result.</span></div>
+            <div class="comparison-state is-corrected"><span class="visual-label">Credit shared across clicks</span><strong><span data-claim="attribution_multitouch">81</span> passed</strong><span>A different set of campaigns passes.</span></div>
+          </div>
+          <figcaption><strong>The credit rule changed <span data-claim="attribution_flips">45</span> decisions.</strong> How credit is assigned belongs in the decision, not in a footnote.</figcaption>
+        </figure>
       </details>
       <details>
         <summary>Could testing many campaigns create false winners?</summary>
         <div class="prose">
-          <p>The public data contains 675 campaigns. <span data-claim="fdr_excluded">59</span> did not have enough activity for this comparison, leaving <span data-claim="fdr_family_count">616</span>. The first screen found <span data-claim="fdr_raw">530</span> apparent winners; <span data-claim="fdr_bh">480</span> remained after the stricter false-winner check.</p>
+          <p>The public data has 675 campaigns. <span data-claim="fdr_excluded">59</span> didn't have enough activity for this comparison, leaving <span data-claim="fdr_family_count">616</span>. The first pass found <span data-claim="fdr_raw">530</span> apparent winners; <span data-claim="fdr_bh">480</span> remained after a stricter check for false winners.</p>
           <p>For technical readers, the recorded cutoff was q&nbsp;=&nbsp;<span data-claim="fdr_q">0.1</span> and p&nbsp;&lt;&nbsp;<span data-claim="fdr_threshold_p">0.002</span>.</p>
         </div>
+        <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
+          <div class="comparison-states" role="img" aria-label="The first pass found 530 apparent winners; 480 remained after the false-winner check.">
+            <div class="comparison-state"><span class="visual-label">First pass</span><strong><span data-claim="fdr_raw">530</span></strong><span>apparent winners</span></div>
+            <div class="comparison-state is-corrected"><span class="visual-label">After the stricter check</span><strong><span data-claim="fdr_bh">480</span></strong><span>remained</span></div>
+          </div>
+          <figcaption><strong>Most apparent winners held up, and the correction stays in the record.</strong> The comparison used <span data-claim="fdr_family_count">616</span> campaigns with enough activity.</figcaption>
+        </figure>
       </details>
       <details>
         <summary>Did the direction hold week by week?</summary>
         <div class="prose">
           <p>Of <span data-claim="weekly_eligible">652</span> campaigns with enough weekly activity, <span data-claim="weekly_negative">473</span> stayed at or below the comparison line, <span data-claim="weekly_positive">93</span> stayed above it, and <span data-claim="weekly_mixed">86</span> moved between the two.</p>
-          <p>The first week agreed with the full-data answer <span data-claim="week1_agreement_pct">88.4%</span> of the time. The prediction written before analysis did not fully match what happened, so the mismatch remains in the record.</p>
+          <p>The first week agreed with the full answer <span data-claim="week1_agreement_pct">88.4%</span> of the time. My written prediction didn't fully match what happened, so the mismatch stays in the record.</p>
         </div>
-      </details>
-      <details>
-        <summary>What did the campaigns that survived have in common?</summary>
-        <div class="prose">
-          <p>They had <span data-claim="survivor_impressions_ratio">2.62</span>&times; the ad views, <span data-claim="survivor_ctr_ratio">1.27</span>&times; the click rate, and <span data-claim="survivor_cpa_ratio">0.16</span>&times; the cost per customer of campaigns that did not survive.</p>
-          <p>Their volume sat around the <span data-claim="survivor_volume_percentile">77.3%</span> percentile. The correction has a shape; it should not be applied as a one-size-fits-all rule.</p>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-<section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="heading" data-depth="supporting" id="supporting-charts">
-  <div class="section-shell">
-    <div class="kicker">Supporting comparisons</div>
-    <h2>Four more checks, available <span class="heading-focus">when you want them.</span></h2>
-    <p class="section-intro">Each disclosure opens one complete, theme-aware comparison. The answer stays in normal browser text, so it remains readable on a phone and at 200% zoom.</p>
-    <div class="technical-disclosures supporting-visuals">
-      <details>
-        <summary>Week-by-week direction · 652 campaigns</summary>
         <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
-          <div class="verdict-distribution" role="img" aria-label="Of 652 weekly campaign checks, 473 stayed at or below the comparison line, 93 stayed above it, and 86 were mixed.">
-            <div class="verdict-row is-selected"><span>Stayed at or below</span><meter min="0" max="473" value="473">473 of 473</meter><strong data-claim="weekly_negative">473</strong></div>
-            <div class="verdict-row is-attention"><span>Stayed above</span><meter min="0" max="473" value="93">93 of 473</meter><strong data-claim="weekly_positive">93</strong></div>
-            <div class="verdict-row"><span>Moved between both</span><meter min="0" max="473" value="86">86 of 473</meter><strong data-claim="weekly_mixed">86</strong></div>
+          <div class="verdict-distribution" role="img" aria-label="Of 652 campaigns checked week by week, 473 stayed at or below the comparison line, 93 stayed above it, and 86 were mixed.">
+            <div class="verdict-row is-selected"><span>Stayed at or below</span><meter min="0" max="652" value="473">473 of 652</meter><strong data-claim="weekly_negative">473</strong></div>
+            <div class="verdict-row is-attention"><span>Stayed above</span><meter min="0" max="652" value="93">93 of 652</meter><strong data-claim="weekly_positive">93</strong></div>
+            <div class="verdict-row"><span>Moved between both</span><meter min="0" max="652" value="86">86 of 652</meter><strong data-claim="weekly_mixed">86</strong></div>
           </div>
-          <figcaption><strong>The direction was usually stable, not perfect.</strong> The first week agreed with the full-data answer <span data-claim="week1_agreement_pct">88.4%</span> of the time.</figcaption>
+          <figcaption><strong>The direction was usually stable, not perfect.</strong> Each bar is drawn against all 652 campaigns.</figcaption>
         </figure>
       </details>
       <details>
-        <summary>Uncertainty by campaign volume · five groups</summary>
+        <summary>Does campaign size change the answer?</summary>
+        <div class="prose">
+          <p>The campaigns that survived had <span data-claim="survivor_impressions_ratio">2.62</span>&times; the ad views, <span data-claim="survivor_ctr_ratio">1.27</span>&times; the click rate, and <span data-claim="survivor_cpa_ratio">0.16</span>&times; the cost per customer of the ones that didn't. Their volume sat around the <span data-claim="survivor_volume_percentile">77.3%</span> percentile, so the correction has a shape; it shouldn't be applied as a one-size-fits-all rule.</p>
+        </div>
         <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
           <div class="volume-trend" role="img" aria-label="Uncertainty declines across five campaign-volume groups, from 0.746 percent in the smallest group to 0.141 percent in the largest.">
             <div class="volume-point volume-100"><span class="volume-bar" aria-hidden="true"></span><strong>0.746%</strong><span>1k–4,999</span></div>
@@ -199,27 +239,7 @@
             <div class="volume-point volume-27 is-comparison"><span class="volume-bar" aria-hidden="true"></span><strong>0.204%</strong><span>25k–99,999</span></div>
             <div class="volume-point volume-19 is-selected"><span class="volume-bar" aria-hidden="true"></span><strong>0.141%</strong><span>100k–999,999</span></div>
           </div>
-          <figcaption><strong>More campaign volume narrows the uncertainty.</strong> The receipt keeps the original decimal endpoints: <span data-claim="volume_low">0.00746</span> for the smallest group and <span data-claim="volume_high">0.00204</span> for the comparison group used by the original check.</figcaption>
-        </figure>
-      </details>
-      <details>
-        <summary>Last-click credit versus shared credit</summary>
-        <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
-          <div class="comparison-states" role="img" aria-label="100 campaigns passed under last-click credit and 81 passed under shared multi-touch credit; 45 campaigns changed verdict.">
-            <div class="comparison-state"><span class="visual-label">Last click gets all credit</span><strong><span data-claim="attribution_last_click">100</span> passed</strong><span>One touch receives the whole conversion.</span></div>
-            <div class="comparison-state is-corrected"><span class="visual-label">Credit shared across touches</span><strong><span data-claim="attribution_multitouch">81</span> passed</strong><span>The decision set changes.</span></div>
-          </div>
-          <figcaption><strong>The credit rule changed <span data-claim="attribution_flips">45</span> campaign verdicts.</strong> The reporting choice belongs in the decision, not in a footnote.</figcaption>
-        </figure>
-      </details>
-      <details>
-        <summary>False-winner check · 616 eligible campaigns</summary>
-        <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
-          <div class="comparison-states" role="img" aria-label="The first screen found 530 apparent winners; 480 remained after the false-winner correction.">
-            <div class="comparison-state"><span class="visual-label">First screen</span><strong><span data-claim="fdr_raw">530</span></strong><span>apparent winners</span></div>
-            <div class="comparison-state is-corrected"><span class="visual-label">After the stricter check</span><strong><span data-claim="fdr_bh">480</span></strong><span>remained</span></div>
-          </div>
-          <figcaption><strong>Most apparent winners survived, but the correction still belongs in the record.</strong> The comparison used <span data-claim="fdr_family_count">616</span> campaigns with enough activity.</figcaption>
+          <figcaption><strong>Bigger campaigns give more certain answers.</strong> The evidence record keeps the original decimals: <span data-claim="volume_low">0.00746</span> for the smallest group and <span data-claim="volume_high">0.00204</span> for the comparison group.</figcaption>
         </figure>
       </details>
     </div>
@@ -246,33 +266,35 @@
   <div class="section-shell">
     <div class="ending-content">
     <div class="ending-heading">
-    <div class="kicker">Return to the main story</div>
+    <div class="kicker">Back to the main story</div>
     <h2>The evidence is here when you need it.</h2>
     </div>
     <div class="ending-response">
     <div class="prose">
-    <p>You do not need the technical appendix to understand the finding. It exists so the claim can still be inspected when the decision matters.</p>
+    <p>You don't need this page to understand the finding. It's here so the claim can be checked when the decision matters.</p>
     </div>
     <div class="action-row">
-    <a class="button button-primary" href="growth.html">Back to Marketing Measurement</a>
-    <a class="button button-secondary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Let’s talk on LinkedIn →</a>
-    </div>
+        <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        <a class="text-link resume-text-link" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
+      </div>
     </div>
     </div>
     <div class="read-next">
-    <span class="read-next-label">Keep going</span>
-    <div class="card-grid">
-    <a class="card" href="proof-system.html">
-    <strong>How I check the work</strong>
-    <span>How important claims stay tied to sources</span>
-    <span class="action-label">See how I check the work →</span>
-    </a>
-    <a class="card" href="projects.html">
-    <strong>All projects</strong>
-    <span>Six projects organized by the kind of problem they solve</span>
-    <span class="action-label">Browse the projects →</span>
-    </a>
-    </div>
+      <span class="read-next-label">Keep going</span>
+      <div class="card-grid">
+        <a class="card is-next" href="growth.html">
+          <span class="card-label">Back to the study</span>
+          <strong>Marketing measurement</strong>
+          <span>The finding in plain words, with the evidence record.</span>
+          <span class="action-label">Read the case →</span>
+        </a>
+        <a class="card is-next" href="shortlist.html">
+          <span class="card-label">Next project</span>
+          <strong>Job Search Tool</strong>
+          <span>It reads hundreds of job posts so I only read the closest matches.</span>
+          <span class="action-label">See how it works →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -281,7 +303,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <strong>Juan Tellez</strong>
-      <span>Demand-generation marketer who builds useful things.</span>
+      <span>Marketer in Houston who builds things to learn.</span>
     </div>
     <nav class="footer-links" aria-label="Explore">
       <strong>Explore</strong>
@@ -298,7 +320,7 @@
       <a href="#main-content">Back to top ↑</a>
     </nav>
     <div class="footer-meta">
-      <span>Updated September 2026 · each case study lists its own evidence date and current boundary.</span>
+      <span>Updated September 2026 · every project page lists where its numbers come from.</span>
     </div>
   </div>
 </footer>
@@ -316,6 +338,6 @@
       <span class="image-dialog-status" aria-live="polite"></span>
     </div>
   </dialog>
-  <script src="nav.js?v=06caa1c2fc" defer></script>
+  <script src="nav.js?v=e5f1ea1bd1" defer></script>
 </body>
 </html>
