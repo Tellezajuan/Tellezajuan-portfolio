@@ -1,4 +1,4 @@
-/* V4.16 PRESENTATION CONTRACT
+/* V4.17 PRESENTATION CONTRACT
    Content declares meaning. Recipes select complete templates. Templates own
    width, alignment, spacing, responsive behavior, and state. Public blocks do
    not choose layout and no route gets a private presentation correction.
@@ -4218,11 +4218,6 @@ img[data-lightbox] {
 
 /* Draft copy awaiting Juan's own wording. [data-draft] marks drafted text;
    .fill marks facts only Juan can supply. Remove both before publishing. */
-[data-draft] {
-  text-decoration: underline dashed color-mix(in srgb, var(--accent) 55%, transparent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.25em;
-}
 
 /* Beats component text colors such as .visual-note span. */
 .site-section .fill {
@@ -4232,4 +4227,428 @@ img[data-lightbox] {
   background: color-mix(in srgb, var(--accent-bright) 32%, transparent);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+/* V4.17 ------------------------------------------------------------------ */
+
+/* Readable minimum: nothing a reader needs is set below 14px, and wide
+   screens get a little more room for heroes and card rows. */
+:root {
+  --frame: 1040px;
+  --text-2xs: 0.875rem;
+  --text-xs: 0.875rem;
+}
+
+/* One accent word per page: the H1. Section headings stay in ink. */
+.site-section h2 .heading-focus {
+  color: inherit;
+}
+
+/* Split sections line up at the top instead of floating mid-column. */
+.site-section[data-lead="split"] .section-grid {
+  align-items: start;
+}
+
+.site-section[data-lead="split"] .lead-heading {
+  align-self: start;
+}
+
+/* Theme toggle icon. */
+.theme-icon {
+  display: inline-grid;
+  place-items: center;
+}
+
+.theme-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.mobile-utilities .theme-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Draft preview: any page that still holds placeholder content says so. The
+   badge disappears once every data-draft attribute is removed. */
+body:has([data-draft])::after {
+  content: "Draft preview · some numbers are placeholders";
+  position: fixed;
+  left: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 650 var(--text-2xs)/1.2 var(--body);
+  box-shadow: var(--shadow-overlay);
+  pointer-events: none;
+}
+
+@media print {
+  body:has([data-draft])::after {
+    display: none;
+  }
+}
+
+/* A selective ratio reads as selectivity; a nearly empty bar reads as failure. */
+.share-ratio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-label);
+  line-height: 1.45;
+}
+
+.share-ratio strong {
+  color: var(--accent-strong);
+  font: 750 1.4rem/1.1 var(--display);
+  white-space: nowrap;
+}
+
+/* Decision-day slider: the same report read at different times. */
+.time-slider {
+  margin-top: 14px;
+  padding: clamp(16px, 3vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.has-slider .report-snapshots {
+  display: none;
+}
+
+.ts-readout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 2px 14px;
+}
+
+.ts-when {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font: 650 var(--text-label)/1.4 var(--body);
+}
+
+.time-slider.is-at-flag .ts-when {
+  color: var(--accent-strong);
+}
+
+.ts-share {
+  color: var(--ink);
+  font: 750 clamp(2.4rem, 6vw, 3.4rem)/1 var(--display);
+  font-variant-numeric: tabular-nums;
+}
+
+.ts-share-label {
+  color: var(--muted);
+}
+
+.ts-count {
+  grid-column: 1 / -1;
+  color: var(--ink);
+}
+
+.ts-count strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.ts-bars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  height: 150px;
+  margin-top: 18px;
+}
+
+.ts-col {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 8px;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.ts-bar {
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  background: var(--surface-soft);
+}
+
+.ts-bar > span {
+  position: absolute;
+  inset: auto 0 0;
+  border-radius: 6px;
+  background: var(--line-strong);
+  transition: background 160ms ease;
+}
+
+.ts-col.is-active .ts-bar > span {
+  background: var(--accent);
+}
+
+.ts-col.is-flag .ts-bar {
+  box-shadow: inset 0 0 0 2px var(--accent-bright);
+}
+
+.ts-col-label {
+  color: var(--muted);
+  font: 600 var(--text-2xs)/1.3 var(--body);
+  text-align: center;
+}
+
+.ts-col.is-active .ts-col-label {
+  color: var(--ink);
+}
+
+.ts-label {
+  display: block;
+  margin-top: 16px;
+  color: var(--muted);
+  font: 600 var(--text-2xs)/1.3 var(--body);
+}
+
+.ts-range {
+  width: 100%;
+  margin-top: 8px;
+  accent-color: var(--accent);
+}
+
+/* Histogram of shuffled runs, and the channel's views per day. */
+.shuffle-histogram,
+.views-chart svg {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  margin-top: 8px;
+}
+
+.hist-bar,
+.vd-bar {
+  fill: var(--line-strong);
+}
+
+.vd-bar.is-peak {
+  fill: var(--accent);
+}
+
+.hist-axis,
+.vd-axis {
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+}
+
+.hist-break {
+  stroke: var(--muted);
+  stroke-width: 2;
+  fill: none;
+}
+
+.hist-value,
+.hist-tick,
+.hist-axis-title,
+.vd-text {
+  fill: var(--muted);
+  font: 600 17px var(--body);
+}
+
+.hist-axis-title {
+  font-size: 16px;
+}
+
+.hist-real {
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.hist-real-dot {
+  fill: var(--accent);
+}
+
+.hist-real-text,
+.vd-note {
+  fill: var(--accent-strong);
+  font: 700 18px var(--body);
+}
+
+.exact-counts {
+  margin-top: 14px;
+}
+
+/* Projects hero: a small collage of real outputs, floating without a frame. */
+.story-illustration.project-collage {
+  position: relative;
+  height: 360px;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.project-collage img,
+.project-collage .collage-chart {
+  position: absolute;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  box-shadow: 0 14px 34px rgb(16 38 50 / 14%);
+}
+
+.project-collage .collage-thumb {
+  top: 10px;
+  left: 2%;
+  width: 72%;
+  height: auto;
+  transform: rotate(-2.5deg);
+}
+
+.project-collage .collage-game {
+  top: 118px;
+  right: 1%;
+  width: 56%;
+  height: auto;
+  transform: rotate(3deg);
+}
+
+.project-collage .collage-chart {
+  left: 5%;
+  bottom: 64px;
+  display: grid;
+  gap: 4px;
+  width: 44%;
+  padding: 14px 16px;
+  transform: rotate(-1deg);
+}
+
+.collage-chart span {
+  color: var(--muted);
+  font: 650 var(--text-2xs)/1.3 var(--body);
+}
+
+.collage-chart strong {
+  color: var(--accent-strong);
+  font: 750 2rem/1 var(--display);
+}
+
+.collage-chart i {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent) var(--w), var(--surface-soft) var(--w));
+}
+
+.project-collage figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
+:root[data-theme="dark"] .project-collage img.theme-light {
+  display: none;
+}
+
+/* Status tags on project tiles. */
+.tile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.tile-tags li {
+  padding: 2px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font: 650 var(--text-2xs)/1.5 var(--body);
+}
+
+/* Tools used every day. */
+.tool-chips li.is-daily,
+.tool-legend .is-daily {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.tool-legend {
+  margin-top: var(--space-item);
+  color: var(--muted);
+  font-size: var(--text-label);
+}
+
+.tool-legend .is-daily {
+  padding: 1px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-weight: 650;
+}
+
+@media (max-width: 680px) {
+  /* On a phone the buttons come right after the opening line. */
+  .intro-grid [data-intro-role="action"] {
+    order: 2;
+  }
+
+  .intro-grid [data-intro-role="supporting"],
+  .intro-grid:has([data-intro-role="visual"]) > .intro-copy > :not([data-intro-role]) {
+    order: 3;
+  }
+
+  /* Carousel arrows sit under the screens instead of on top of them. */
+  .tour .gallery-status,
+  .carousel .gallery-status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 48px;
+    margin-top: 12px;
+  }
+
+  .tour-btn,
+  .carousel-btn,
+  .tour.is-portrait .tour-btn {
+    top: auto;
+    bottom: 2px;
+  }
+
+  .tour-prev,
+  .carousel-prev {
+    left: 0;
+  }
+
+  .tour-next,
+  .carousel-next {
+    left: 54px;
+    right: auto;
+  }
+
+  .story-illustration.project-collage {
+    height: 320px;
+  }
+
+  .ts-bars {
+    height: 120px;
+    gap: 6px;
+  }
+}
+
+/* WebP with a JPG fallback; the picture wrapper stays out of layout. */
+picture {
+  display: contents;
 }

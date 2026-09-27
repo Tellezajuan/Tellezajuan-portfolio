@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>try{var t=localStorage.getItem("theme");var d=t==="dark";if(d)document.documentElement.dataset.theme="dark";}catch(e){}try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window)document.documentElement.classList.add("motion-ready");}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>Marketing measurement — Juan Tellez</title>
+  <meta name="description" content="A public-data study: 167 of 285 ad campaigns that looked worth scaling only looked good because of credit that arrived after the budget was set.">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Marketing measurement — Juan Tellez">
+  <meta property="og:description" content="A public-data study: 167 of 285 ad campaigns that looked worth scaling only looked good because of credit that arrived after the budget was set.">
+  <meta property="og:url" content="https://www.tellezajuan.com/marketing-measurement.html">
+  <link rel="canonical" href="https://www.tellezajuan.com/marketing-measurement.html">
+  <meta property="og:image" content="https://www.tellezajuan.com/images/social/growth.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Preview card: Marketing measurement — Juan Tellez">
+  <meta property="og:site_name" content="Juan Tellez">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marketing measurement — Juan Tellez">
+  <meta name="twitter:description" content="A public-data study: 167 of 285 ad campaigns that looked worth scaling only looked good because of credit that arrived after the budget was set.">
+  <meta name="twitter:image" content="https://www.tellezajuan.com/images/social/growth.png">
+  <meta name="twitter:image:alt" content="Preview card: Marketing measurement — Juan Tellez">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"All Projects","item":"https://www.tellezajuan.com/projects.html"},{"@type":"ListItem","position":2,"name":"Marketing Measurement","item":"https://www.tellezajuan.com/marketing-measurement.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Most campaigns that looked worth scaling only looked good in hindsight.", "description": "A public-data study: 167 of 285 ad campaigns that looked worth scaling only looked good because of credit that arrived after the budget was set.", "image": "https://www.tellezajuan.com/images/social/growth.png", "url": "https://www.tellezajuan.com/marketing-measurement.html", "mainEntityOfPage": "https://www.tellezajuan.com/marketing-measurement.html", "dateModified": "2026-09-27", "author": {"@type": "Person", "name": "Juan Tellez", "url": "https://www.tellezajuan.com/"}}</script>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=12e88c541e">
+</head>
+<body data-route="marketing-measurement.html" data-recipe="case-study" data-route-role="project">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Juan Tellez home">JT<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+      <details class="nav-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life outside work.</span></a>
+<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years of paid media and demand gen.</span></a>
+<a data-page="how-i-work.html" href="how-i-work.html"><strong>How I Work</strong><span>How I use AI, and how I check the numbers.</span></a></div></details>
+      <details class="nav-group nav-projects is-current-group"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All five: marketing work and things I built for fun.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing"><span>Marketing</span><a data-page="marketing-measurement.html" href="marketing-measurement.html" aria-current="page"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look better in hindsight.</span></a>
+<a data-page="market-scan.html" href="market-scan.html"><strong>Market Scan</strong><span>What 683 demand gen job posts ask for.</span></a></div>
+<div class="project-menu-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="youtube-channel.html" href="youtube-channel.html"><strong>YouTube Channel</strong><span>A gaming clips channel and the system behind it.</span></a>
+<a data-page="research.html" href="research.html"><strong>Research Lab</strong><span>Trading and sports ideas, tested with simulated money.</span></a>
+<a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon game prototype.</span></a></div></div></div></details>
+      <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <div class="header-tools desktop-tools">
+      <a class="icon-link" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener" aria-label="Juan Tellez on LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20.5H6.94V8.5Z"/><path d="M5.25 7.11C6.35 7.11 7.24 6.22 7.24 5.11C7.24 4.01 6.35 3.11 5.25 3.11C4.24 3.11 3.25 4.01 3.25 5.11Z"/><path d="M20.5 13.66V20.5H17.13V14.05C17.13 12.44 16.56 11.34 15.12 11.34C14.02 11.34 13.37 12.08 13.08 12.79C12.98 13.05 12.95 13.4 12.95 13.76V20.5H9.57C9.57 20.5 9.62 9.47 9.57 8.5H12.95V9.95C13.4 9.25 14.21 8.24 16.54 8.24C19.43 8.24 20.5 10.24 20.5 13.66Z"/></svg>
+      </a>
+      <button class="theme-toggle icon-button" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></span></button>
+    </div>
+    <details class="mobile-menu">
+      <summary><span class="menu-label">Menu</span><span class="close-label">Close</span></summary>
+      <nav class="mobile-nav" aria-label="Mobile">
+        <a data-page="index.html" href="index.html">Home</a>
+        <a data-page="about-me.html" href="about-me.html">About Juan</a>
+        <a data-page="experience.html" href="experience.html">Experience</a>
+        <details class="mobile-nav-group" open><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing"><span>Marketing</span><a data-page="marketing-measurement.html" href="marketing-measurement.html" aria-current="page">Marketing Measurement</a>
+<a data-page="market-scan.html" href="market-scan.html">Market Scan</a></div>
+<div class="mobile-project-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="youtube-channel.html" href="youtube-channel.html">YouTube Channel</a>
+<a data-page="research.html" href="research.html">Research Lab</a>
+<a data-page="delve.html" href="delve.html">Delve</a></div></div></details>
+        <a href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <div class="mobile-utilities mobile-utilities-supporting">
+          <a data-page="how-i-work.html" href="how-i-work.html">How I Work</a>
+          <a href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">LinkedIn</a>
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">Theme <span class="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></span></button>
+        </div>
+      </nav>
+    </details>
+  </div>
+</header>
+  <main id="main-content">
+<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">Marketing Measurement</li></ol></nav>
+<header class="page-intro container" data-block="intro">
+  <div class="intro-head">
+          <p class="eyebrow">Marketing measurement · public ad data</p>
+          <h1>Most campaigns that looked worth scaling only looked good <span>in hindsight</span>.</h1>
+        </div>
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <p class="intro-subtitle" data-intro-role="primary">Ad reports keep crediting results to a campaign for weeks after its budget was decided. I rebuilt 675 campaign reports to show only what was known on the day each decision was due.</p>
+            <p class="intro-lede" data-intro-role="supporting">On decision day, only <span data-claim="share_credited_at_gate">39%</span> of the eventual credit existed. I wrote the plan first, then tried hard to break the result.</p>
+            <div class="action-row" data-intro-role="action">
+  <a class="button button-primary" href="#findings">Read the finding</a>
+  <a class="button button-secondary" href="#receipt">See the evidence</a>
+  </div>
+          </div>
+          <figure class="story-illustration" data-intro-role="visual">
+            <svg class="illo" viewBox="0 0 640 340" role="img" aria-label="An old campaign report sits to the left of a flag marking the day the budget was decided. Credit tokens keep arriving on later days and fly back into the old report, making its bar look taller than it was on decision day.">
+  <line class="illo-faint" x1="30" y1="300" x2="610" y2="300"/>
+  <path class="illo-faint" d="M58 294v12M94 294v12M130 294v12M166 294v12M202 294v12M274 294v12M310 294v12M346 294v12M382 294v12M418 294v12M454 294v12M490 294v12M526 294v12M562 294v12M598 294v12"/>
+  <rect class="illo-sheet" x="44" y="62" width="160" height="200" rx="12"/>
+  <path class="illo-text" d="M68 92h92M68 110h58"/>
+  <line class="illo-line" x1="66" y1="236" x2="182" y2="236"/>
+  <rect class="illo-soft" x="78" y="204" width="22" height="32" rx="3"/>
+  <rect class="illo-ghost" x="114" y="130" width="22" height="62" rx="3"/>
+  <rect class="illo-soft" x="114" y="192" width="22" height="44" rx="3"/>
+  <rect class="illo-soft" x="150" y="214" width="22" height="22" rx="3"/>
+  <path class="illo-accent-dots" d="M352 248 C 350 110, 250 30, 150 124"/>
+  <path class="illo-accent-dots" d="M448 260 C 440 70, 290 10, 152 134"/>
+  <path class="illo-accent-dots" d="M548 242 C 546 40, 320 -6, 154 144"/>
+  <path class="illo-accent-line" d="M160 110 L148 126 L168 128"/>
+  <line class="illo-line" x1="244" y1="300" x2="244" y2="164"/>
+  <path class="illo-accent" d="M244 166 L300 182 L244 200 Z"/>
+  <circle class="illo-accent" cx="244" cy="300" r="7"/>
+  <circle class="illo-coin" cx="352" cy="266" r="16"/>
+  <path class="illo-line" d="M344 266l6 6 11-12"/>
+  <circle class="illo-coin" cx="448" cy="278" r="16"/>
+  <path class="illo-line" d="M440 278l6 6 11-12"/>
+  <circle class="illo-coin" cx="548" cy="260" r="16"/>
+  <path class="illo-line" d="M540 260l6 6 11-12"/>
+  <rect class="illo-sheet" x="520" y="96" width="80" height="74" rx="8"/>
+  <path class="illo-line" d="M520 118h80M540 88v16M580 88v16"/>
+  <path class="illo-text" d="M536 136h10M556 136h10M576 136h10M536 152h10M556 152h10"/>
+</svg>
+            <figcaption><strong>The problem in one picture:</strong> the budget is decided on the day of the flag, but credit keeps arriving for weeks and gets filed back into the old report.</figcaption>
+          </figure>
+        </div>
+        <div class="feature-callout">
+  <span class="callout-label">The finding</span>
+  <strong class="callout-title">167 of 285 campaigns that looked worth scaling only looked good because of credit that arrived after the budget was set.</strong>
+  <span class="callout-copy">At the extreme, the 25 campaigns with the most late credit looked about 4× cheaper in hindsight than on decision day: their middle cost per customer rose <span data-claim="median_cpa_inflation_pct">297%</span> once late credit was removed. Those 25 were picked after the study, so they show the problem’s size, not a typical campaign.</span>
+  </div>
+</header>
+<details class="page-toc container">
+  <summary>On this page · 5 sections · 7 min read</summary>
+  <nav class="page-toc-links" aria-label="On this page">
+    <span class="page-toc-label" aria-hidden="true">On this page · 7 min</span>
+    <a href="#problem">Problem</a>
+    <a href="#mechanism">How it works</a>
+    <a href="#findings">Findings</a>
+    <a href="#check-your-account">Check Your Account</a>
+    <a href="#receipt">Evidence record</a>
+  </nav>
+</details>
+<section class="site-section" data-intent="evidence" data-template="evidence" data-lead="split" data-tone="base" data-attention="heading" data-depth="primary" id="problem">
+  <div class="section-shell">
+    <div class="section-grid">
+    <div class="lead-heading">
+    <div class="kicker">The problem</div>
+    <h2>Credit counted today can belong to a budget decision made <span class="heading-focus">weeks ago.</span></h2>
+    </div>
+    <div class="lead-body prose">
+    <p>Nothing is broken. Ad platforms usually file a result under the day someone clicked, so an old report keeps improving as late results trickle in. <strong>That helps you understand history and misleads you about a decision you already made.</strong></p>
+    <p>This study measures that gap on a public ad dataset anyone can download. My part was choosing the cutoff and writing the rule down before seeing the answer.</p>
+    </div>
+    </div>
+    <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
+    <span class="visual-label">The same report, read later</span>
+    <div class="time-slider" data-start="1" data-steps='[{"when": "1 hour later", "share": 31, "count": 85}, {"when": "1 day later", "share": 39, "count": 118, "flag": "Budget decided"}, {"when": "2 days later", "share": 44, "count": 142}, {"when": "1 week later", "share": 64, "count": 208}, {"when": "30 days later", "share": 100, "count": 285}]' hidden></div>
+    <div class="report-snapshots" role="img" aria-label="The same ad report read five times. 1 hour later: 31% of the credit, 85 campaigns looked worth scaling; 1 day later: 39% of the credit, 118 campaigns looked worth scaling (the budget was decided here); 2 days later: 44% of the credit, 142 campaigns looked worth scaling; 1 week later: 64% of the credit, 208 campaigns looked worth scaling; 30 days later: 100% of the credit, 285 campaigns looked worth scaling.">
+      <div class="report-snapshot">
+        <span class="report-snapshot-when">1 hour later</span>
+        <strong class="report-snapshot-value"><span data-claim="sweep_1h_share">31%</span></strong>
+        <meter min="0" max="100" value="31">31%</meter>
+        <span class="report-snapshot-note"><span data-claim="sweep_1h_candidates">85</span> campaigns look worth scaling</span>
+      </div>
+      <div class="report-snapshot is-decision">
+        <span class="report-snapshot-when">1 day later</span><span class="report-snapshot-flag">Budget decided</span>
+        <strong class="report-snapshot-value"><span data-claim="sweep_24h_share">39%</span></strong>
+        <meter min="0" max="100" value="39">39%</meter>
+        <span class="report-snapshot-note"><span data-claim="sweep_24h_candidates">118</span> campaigns look worth scaling</span>
+      </div>
+      <div class="report-snapshot">
+        <span class="report-snapshot-when">2 days later</span>
+        <strong class="report-snapshot-value"><span data-claim="sweep_48h_share">44%</span></strong>
+        <meter min="0" max="100" value="44">44%</meter>
+        <span class="report-snapshot-note"><span data-claim="sweep_48h_candidates">142</span> campaigns look worth scaling</span>
+      </div>
+      <div class="report-snapshot">
+        <span class="report-snapshot-when">1 week later</span>
+        <strong class="report-snapshot-value"><span data-claim="sweep_7d_share">64%</span></strong>
+        <meter min="0" max="100" value="64">64%</meter>
+        <span class="report-snapshot-note"><span data-claim="sweep_7d_candidates">208</span> campaigns look worth scaling</span>
+      </div>
+      <div class="report-snapshot is-final">
+        <span class="report-snapshot-when">30 days later</span>
+        <strong class="report-snapshot-value"><span data-claim="sweep_full_share">100%</span></strong>
+        <meter min="0" max="100" value="100">100%</meter>
+        <span class="report-snapshot-note"><span data-claim="sweep_full_candidates">285</span> campaigns look worth scaling</span>
+      </div>
+    </div>
+    <figcaption><strong>Nothing about these campaigns changed between readings. Only the waiting did.</strong> The budget was decided at the one-day reading, and <span data-claim="share_credited_after_gate">61%</span> of the credit arrived after that. Shares are of all the credit the dataset recorded in the 30 days after each decision.</figcaption>
+    </figure>
+    <div class="highlight">
+    <strong>Will this page’s numbers change? No.</strong>
+    <span>The study uses a closed public archive: a month of ad data that Criteo released for research, plus the month of results that followed, saved on August 20, 2026. Nothing new can arrive in it, so re-running the study gives the same numbers. A live account’s old reports keep changing.</span>
+    </div>
+  </div>
+</section>
+<section class="site-section tone-soft" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="soft" data-attention="component" data-depth="primary" id="mechanism">
+  <div class="section-shell">
+    <div class="kicker">How the correction works</div>
+    <h2>Score every campaign twice: once the usual way, once with only what was known on decision day.</h2>
+    <figure class="media-block system-visual">
+    <div class="process-flow">
+      <article class="process-stage"><span class="process-stage-label">01 · The usual report</span><strong><span data-claim="naive_candidates">285</span></strong><span>campaigns looked promising once all the late credit was counted</span></article>
+      <article class="process-stage is-decision"><span class="process-stage-label">02 · Decision-day view</span><strong><span data-claim="corrected_candidates">118</span></strong><span>still looked promising using only credit that existed on decision day</span></article>
+      <article class="process-stage is-outcome"><span class="process-stage-label">03 · Worth another test</span><strong><span data-claim="promote_candidates">33</span></strong><span>passed the remaining checks and earned another experiment</span></article>
+    </div>
+    <div class="visual-note"><strong>167 dropped out</strong><span>They only looked good because of credit that arrived late. Another 85 did not clear the next-test bar.</span></div>
+    <figcaption>
+    <strong>The timing check is the whole idea.</strong> Separately, <span data-claim="spend_at_risk_pct">60.3%</span> of the test budget sat behind campaigns that failed it, a figure calculated after the planned study.</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="site-section" data-intent="evidence" data-template="evidence" data-lead="stack" data-tone="base" data-attention="heading" data-depth="primary" id="findings">
+  <div class="section-shell">
+    <div class="kicker">The finding</div>
+    <h2>The gap is real, it is large, and it is <span class="heading-focus">not luck.</span></h2>
+    <p class="section-intro">To rule out luck, I shuffled the dates and re-ran the whole test <span data-claim="placebo_permutations">20</span> times, then <span data-claim="placebo_hr_permutations">999</span> more. No shuffled run found more than <span data-claim="placebo_hr_max">4</span> campaigns worth testing; the real dates found <span data-claim="placebo_observed">33</span>. <a class="text-link" href="how-i-tested-it.html#main-result">See the shuffle chart →</a></p>
+    <figure class="media-block system-visual" data-visual-role="evidence" data-visual-format="html">
+    <div class="verdict-distribution" role="img" aria-label="Final decisions across 675 campaigns: 393 stopped, 152 moved down, 97 lacked enough evidence, and 33 earned another experiment.">
+      <div class="verdict-row"><span>Stopped</span><meter min="0" max="675" value="393">393 of 675</meter><strong data-claim="verdict_kill">393</strong></div>
+      <div class="verdict-row is-attention"><span>Moved down</span><meter min="0" max="675" value="152">152 of 675</meter><strong data-claim="verdict_demote">152</strong></div>
+      <div class="verdict-row"><span>Not enough evidence</span><meter min="0" max="675" value="97">97 of 675</meter><strong data-claim="verdict_insufficient">97</strong></div>
+      <div class="verdict-row is-selected"><span>Earned another experiment</span><meter min="0" max="675" value="33">33 of 675</meter><strong data-claim="verdict_promote">33</strong></div>
+    </div>
+    <figcaption><strong>Out of 675 campaigns, 33 earned another experiment.</strong> Stopped means no more testing; moved down means lower priority; not enough evidence means too little data to judge. Each bar is drawn against all 675.</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" data-depth="supporting" id="bugs">
+  <div class="section-shell">
+    <div class="section-grid">
+    <div class="lead-heading">
+    <div class="kicker">What changes</div>
+    <h2>A correction only matters if it changes the next <span class="heading-focus">budget decision.</span></h2>
+    </div>
+    <div class="lead-body prose">
+    <p>So I tested both rules on campaigns held back from the first analysis. The usual rule picks <span data-claim="oos_naive_selected">274</span> campaigns. The timing-corrected rule picks a different, smaller set of <span data-claim="oos_corrected_selected">99</span> with <strong>about half the cost per customer</strong>, a <span data-claim="oos_improvement_pct">50.8%</span> improvement. That is a test on public data, not proof of results in a live account.</p>
+    <p>One campaign looked <span data-claim="example_multiple">6.1</span>× cheaper than it really was because <span data-claim="example_leaked">431</span> late credits were filed back into it.</p>
+    </div>
+    </div>
+    <figure class="media-block system-visual decision-comparison">
+      <div class="comparison-states">
+        <div class="comparison-state">
+          <span class="visual-label">The usual rule, on campaigns set aside</span>
+          <strong><span data-claim="oos_naive_selected">274</span> campaigns picked</strong>
+          <span>Picks campaigns that look good once late credit is counted</span>
+        </div>
+        <div class="comparison-state is-corrected">
+          <span class="visual-label">Timing-corrected rule, same campaigns</span>
+          <strong><span data-claim="oos_corrected_selected">99</span> campaigns picked</strong>
+          <span>About half the cost per customer of the usual picks</span>
+        </div>
+      </div>
+      <figcaption><strong>The correction changed which campaigns would get the budget.</strong> Exact costs are in the evidence record below.</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="site-section" data-intent="sequence" data-template="timeline" data-lead="split" data-tone="base" data-attention="component" data-depth="primary" id="check-your-account">
+  <div class="section-shell">
+    <div class="section-grid">
+    <div class="lead-heading">
+    <div class="kicker">A question for your own reports</div>
+    <h2>Does this happen in your account?</h2>
+    </div>
+    <div class="lead-body prose">
+    <p>Probably, and it is not anyone’s fault. Many ad platforms <span>backfill conversions into the day of the click</span>, not the day the conversion occurred.</p>
+    </div>
+    </div>
+    <div class="steps">
+    <div class="step">
+    <strong>01</strong>
+    <span>
+    <strong>Pull the same report twice.</strong> Once today, once from a snapshot 30 days ago, like the readings above. If the older numbers have changed, you have the problem.</span>
+    </div>
+    <div class="step">
+    <strong>02</strong>
+    <span>
+    <strong>Check your click-to-conversion lag.</strong> Anything longer than your reporting cycle is the size of your blind spot.</span>
+    </div>
+    <div class="step">
+    <strong>03</strong>
+    <span>
+    <strong>Replay your last budget decision.</strong> Ask what it would have looked like using only the data that existed the morning you made it.</span>
+    </div>
+    </div>
+  </div>
+</section>
+<section class="site-section" data-intent="receipt" data-template="evidence" data-lead="stack" data-tone="base" data-attention="component" data-depth="technical" id="receipt">
+  <div class="section-shell">
+    <div class="kicker">Evidence record</div>
+    <h2>Every number on this page, with its source.</h2>
+    <details>
+    <summary>Open the full evidence record</summary>
+    <p>Every value here comes from a dated record built from the public dataset. Nothing is hidden from this summary because the data is already public; the larger working record remains private.</p>
+    <p class="caption">Credit counts are grouped by campaign and day. They are not counts of unique customers or revenue.</p>
+    <h3 class="receipt-subhead">The claim</h3>
+    <p class="caption">What changed once late credit was removed, including the test on held-back campaigns.</p>
+    <div class="receipt-grid">
+    <div class="receipt-item">
+    <strong data-claim="naive_candidates">285</strong>
+    <span>campaigns that looked promising in the usual report</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="corrected_candidates">118</strong>
+    <span>still promising with decision-day credit only</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="promote_candidates">33</strong>
+    <span>earned another experiment</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="share_credited_at_gate">39%</strong>
+    <span>of the credit existed on decision day</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="share_credited_after_gate">61%</strong>
+    <span>of the credit arrived after the decision</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="median_cpa_inflation_pct">297%</strong>
+    <span>middle cost-per-customer increase, 25 campaigns with the most late credit</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="verdict_kill">393</strong>
+    <span>campaigns stopped</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="verdict_demote">152</strong>
+    <span>campaigns moved down</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="verdict_insufficient">97</strong>
+    <span>campaigns without enough evidence</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="oos_naive_selected">274</strong>
+    <span>picked by the usual rule on held-back campaigns</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="oos_corrected_selected">99</strong>
+    <span>picked by the corrected rule on held-back campaigns</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="oos_improvement_pct">50.8%</strong>
+    <span>held-back improvement in cost per customer</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="oos_cpa_naive">0.01782</strong>
+    <span>cost per customer, usual rule, held-back (dataset units)</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="oos_cpa_corrected">0.00877</strong>
+    <span>cost per customer, corrected rule, held-back (dataset units)</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="cpa_improvement_pct">49.8%</strong>
+    <span>first-analysis improvement in cost per customer</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="cpa_naive_rule">0.01671</strong>
+    <span>cost per customer, usual rule, first analysis</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="cpa_corrected_rule">0.00839</strong>
+    <span>cost per customer, corrected rule, first analysis</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="spend_at_risk_pct">60.3%</strong>
+    <span>of test budget behind campaigns that failed the timing check (calculated after the planned study)</span>
+    </div>
+    </div>
+    <h3 class="receipt-subhead">The checks</h3>
+    <p class="caption">Whether luck, the credit rule, false winners, or week-to-week swings could explain the result.</p>
+    <div class="receipt-grid">
+    <div class="receipt-item">
+    <strong data-claim="placebo_permutations">20</strong>
+    <span>planned timing shuffles</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_observed">33</strong>
+    <span>real result (campaigns worth another test)</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_median">0</strong>
+    <span>middle result across planned shuffles</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_max">1</strong>
+    <span>highest result across planned shuffles</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_at_or_above">0</strong>
+    <span>planned shuffles at or above the real result</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_hr_permutations">999</strong>
+    <span>confirmation shuffles</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_hr_median">0</strong>
+    <span>middle result across confirmation shuffles</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_hr_max">4</strong>
+    <span>highest result across confirmation shuffles</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_hr_at_or_above">0</strong>
+    <span>confirmation shuffles at or above the real result</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="placebo_hr_p">0.001</strong>
+    <span>confirmation p-value</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="attribution_last_click">100</strong>
+    <span>passed when the last click gets all the credit</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="attribution_multitouch">81</strong>
+    <span>passed when credit is shared across clicks</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="attribution_flips">45</strong>
+    <span>decisions changed by the credit rule</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="fdr_raw">530</strong>
+    <span>apparent winners before the false-winner check</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="fdr_bh">480</strong>
+    <span>apparent winners after the false-winner check</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="weekly_positive">93</strong>
+    <span>campaigns that stayed above the comparison line</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="weekly_negative">473</strong>
+    <span>campaigns that stayed at or below the comparison line</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="weekly_mixed">86</strong>
+    <span>campaigns that moved between both</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="week1_agreement_pct">88.4%</strong>
+    <span>first-week agreement with the full answer</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="volume_low">0.00746</strong>
+    <span>uncertainty floor, lowest-volume campaigns</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="volume_high">0.00204</strong>
+    <span>uncertainty floor, comparison group</span>
+    </div>
+    </div>
+    <h3 class="receipt-subhead">The scale</h3>
+    <p class="caption">How much data was involved, who survived the correction, and the one worked example.</p>
+    <div class="receipt-grid">
+    <div class="receipt-item">
+    <strong data-claim="heldout_cohorts">9,979</strong>
+    <span>campaign-day groups held back for a second test</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="leakage_cohorts">8,730</strong>
+    <span>held-back groups that received late credit</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="leakage_rate">87.5%</strong>
+    <span>of held-back groups received late credit</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="leaked_conversions">189,430</strong>
+    <span>late credits filed back into earlier days (credits, not customers)</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="survivor_impressions_ratio">2.62</strong>
+    <span>× the ad views of other campaigns (survivors)</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="survivor_ctr_ratio">1.27</strong>
+    <span>× the click rate of other campaigns (survivors)</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="survivor_cpa_ratio">0.16</strong>
+    <span>× the cost per customer of other campaigns (survivors)</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="survivor_volume_percentile">77.3%</strong>
+    <span>volume percentile of the survivors</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="example_campaign">2576437</strong>
+    <span>worked-example campaign ID in the public dataset</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="example_naive_cpa">0.00828</strong>
+    <span>example cost per customer, usual report</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="example_corrected_cpa">0.05076</strong>
+    <span>example cost per customer, decision-day view</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="example_multiple">6.1</strong>
+    <span>× difference in the worked example</span>
+    </div>
+    <div class="receipt-item">
+    <strong data-claim="example_leaked">431</strong>
+    <span>late credits in the worked example</span>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+<section class="site-section" data-intent="categories" data-template="horizontal-rows" data-lead="stack" data-tone="base" data-attention="component" data-depth="supporting" id="what-it-took">
+  <div class="section-shell">
+    <div class="kicker">What it took</div>
+    <h2>The result only became useful after two uncomfortable checks.</h2>
+    <div class="detail-list takeaway-list">
+      <article class="detail-row"><span class="card-label">How long</span><div class="detail-row-copy"><span>Built in about <span data-claim="est_growth_build_days">3</span> days, going by the project’s file dates: 21 scripts in seven ordered stages, with automated tests, on a public dataset anyone can repeat.</span></div></article>
+      <article class="detail-row"><span class="card-label">What broke</span><div class="detail-row-copy"><span>Two bugs were caught before any result was trusted. Both were fixed, and everything was re-run without changing the plan.</span></div></article>
+      <article class="detail-row"><span class="card-label">Full method</span><div class="detail-row-copy"><span>How credit was assigned and how false winners were filtered out. <a class="text-link" href="how-i-tested-it.html">See how I tested it →</a></span></div></article>
+    </div>
+  </div>
+</section>
+<section class="site-section tone-inverse" data-intent="ending" data-template="split-ending" data-lead="stack" data-tone="inverse" data-attention="action" data-depth="primary" id="talk">
+  <div class="section-shell">
+    <div class="ending-content">
+      <div class="ending-heading">
+      <div class="kicker">Compare notes</div>
+      <h2>Seen this in your own reports?</h2>
+      </div>
+      <div class="ending-response">
+      <div class="prose"><p>This is the <span>closest match to my day job</span>, and I’m always curious how other teams handle late credit. I’d like to hear what you’ve seen.</p></div>
+      <div class="action-row">
+        <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        <a class="text-link resume-text-link" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
+      </div>
+      </div>
+    </div>
+    <div class="read-next">
+      <span class="read-next-label">Keep going</span>
+      <div class="card-grid">
+        <a class="card is-next" href="market-scan.html">
+          <span class="card-label">Next project</span>
+          <strong>Market Scan</strong>
+          <span>What 683 demand gen job posts actually ask for.</span>
+          <span class="action-label">See the scan →</span>
+        </a>
+        <a class="card" href="projects.html">
+          <strong>All five projects</strong>
+          <span>Marketing work and things I built for fun.</span>
+          <span class="action-label">Browse the projects →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <strong>Juan Tellez</strong>
+      <span>Marketer in Houston who builds things to learn.</span>
+    </div>
+    <nav class="footer-links" aria-label="Explore">
+      <strong>Explore</strong>
+      <a href="about-me.html">About Juan</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html">All Projects</a>
+<a href="how-i-work.html">How I Work</a>
+    </nav>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <strong>Elsewhere</strong>
+      <a href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Tellezajuan" target="_blank" rel="noopener">GitHub</a>
+      <a href="#main-content">Back to top ↑</a>
+    </nav>
+    <div class="footer-meta">
+      <span>Updated September 2026 · every project page lists where its numbers come from.</span>
+    </div>
+  </div>
+</footer>
+  <dialog class="image-dialog" aria-label="Expanded image">
+    <button class="dialog-close" type="button" aria-label="Close expanded image">×</button>
+    <div class="image-dialog-stage">
+      <button class="dialog-nav dialog-prev" type="button" aria-label="Previous image">‹</button>
+      <!-- nav.js swaps in the real src on open; a transparent pixel keeps this
+           a valid image instead of a src-less element the browser reports broken. -->
+      <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+      <button class="dialog-nav dialog-next" type="button" aria-label="Next image">›</button>
+    </div>
+    <div class="image-dialog-meta">
+      <p></p>
+      <span class="image-dialog-status" aria-live="polite"></span>
+    </div>
+  </dialog>
+  <script src="nav.js?v=bc83ca9d99" defer></script>
+</body>
+</html>

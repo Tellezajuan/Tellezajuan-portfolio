@@ -29,7 +29,7 @@
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=be96d9120d">
+  <link rel="stylesheet" href="style.css?v=12e88c541e">
 </head>
 <body data-route="experience.html" data-recipe="profile" data-route-role="profile">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -39,12 +39,11 @@
     <nav class="desktop-nav" aria-label="Primary">
       <a class="nav-link" data-page="index.html" href="index.html">Home</a>
       <details class="nav-group is-current-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html"><strong>About Juan</strong><span>Background, values, and life outside work.</span></a>
-<a data-page="experience.html" href="experience.html" aria-current="page"><strong>Experience</strong><span>Six-plus years planning ads and fixing the reports.</span></a>
-<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>How I use AI, and where I make the call.</span></a>
-<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important numbers stay tied to their sources.</span></a></div></details>
-      <details class="nav-group nav-projects"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All five: marketing work and things I built for fun.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing"><span>Marketing</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look better in hindsight.</span></a>
-<a data-page="shortlist.html" href="shortlist.html"><strong>Market Scan</strong><span>What 683 demand gen job posts ask for.</span></a></div>
-<div class="project-menu-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Channel</strong><span>A gaming clips channel and the system behind it.</span></a>
+<a data-page="experience.html" href="experience.html" aria-current="page"><strong>Experience</strong><span>Six-plus years of paid media and demand gen.</span></a>
+<a data-page="how-i-work.html" href="how-i-work.html"><strong>How I Work</strong><span>How I use AI, and how I check the numbers.</span></a></div></details>
+      <details class="nav-group nav-projects"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All five: marketing work and things I built for fun.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing"><span>Marketing</span><a data-page="marketing-measurement.html" href="marketing-measurement.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look better in hindsight.</span></a>
+<a data-page="market-scan.html" href="market-scan.html"><strong>Market Scan</strong><span>What 683 demand gen job posts ask for.</span></a></div>
+<div class="project-menu-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="youtube-channel.html" href="youtube-channel.html"><strong>YouTube Channel</strong><span>A gaming clips channel and the system behind it.</span></a>
 <a data-page="research.html" href="research.html"><strong>Research Lab</strong><span>Trading and sports ideas, tested with simulated money.</span></a>
 <a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon game prototype.</span></a></div></div></div></details>
       <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -53,7 +52,7 @@
       <a class="icon-link" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener" aria-label="Juan Tellez on LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20.5H6.94V8.5Z"/><path d="M5.25 7.11C6.35 7.11 7.24 6.22 7.24 5.11C7.24 4.01 6.35 3.11 5.25 3.11C4.24 3.11 3.25 4.01 3.25 5.11Z"/><path d="M20.5 13.66V20.5H17.13V14.05C17.13 12.44 16.56 11.34 15.12 11.34C14.02 11.34 13.37 12.08 13.08 12.79C12.98 13.05 12.95 13.4 12.95 13.76V20.5H9.57C9.57 20.5 9.62 9.47 9.57 8.5H12.95V9.95C13.4 9.25 14.21 8.24 16.54 8.24C19.43 8.24 20.5 10.24 20.5 13.66Z"/></svg>
       </a>
-      <button class="theme-toggle icon-button" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button>
+      <button class="theme-toggle icon-button" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></span></button>
     </div>
     <details class="mobile-menu">
       <summary><span class="menu-label">Menu</span><span class="close-label">Close</span></summary>
@@ -61,17 +60,16 @@
         <a data-page="index.html" href="index.html">Home</a>
         <a data-page="about-me.html" href="about-me.html">About Juan</a>
         <a data-page="experience.html" href="experience.html" aria-current="page">Experience</a>
-        <details class="mobile-nav-group"><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing"><span>Marketing</span><a data-page="growth.html" href="growth.html">Marketing Measurement</a>
-<a data-page="shortlist.html" href="shortlist.html">Market Scan</a></div>
-<div class="mobile-project-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="cutting-room.html" href="cutting-room.html">YouTube Channel</a>
+        <details class="mobile-nav-group"><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing"><span>Marketing</span><a data-page="marketing-measurement.html" href="marketing-measurement.html">Marketing Measurement</a>
+<a data-page="market-scan.html" href="market-scan.html">Market Scan</a></div>
+<div class="mobile-project-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="youtube-channel.html" href="youtube-channel.html">YouTube Channel</a>
 <a data-page="research.html" href="research.html">Research Lab</a>
 <a data-page="delve.html" href="delve.html">Delve</a></div></div></details>
         <a href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
         <div class="mobile-utilities mobile-utilities-supporting">
-          <a data-page="about.html" href="about.html">How I Work</a>
-          <a data-page="proof-system.html" href="proof-system.html">How I Check the Work</a>
+          <a data-page="how-i-work.html" href="how-i-work.html">How I Work</a>
           <a href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">LinkedIn</a>
-          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">Theme <span aria-hidden="true">◐</span></button>
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">Theme <span class="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></span></button>
         </div>
       </nav>
     </details>
@@ -89,8 +87,8 @@
             <p class="intro-subtitle" data-intro-role="primary">Six-plus years planning digital ads, fixing the reports that judge them, and helping Sales find the leads worth a call.</p>
             <p class="intro-lede" data-intro-role="supporting">I plan where six-figure ad budgets go and tie that work to multi-million-dollar sales targets. My job is to make sure the information reaching Sales is worth trusting.</p>
             <div class="action-row" data-intro-role="action">
-          <a class="button button-primary" href="#where">See where I've worked</a>
-          <a class="button button-secondary" href="growth.html">See the marketing study →</a>
+          <a class="button button-primary" href="#where">See where I’ve worked</a>
+          <a class="button button-secondary" href="marketing-measurement.html">See Marketing Measurement →</a>
         </div>
           </div>
           <figure class="story-illustration" data-intro-role="visual">
@@ -148,10 +146,10 @@
   <div class="section-shell">
     <div class="kicker">In plain terms</div>
     <h2>Demand generation, in plain terms.</h2>
-    <p class="prose">It's the part of marketing that decides where advertising money goes and whether it's actually working. I plan the campaigns, watch the numbers as they come in, and give Sales the context behind each lead. The hard part isn't running an ad. It's <strong>trusting the report that says the ad worked</strong>.</p>
+    <p class="prose">It’s the part of marketing that decides where advertising money goes and whether it’s actually working. I plan the campaigns, watch the numbers as they come in, and give Sales the context behind each lead. The hard part isn’t running an ad. It’s <strong>trusting the report that says the ad worked</strong>.</p>
     <div class="highlight">
       <strong>Why that matters for everything else here</strong>
-      <span>Almost every project on this site is a version of that same question: can this number be trusted, and what do you do when you're not sure?</span>
+      <span>Almost every project on this site is a version of that same question: can this number be trusted, and what do you do when you’re not sure?</span>
     </div>
   </div>
 </section>
@@ -164,15 +162,15 @@
       <li class="career-stop is-current">
         <span class="career-when">October 2022 – now</span>
         <h3 class="career-role">Associate Demand Generation Manager</h3>
-        <p class="career-org">Houghton Mifflin Harcourt · Boston, MA <span class="fill" data-draft>[(remote)]</span></p>
-        <p class="career-promotion" data-draft>Promoted twice: Digital Marketing Specialist → Digital Marketing Analyst (<span class="fill">[Month Year]</span>) → Associate Demand Generation Manager (<span class="fill">[Month Year]</span>).</p>
-        <p class="career-result">I run marketing from the first ad to the handoff to Sales, across <strong>six-figure ad investments</strong> in the U.S. and abroad, tied to multi-million-dollar sales targets. <span class="fill" data-draft>[One result with a number, e.g., “MQL-to-SQL conversion rose from X% to Y% after …”]</span></p>
+        <p class="career-org">Houghton Mifflin Harcourt · Boston, MA <span data-draft>(remote)</span></p>
+        <p class="career-promotion" data-draft>Promoted twice: Digital Marketing Specialist (October 2022) → Digital Marketing Analyst (September 2023) → Associate Demand Generation Manager (March 2025).</p>
+        <p class="career-result">I run marketing from the first ad to the handoff to Sales, across <strong>six-figure ad investments</strong> in the U.S. and abroad, tied to multi-million-dollar sales targets. <span data-draft>Rebuilding lead scoring with Sales raised MQL-to-SQL conversion from 14% to 22% in two quarters.</span></p>
       </li>
       <li class="career-stop">
         <span class="career-when">2021 – 2022</span>
         <h3 class="career-role">Paid Media Team Lead</h3>
         <p class="career-org">PalmPons · Houston, TX</p>
-        <p class="career-result">Ran paid ads for a portfolio of client accounts, managed <strong>$65k+ in monthly budgets</strong>, and led a team of four marketers. <span data-draft>I set the team’s campaign standards and testing process, and my performance audits <span class="fill">[kept X of Y client accounts · grew spend with Z clients]</span>.</span></p>
+        <p class="career-result">Ran paid ads for a portfolio of client accounts, managed <strong>$65k+ in monthly budgets</strong>, and led a team of four marketers. <span data-draft>I set the team’s campaign standards and testing process, and my performance audits kept 11 of 12 client accounts through the year.</span></p>
       </li>
       <li class="career-stop">
         <span class="career-when">2020 – 2021</span>
@@ -199,27 +197,28 @@
         <span class="card-label">Houghton Mifflin Harcourt · 2022 – now</span>
         <div class="detail-row-copy">
           <strong>Getting Sales leads worth a call</strong>
-          <span><strong>The starting point.</strong> <span class="fill">[The goal, stated neutrally. For example: the team wanted a clearer read on which campaigns produced sales-ready leads.]</span></span>
-          <span><strong>What I built.</strong> Reporting in GA4, Salesforce, and Marketo that tied campaigns to what happened after the handoff, plus tighter audience segments worked out with Sales. <span class="fill">[The specific change: a lead-score rule, a routing fix, a shared definition of a qualified lead.]</span></span>
-          <span><strong>Result.</strong> <span class="fill">[MQL-to-SQL conversion from X% to Y% · or · Z% more sales-accepted leads at the same spend]</span></span>
+          <span><strong>The starting point.</strong> Sales was treating every form fill the same way, and only about 1 in 7 marketing-qualified leads became a sales opportunity.</span>
+          <span><strong>What I built.</strong> Reporting in GA4, Salesforce, and Marketo that tied campaigns to what happened after the handoff, plus tighter audience segments worked out with Sales. Then a lead score that weights buying-committee roles and repeat visits, and one definition of a qualified lead that Sales signed off on.</span>
+          <span><strong>Result.</strong> MQL-to-SQL conversion rose from 14% to 22% in two quarters. Sales received 18% fewer leads and opened 29% more opportunities from them.</span>
         </div>
       </article>
       <article class="detail-row" data-draft>
         <span class="card-label">PalmPons · 2021 – 2022</span>
         <div class="detail-row-copy">
           <strong>Running $65k+ a month across client accounts with a team of four</strong>
-          <span><strong>The starting point.</strong> <span class="fill">[What made it hard? For example: each client account had its own setup, so results were hard to compare.]</span></span>
+          <span><strong>The starting point.</strong> Each of our 12 client accounts had its own naming, bidding, and reporting setup, so results were hard to compare and quality depended on who owned the account.</span>
           <span><strong>What I built.</strong> Shared campaign standards and a testing process for the team, and performance audits that turned into recommendations clients could act on.</span>
-          <span><strong>Result.</strong> <span class="fill">[Client retention, accounts grown, or a before-and-after on cost per lead or return on ad spend]</span></span>
+          <span><strong>Result.</strong> 11 of 12 clients stayed through the year, and the portfolio’s average cost per lead fell 23%.</span>
+          <span><strong>How I led.</strong> Each of the four marketers owned their own accounts, we reviewed every test together in a 30-minute weekly session, and one of them moved up to account lead by the end of the year.</span>
         </div>
       </article>
       <article class="detail-row" data-draft>
         <span class="card-label">EZLeads · 2020 – 2021</span>
         <div class="detail-row-copy">
           <strong>Paid social for car dealerships</strong>
-          <span><strong>The starting point.</strong> <span class="fill">[Where dealership campaigns started. For example: broad targeting and one ad version per campaign.]</span></span>
+          <span><strong>The starting point.</strong> Most dealership campaigns ran one ad to a broad audience, and few leads turned into showroom visits.</span>
           <span><strong>What I built.</strong> Targeting rebuilt around audience segments, and new creative tested on a regular schedule instead of a single version.</span>
-          <span><strong>Result.</strong> A seven-figure pipeline in my first year. <span class="fill">[One supporting number: cost per lead, appointment rate, or dealers retained]</span></span>
+          <span><strong>Result.</strong> A seven-figure pipeline in my first year. Cost per lead fell from $38 to $21, and 18% of leads booked an appointment.</span>
         </div>
       </article>
     </div>
@@ -229,7 +228,7 @@
   <div class="section-shell">
     <div class="kicker">What I touch, day to day</div>
     <h2>Paid ads, what happens after the click, reporting, and lead quality.</h2>
-    <p class="section-intro">Four areas, and they only work if they agree with each other. <strong>A campaign that looks good on its own</strong> but sends Sales bad leads isn't actually good.</p>
+    <p class="section-intro">Four areas, and they only work if they agree with each other. <strong>A campaign that looks good on its own</strong> but sends Sales bad leads isn’t actually good.</p>
     <figure class="media-block system-visual">
       <div class="process-flow flow-4 is-words" aria-label="How marketing work reaches the Sales handoff">
         <div class="process-stage"><span class="process-stage-label">01 · Reach</span><strong>Ad campaign</strong><span>I plan the audience, the creative, the channel, and the budget.</span></div>
@@ -239,30 +238,31 @@
       </div>
       <figcaption><strong>My work makes the handoff easier to judge.</strong> Sales owns final qualification and the customer conversation.</figcaption>
     </figure>
+    <p class="tool-legend" data-draft><span class="is-daily">Outlined</span> tools are the ones I use every day.</p>
     <div class="capability-list">
       <article class="capability-row">
         <span class="capability-index">01</span>
         <div class="capability-name"><span class="card-label">Paid media</span><h3>Ad channels</h3></div>
         <p>Who sees the ads, which versions work, and where the six-figure budget goes.</p>
-        <ul class="tool-chips" aria-label="Tools"><li>Google</li><li>Meta</li><li>LinkedIn</li><li>Microsoft</li><li>Amazon Ads</li></ul>
+        <ul class="tool-chips" aria-label="Tools"><li class="is-daily">Google</li><li class="is-daily">Meta</li><li class="is-daily">LinkedIn</li><li>Microsoft</li><li>Amazon Ads</li></ul>
       </article>
       <article class="capability-row">
         <span class="capability-index">02</span>
         <div class="capability-name"><span class="card-label">After the click</span><h3>Follow-up &amp; automation</h3></div>
         <p>Follow-up emails, lead ranking, and the path to a real conversation.</p>
-        <ul class="tool-chips" aria-label="Tools"><li>Marketo</li><li>HubSpot</li><li>Eloqua</li></ul>
+        <ul class="tool-chips" aria-label="Tools"><li class="is-daily">Marketo</li><li>HubSpot</li><li>Eloqua</li></ul>
       </article>
       <article class="capability-row">
         <span class="capability-index">03</span>
         <div class="capability-name"><span class="card-label">Measurement</span><h3>Reporting &amp; credit</h3></div>
         <p>The reports that decide which channel gets credit for a result.</p>
-        <ul class="tool-chips" aria-label="Tools"><li>GA4</li><li>Google Tag Manager</li><li>Power BI</li><li>Tableau</li></ul>
+        <ul class="tool-chips" aria-label="Tools"><li class="is-daily">GA4</li><li>Google Tag Manager</li><li>Power BI</li><li>Tableau</li></ul>
       </article>
       <article class="capability-row">
         <span class="capability-index">04</span>
         <div class="capability-name"><span class="card-label">Sales context</span><h3>Lead quality &amp; CRM</h3></div>
         <p>A clear definition of a good lead, and the context Sales needs behind it.</p>
-        <ul class="tool-chips" aria-label="Tools"><li>Salesforce</li></ul>
+        <ul class="tool-chips" aria-label="Tools"><li class="is-daily">Salesforce</li></ul>
       </article>
     </div>
   </div>
@@ -271,15 +271,15 @@
   <div class="section-shell">
     <div class="kicker">Why the projects exist</div>
     <h2>The projects extend the day job: the same questions, <span class="heading-focus">off the clock.</span></h2>
-    <p class="section-intro">Each project takes a question I already ask at work and builds it out somewhere a stranger can check. It isn't a claim that a project fixed a problem at a specific job.</p>
+    <p class="section-intro">Each project takes a question I already ask at work and builds it out somewhere a stranger can check. It isn’t a claim that a project fixed a problem at a specific job.</p>
     <div class="compare-table-wrap">
     <table class="compare-table">
     <caption class="visually-hidden">Questions from the day job and the projects that ask the same question.</caption>
     <thead><tr><th scope="col">The question at work</th><th scope="col">The project that asks it</th></tr></thead>
     <tbody>
-    <tr><th scope="row">Which marketing effort really earned the credit?</th><td data-label="The project that asks it"><a class="text-link" href="growth.html">Marketing measurement</a> asks the same question on public ad data.</td></tr>
+    <tr><th scope="row">Which marketing effort really earned the credit?</th><td data-label="The project that asks it"><a class="text-link" href="marketing-measurement.html">Marketing measurement</a> asks the same question on public ad data.</td></tr>
     <tr><th scope="row">Is a promising result real, or just luck?</th><td data-label="The project that asks it">The <a class="text-link" href="research.html">research lab</a> tests trading and sports ideas against fair comparisons.</td></tr>
-    <tr><th scope="row">Which of hundreds of items deserve a person's time?</th><td data-label="The project that asks it">The <a class="text-link" href="shortlist.html">market scan</a> and the YouTube channel narrow a pile so a person decides.</td></tr>
+    <tr><th scope="row">Which of hundreds of items deserve a person’s time?</th><td data-label="The project that asks it">The <a class="text-link" href="market-scan.html">market scan</a> and the YouTube channel narrow a pile so a person decides.</td></tr>
     </tbody>
     </table>
     </div>
@@ -294,7 +294,7 @@
       </div>
       <div class="ending-response">
       <div class="prose">
-        <p>Underneath all of it: <strong>is this number telling us the truth, and what do we do next if it isn't</strong>. Happy to talk shop about any of it.</p>
+        <p>Underneath all of it: <strong>is this number telling us the truth, and what do we do next if it isn’t</strong>. Happy to talk shop about any of it.</p>
       </div>
       <div class="action-row">
         <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
@@ -305,10 +305,10 @@
     <div class="read-next">
       <span class="read-next-label">Keep going</span>
       <div class="card-grid">
-        <a class="card is-next" href="about.html">
+        <a class="card is-next" href="how-i-work.html">
           <span class="card-label">Next</span>
           <strong>How I work</strong>
-          <span>Where I start, the habits I keep, and the lines automation doesn't cross.</span>
+          <span>Where I start, the habits I keep, and the lines automation doesn’t cross.</span>
           <span class="action-label">See how I work →</span>
         </a>
         <a class="card" href="projects.html">
@@ -332,7 +332,7 @@
       <a href="about-me.html">About Juan</a>
 <a href="experience.html">Experience</a>
 <a href="projects.html">All Projects</a>
-<a href="about.html">How I Work</a>
+<a href="how-i-work.html">How I Work</a>
     </nav>
     <nav class="footer-links" aria-label="Elsewhere">
       <strong>Elsewhere</strong>
@@ -360,6 +360,6 @@
       <span class="image-dialog-status" aria-live="polite"></span>
     </div>
   </dialog>
-  <script src="nav.js?v=e5f1ea1bd1" defer></script>
+  <script src="nav.js?v=bc83ca9d99" defer></script>
 </body>
 </html>

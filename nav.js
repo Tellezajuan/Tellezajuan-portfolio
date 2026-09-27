@@ -2,6 +2,8 @@
   "use strict";
 
   var root = document.documentElement;
+  var MOON_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>';
+  var SUN_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
   var body = document.body;
   var themeButtons = Array.prototype.slice.call(document.querySelectorAll(".theme-toggle"));
   var themeMeta = document.querySelector('meta[name="theme-color"]');
@@ -18,8 +20,8 @@
     themeButtons.forEach(function (button) {
       button.setAttribute("aria-pressed", dark ? "true" : "false");
       button.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
-      var icon = button.querySelector("[aria-hidden]");
-      if (icon) icon.textContent = dark ? "☀" : "◐";
+      var icon = button.querySelector(".theme-icon");
+      if (icon) icon.innerHTML = dark ? SUN_ICON : MOON_ICON;
     });
     if (themeMeta) themeMeta.setAttribute("content", dark ? "#121619" : "#f5f3ee");
   }
@@ -103,20 +105,6 @@
   if (desktopQuery.addEventListener) desktopQuery.addEventListener("change", resetNavigationForViewport);
 
   var current = (body.getAttribute("data-route") || location.pathname.split("/").pop() || "index.html").split("#")[0];
-  var builderRequested = current === "_patterns.html" || new URLSearchParams(location.search).get("layout") === "1";
-  if (builderRequested) {
-    body.classList.add("layout-debug");
-    var builderBar = document.createElement("aside");
-    builderBar.className = "builder-toolbar";
-    builderBar.setAttribute("aria-label", "Layout builder controls");
-    builderBar.innerHTML = '<div><strong>Layout map</strong><span>' + current + ' · ' + (body.dataset.recipe || "page") + '</span></div><button type="button">Hide boxes</button><a href="_patterns.html">Component showroom</a>';
-    var builderButton = builderBar.querySelector("button");
-    builderButton.addEventListener("click", function () {
-      var visible = body.classList.toggle("layout-debug");
-      builderButton.textContent = visible ? "Hide boxes" : "Show boxes";
-    });
-    body.appendChild(builderBar);
-  }
 
   var dialog = document.querySelector(".image-dialog");
   var dialogImage = dialog && dialog.querySelector("img");
@@ -311,6 +299,74 @@
       document.querySelectorAll('[data-reveal="pending"]').forEach(function (element) {
         element.setAttribute("data-reveal", "shown");
       });
+    });
+  }
+
+  // Decision-day slider: read the same report at different times.
+  Array.prototype.forEach.call(document.querySelectorAll(".time-slider"), function (box, n) {
+    var steps;
+    try { steps = JSON.parse(box.getAttribute("data-steps")); } catch (error) { return; }
+    if (!steps || !steps.length) return;
+    var id = "time-slider-" + n;
+    var cols = steps.map(function (step, i) {
+      return '<span class="ts-col" data-i="' + i + '"><span class="ts-bar"><span style="height:' + step.share + '%"></span></span>' +
+        '<span class="ts-col-label">' + step.when.replace(" later", "") + "</span></span>";
+    }).join("");
+    box.innerHTML =
+      '<div class="ts-readout" aria-hidden="true"><span class="ts-when"></span><strong class="ts-share"></strong>' +
+      '<span class="ts-share-label">of the eventual credit existed</span><span class="ts-count"></span></div>' +
+      '<div class="ts-bars" aria-hidden="true">' + cols + "</div>" +
+      '<label class="ts-label" for="' + id + '">Drag to read the same report later</label>' +
+      '<input class="ts-range" id="' + id + '" type="range" min="0" max="' + (steps.length - 1) + '" step="1">';
+    var range = box.querySelector(".ts-range");
+    var when = box.querySelector(".ts-when");
+    var share = box.querySelector(".ts-share");
+    var count = box.querySelector(".ts-count");
+    var columns = Array.prototype.slice.call(box.querySelectorAll(".ts-col"));
+    function show(i) {
+      var step = steps[i];
+      range.value = i;
+      when.textContent = step.when + (step.flag ? " · " + step.flag : "");
+      share.textContent = step.share + "%";
+      count.innerHTML = "<strong>" + step.count + "</strong> campaigns look worth scaling";
+      range.setAttribute("aria-valuetext", step.when + ": " + step.share + "% of the eventual credit existed, and " +
+        step.count + " campaigns looked worth scaling" + (step.flag ? ". " + step.flag + " at this reading." : "."));
+      columns.forEach(function (column, j) {
+        column.classList.toggle("is-active", j === i);
+        column.classList.toggle("is-flag", !!steps[j].flag);
+      });
+      box.classList.toggle("is-at-flag", !!step.flag);
+    }
+    range.addEventListener("input", function () { show(parseInt(range.value, 10)); });
+    columns.forEach(function (column) {
+      column.addEventListener("click", function () {
+        show(parseInt(column.getAttribute("data-i"), 10));
+        range.focus();
+      });
+    });
+    var start = parseInt(box.getAttribute("data-start") || "0", 10);
+    show(isNaN(start) ? 0 : Math.max(0, Math.min(steps.length - 1, start)));
+    box.hidden = false;
+    var figure = box.closest("figure");
+    if (figure) figure.classList.add("has-slider");
+  });
+
+  // Analytics stays off until an endpoint is set. Paste a GoatCounter endpoint
+  // (https://NAME.goatcounter.com/count) to count page views plus LinkedIn,
+  // resume, and YouTube clicks. No cookies, no personal data.
+  var ANALYTICS_ENDPOINT = "";
+  if (ANALYTICS_ENDPOINT) {
+    var counter = document.createElement("script");
+    counter.async = true;
+    counter.src = "https://gc.zgo.at/count.js";
+    counter.setAttribute("data-goatcounter", ANALYTICS_ENDPOINT);
+    document.head.appendChild(counter);
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest && event.target.closest("a[href]");
+      if (!link || !window.goatcounter || !window.goatcounter.count) return;
+      var href = link.getAttribute("href");
+      var name = /linkedin\.com/.test(href) ? "linkedin-click" : /\.pdf$/.test(href) ? "resume-download" : /youtube\.com/.test(href) ? "youtube-click" : "";
+      if (name) window.goatcounter.count({ path: name, title: document.title, event: true });
     });
   }
 })();

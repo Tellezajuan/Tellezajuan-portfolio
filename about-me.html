@@ -29,7 +29,7 @@
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=be96d9120d">
+  <link rel="stylesheet" href="style.css?v=12e88c541e">
 </head>
 <body data-route="about-me.html" data-recipe="profile" data-route-role="profile">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -39,12 +39,11 @@
     <nav class="desktop-nav" aria-label="Primary">
       <a class="nav-link" data-page="index.html" href="index.html">Home</a>
       <details class="nav-group is-current-group"><summary>About</summary><div class="submenu submenu-about"><a data-page="about-me.html" href="about-me.html" aria-current="page"><strong>About Juan</strong><span>Background, values, and life outside work.</span></a>
-<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years planning ads and fixing the reports.</span></a>
-<a data-page="about.html" href="about.html"><strong>How I Work</strong><span>How I use AI, and where I make the call.</span></a>
-<a data-page="proof-system.html" href="proof-system.html"><strong>How I Check the Work</strong><span>How important numbers stay tied to their sources.</span></a></div></details>
-      <details class="nav-group nav-projects"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All five: marketing work and things I built for fun.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing"><span>Marketing</span><a data-page="growth.html" href="growth.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look better in hindsight.</span></a>
-<a data-page="shortlist.html" href="shortlist.html"><strong>Market Scan</strong><span>What 683 demand gen job posts ask for.</span></a></div>
-<div class="project-menu-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="cutting-room.html" href="cutting-room.html"><strong>YouTube Channel</strong><span>A gaming clips channel and the system behind it.</span></a>
+<a data-page="experience.html" href="experience.html"><strong>Experience</strong><span>Six-plus years of paid media and demand gen.</span></a>
+<a data-page="how-i-work.html" href="how-i-work.html"><strong>How I Work</strong><span>How I use AI, and how I check the numbers.</span></a></div></details>
+      <details class="nav-group nav-projects"><summary>Projects</summary><div class="submenu project-menu"><div class="project-menu-overview"><a data-page="projects.html" href="projects.html"><strong>All Projects</strong><span>All five: marketing work and things I built for fun.</span></a></div><div class="project-menu-grid"><div class="project-menu-group" data-project-group="marketing"><span>Marketing</span><a data-page="marketing-measurement.html" href="marketing-measurement.html"><strong>Marketing Measurement</strong><span>When ad reports make campaigns look better in hindsight.</span></a>
+<a data-page="market-scan.html" href="market-scan.html"><strong>Market Scan</strong><span>What 683 demand gen job posts ask for.</span></a></div>
+<div class="project-menu-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="youtube-channel.html" href="youtube-channel.html"><strong>YouTube Channel</strong><span>A gaming clips channel and the system behind it.</span></a>
 <a data-page="research.html" href="research.html"><strong>Research Lab</strong><span>Trading and sports ideas, tested with simulated money.</span></a>
 <a data-page="delve.html" href="delve.html"><strong>Delve</strong><span>A daily dungeon game prototype.</span></a></div></div></div></details>
       <a class="nav-link resume-link" href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -53,7 +52,7 @@
       <a class="icon-link" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener" aria-label="Juan Tellez on LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20.5H6.94V8.5Z"/><path d="M5.25 7.11C6.35 7.11 7.24 6.22 7.24 5.11C7.24 4.01 6.35 3.11 5.25 3.11C4.24 3.11 3.25 4.01 3.25 5.11Z"/><path d="M20.5 13.66V20.5H17.13V14.05C17.13 12.44 16.56 11.34 15.12 11.34C14.02 11.34 13.37 12.08 13.08 12.79C12.98 13.05 12.95 13.4 12.95 13.76V20.5H9.57C9.57 20.5 9.62 9.47 9.57 8.5H12.95V9.95C13.4 9.25 14.21 8.24 16.54 8.24C19.43 8.24 20.5 10.24 20.5 13.66Z"/></svg>
       </a>
-      <button class="theme-toggle icon-button" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button>
+      <button class="theme-toggle icon-button" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></span></button>
     </div>
     <details class="mobile-menu">
       <summary><span class="menu-label">Menu</span><span class="close-label">Close</span></summary>
@@ -61,17 +60,16 @@
         <a data-page="index.html" href="index.html">Home</a>
         <a data-page="about-me.html" href="about-me.html" aria-current="page">About Juan</a>
         <a data-page="experience.html" href="experience.html">Experience</a>
-        <details class="mobile-nav-group"><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing"><span>Marketing</span><a data-page="growth.html" href="growth.html">Marketing Measurement</a>
-<a data-page="shortlist.html" href="shortlist.html">Market Scan</a></div>
-<div class="mobile-project-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="cutting-room.html" href="cutting-room.html">YouTube Channel</a>
+        <details class="mobile-nav-group"><summary>Projects</summary><div class="mobile-nav-links mobile-project-links"><div class="mobile-project-overview"><a data-page="projects.html" href="projects.html">All Projects</a></div><div class="mobile-project-group" data-project-group="marketing"><span>Marketing</span><a data-page="marketing-measurement.html" href="marketing-measurement.html">Marketing Measurement</a>
+<a data-page="market-scan.html" href="market-scan.html">Market Scan</a></div>
+<div class="mobile-project-group" data-project-group="built-for-fun"><span>Built for fun</span><a data-page="youtube-channel.html" href="youtube-channel.html">YouTube Channel</a>
 <a data-page="research.html" href="research.html">Research Lab</a>
 <a data-page="delve.html" href="delve.html">Delve</a></div></div></details>
         <a href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
         <div class="mobile-utilities mobile-utilities-supporting">
-          <a data-page="about.html" href="about.html">How I Work</a>
-          <a data-page="proof-system.html" href="proof-system.html">How I Check the Work</a>
+          <a data-page="how-i-work.html" href="how-i-work.html">How I Work</a>
           <a href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">LinkedIn</a>
-          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">Theme <span aria-hidden="true">◐</span></button>
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">Theme <span class="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></span></button>
         </div>
       </nav>
     </details>
@@ -89,11 +87,11 @@
             <p class="intro-lede" data-intro-role="supporting">I’ve spent six-plus years in marketing, usually turning a messy question into something a team can actually use. Outside work I keep the same habit: find the thing I don’t understand, take it apart, and learn enough to explain it.</p>
             <div class="action-row" data-intro-role="action">
           <a class="button button-primary" href="#life">Life outside work</a>
-          <a class="button button-secondary" href="about.html">How I work →</a>
+          <a class="button button-secondary" href="how-i-work.html">How I work →</a>
         </div>
           </div>
           <figure class="intro-portrait" data-intro-role="visual">
-  <img src="images/about/headshot.jpg" width="1000" height="1000" alt="Juan Tellez, smiling, wearing glasses and a navy suit jacket." loading="eager" data-lightbox="true">
+  <picture><source srcset="images/about/headshot.webp" type="image/webp"><img src="images/about/headshot.jpg" width="1000" height="1000" alt="Juan Tellez, smiling, wearing glasses and a navy suit jacket." loading="eager" data-lightbox="true"></picture>
   </figure>
         </div>
         <div class="metrics">
@@ -138,55 +136,71 @@
   <div class="section-shell">
     <div class="kicker">Life outside work</div>
             <h2>The crew that <span class="heading-focus">keeps me grounded.</span></h2>
-            <p class="section-intro">Five pets who run the house, whether we agreed to that or not. Tap any photo to see it larger.</p>
+            <p class="section-intro">Five pets who run the house, whether we agreed to that or not. Select any photo to see it larger.</p>
             <div class="media-grid photo-grid">
                 <figure>
     <img src="images/about/pet-bailey.jpg" width="720" height="720" alt="Bailey, a small white curly-haired dog, lying in green grass wearing a rainbow bandana." loading="lazy" decoding="async" data-lightbox="true">
     <figcaption><strong>Bailey</strong><span>professional grass supervisor</span></figcaption>
     </figure>
                 <figure>
-    <img src="images/about/pet-chloe.jpg" width="675" height="900" alt="Chloe, a grey tortoiseshell cat with green eyes, sitting upright on a bed." loading="lazy" decoding="async" data-lightbox="true">
+    <picture><source srcset="images/about/pet-chloe.webp" type="image/webp"><img src="images/about/pet-chloe.jpg" width="675" height="900" alt="Chloe, a grey tortoiseshell cat with green eyes, sitting upright on a bed." loading="lazy" decoding="async" data-lightbox="true"></picture>
     <figcaption><strong>Chloe</strong><span>governs the household</span></figcaption>
     </figure>
                 <figure>
-    <img src="images/about/pet-renny.jpg" width="697" height="900" alt="Renny, a yellow and cream crested gecko, perched on driftwood in a terrarium." loading="lazy" decoding="async" data-lightbox="true">
+    <picture><source srcset="images/about/pet-renny.webp" type="image/webp"><img src="images/about/pet-renny.jpg" width="697" height="900" alt="Renny, a yellow and cream crested gecko, perched on driftwood in a terrarium." loading="lazy" decoding="async" data-lightbox="true"></picture>
     <figcaption><strong>Renny</strong><span>nocturnal and unbothered</span></figcaption>
     </figure>
                 <figure>
-    <img src="images/about/pet-lucy.jpg" width="675" height="900" alt="Lucy, a small black kingsnake, coiled in an open hand." loading="lazy" decoding="async" data-lightbox="true">
+    <picture><source srcset="images/about/pet-lucy.webp" type="image/webp"><img src="images/about/pet-lucy.jpg" width="675" height="900" alt="Lucy, a small black kingsnake, coiled in an open hand." loading="lazy" decoding="async" data-lightbox="true"></picture>
     <figcaption><strong>Lucy</strong><span>calmer than most people</span></figcaption>
     </figure>
                 <figure>
-    <img src="images/about/pet-rosie.jpg" width="675" height="900" alt="Rosie, an orange and grey bearded dragon, climbing on driftwood and looking toward the camera." loading="lazy" decoding="async" data-lightbox="true">
+    <picture><source srcset="images/about/pet-rosie.webp" type="image/webp"><img src="images/about/pet-rosie.jpg" width="675" height="900" alt="Rosie, an orange and grey bearded dragon, climbing on driftwood and looking toward the camera." loading="lazy" decoding="async" data-lightbox="true"></picture>
     <figcaption><strong>Rosie</strong><span>the most opinionated one</span></figcaption>
     </figure>
                 <figure>
-    <img src="images/about/couple.jpg" width="900" height="600" alt="Juan and Kymm laughing together on a mountainside at sunset in Colorado." loading="lazy" decoding="async" data-lightbox="true">
+    <picture><source srcset="images/about/couple.webp" type="image/webp"><img src="images/about/couple.jpg" width="900" height="600" alt="Juan and Kymm laughing together on a mountainside at sunset in Colorado." loading="lazy" decoding="async" data-lightbox="true"></picture>
     <figcaption><strong>Juan &amp; Kymm</strong><span>still laughing at each other</span></figcaption>
     </figure>
             </div>
   </div>
 </section>
+<section class="site-section" data-intent="reading" data-template="reading" data-lead="split" data-tone="base" data-attention="heading" data-depth="supporting" id="right-now">
+  <div class="section-shell">
+    <div class="section-grid">
+    <div class="lead-heading">
+    <div class="kicker">Right now</div>
+    <h2 data-draft>What I’m into this fall.</h2>
+    </div>
+    <div class="lead-body summary-list" role="list" data-draft>
+      <div class="summary-item" role="listitem"><strong>Building</strong><span>Delve’s release checklist, so friends can play it this winter.</span></div>
+      <div class="summary-item" role="listitem"><strong>Learning</strong><span>SQL window functions, for faster cohort reports.</span></div>
+      <div class="summary-item" role="listitem"><strong>Playing</strong><span>Valorant with friends, most weeknights.</span></div>
+      <div class="summary-item" role="listitem"><strong>Reading</strong><span>Thinking in Bets by Annie Duke.</span></div>
+    </div>
+    </div>
+  </div>
+</section>
 <section class="site-section" data-intent="comparison-4" data-template="cards-4" data-lead="stack" data-tone="base" data-attention="component" data-depth="supporting" id="shaped-me">
   <div class="section-shell">
     <div class="kicker">What shaped me</div>
-            <h2>The work is serious. The person doing it is still a person.</h2>
+            <h2>A few things that shaped me.</h2>
             <p class="section-intro">A few things explain the way I show up better than a list of adjectives.</p>
             <div class="card-grid">
               <div class="card">
     <span class="card-label">Curiosity</span>
     <strong>I go down the rabbit hole.</strong>
-    <span>I genuinely like learning how a system works, then making the explanation useful to someone else.</span>
+    <span>I genuinely like learning how a system works, then making the explanation useful to someone else.<span data-draft> Last year that meant learning enough Python to build the Market Scan.</span></span>
     </div>
               <div class="card">
     <span class="card-label">Competition</span>
     <strong>I like a clear scoreboard.</strong>
-    <span>Games taught me to prepare, notice patterns, and change course quickly when the result says the plan isn't working.</span>
+    <span>Games taught me to prepare, notice patterns, and change course quickly when the result says the plan isn’t working.<span data-draft> In Valorant, that means reviewing my own losses before anyone’s highlights.</span></span>
     </div>
               <div class="card">
     <span class="card-label">Resourcefulness</span>
-    <strong>I start before it's perfect.</strong>
-    <span>I don't wait for a perfect brief or a familiar tool. I find the source, learn the gap, and build the smallest useful version.</span>
+    <strong>I start before it’s perfect.</strong>
+    <span>I don’t wait for a perfect brief or a familiar tool. I find the source, learn the gap, and build the smallest useful version.<span data-draft> The first version of Delve was a spreadsheet.</span></span>
     </div>
               <div class="card">
     <span class="card-label">Perspective</span>
@@ -206,7 +220,7 @@
     <div class="ending-response">
     <div class="prose">
     <p><span>LinkedIn is the easiest place to find me.</span></p>
-    <p>On a team, I'm most useful in the messy middle between the audience, the budget, the reports, and the next decision: make the question clear, build what helps, and explain what the result does and doesn't mean.</p>
+    <p>On a team, I’m most useful in the messy middle between the audience, the budget, the reports, and the next decision: make the question clear, build what helps, and explain what the result does and doesn’t mean.</p>
     </div>
     <div class="action-row">
         <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
@@ -244,7 +258,7 @@
       <a href="about-me.html">About Juan</a>
 <a href="experience.html">Experience</a>
 <a href="projects.html">All Projects</a>
-<a href="about.html">How I Work</a>
+<a href="how-i-work.html">How I Work</a>
     </nav>
     <nav class="footer-links" aria-label="Elsewhere">
       <strong>Elsewhere</strong>
@@ -272,6 +286,6 @@
       <span class="image-dialog-status" aria-live="polite"></span>
     </div>
   </dialog>
-  <script src="nav.js?v=e5f1ea1bd1" defer></script>
+  <script src="nav.js?v=bc83ca9d99" defer></script>
 </body>
 </html>
