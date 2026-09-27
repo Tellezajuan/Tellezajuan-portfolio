@@ -1,4 +1,4 @@
-/* V4.15 PRESENTATION CONTRACT
+/* V4.16 PRESENTATION CONTRACT
    Content declares meaning. Recipes select complete templates. Templates own
    width, alignment, spacing, responsive behavior, and state. Public blocks do
    not choose layout and no route gets a private presentation correction.
@@ -4207,4 +4207,29 @@ img[data-lightbox] {
     transform: none;
     animation: none;
   }
+}
+
+/* A group of three projects sits in one row on wide screens. */
+@media (min-width: 901px) {
+  .project-tile-grid[data-count="3"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Draft copy awaiting Juan's own wording. [data-draft] marks drafted text;
+   .fill marks facts only Juan can supply. Remove both before publishing. */
+[data-draft] {
+  text-decoration: underline dashed color-mix(in srgb, var(--accent) 55%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+/* Beats component text colors such as .visual-note span. */
+.site-section .fill {
+  padding-inline: 2px;
+  color: var(--ink);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--accent-bright) 32%, transparent);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
