@@ -4729,11 +4729,19 @@ body:has([data-draft])::before {
   background: none;
 }
 
-/* On a phone the four thumbnails sit two by two instead of one tall stack. */
+/* Three thumbnails in a row; on a phone, one wide and two below. */
+.media-grid.video-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 680px) {
   .media-grid.video-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+  }
+
+  .media-grid.video-grid > :first-child {
+    grid-column: 1 / -1;
   }
 }
 
@@ -5275,4 +5283,12 @@ details.steps-fold > .steps {
     repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px 14px) 0 100% / 100% 6px no-repeat,
     linear-gradient(var(--line-strong), var(--line-strong)) 0 100% / 100% 1px no-repeat;
   padding-bottom: 6px;
+}
+
+/* YouTube hero: a real thumbnail in the hero frame. */
+.story-illustration.story-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
 }
