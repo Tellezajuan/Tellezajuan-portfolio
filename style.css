@@ -2407,11 +2407,12 @@ img[data-lightbox]:hover {
   list-style: none;
 }
 
-.career-path::before {
+/* The rail runs dot to dot, so it ends at the last role instead of below it. */
+.career-stop:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 12px;
-  bottom: 12px;
+  top: 19px;
+  bottom: -4px;
   left: 7px;
   width: 1.5px;
   background: var(--line);
@@ -2459,16 +2460,90 @@ img[data-lightbox]:hover {
   letter-spacing: -0.02em;
 }
 
-.career-org,
-.career-promotion {
+.career-org {
   margin: 0;
   color: var(--muted);
   font-size: var(--text-label);
 }
 
-.career-promotion {
-  margin-top: 2px;
+/* Promotions as a small ladder: newest step on top, one dot per title. */
+.career-ladder {
+  margin-top: 14px;
+}
+
+.career-ladder-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font: 650 var(--text-xs)/1.45 var(--body);
+}
+
+.career-ladder ol {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.career-ladder ol::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  bottom: 11px;
+  left: 3.5px;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.career-ladder li {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 12px;
+  padding: 3px 0 3px 20px;
+  color: var(--muted);
   font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+.career-ladder li::before {
+  content: "";
+  position: absolute;
+  top: calc(3px + 0.725em - 4px);
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--band-soft);
+}
+
+.career-ladder li.is-now {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.career-ladder li.is-now::before {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.ladder-when {
+  color: var(--muted);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Education sits under the rail, lined up with the role titles, without a dot. */
+.career-education {
+  margin: 40px 0 0 46px;
+  padding: 28px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.career-education::before,
+.career-education::after {
+  content: none;
 }
 
 .career-result {
@@ -2996,8 +3071,9 @@ img[data-lightbox]:hover {
   transition-delay: calc(var(--i, 0) * 90ms + 300ms);
 }
 
-.motion-ready [data-reveal="shown"].career-path::before {
-  animation: rail-draw 1100ms var(--ease-out) both;
+.motion-ready [data-reveal="shown"].career-path .career-stop::after {
+  animation: rail-draw 700ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 90ms + 260ms);
 }
 
 .motion-ready [data-reveal="shown"].career-path .career-stop::before {
@@ -5130,38 +5206,100 @@ details.steps-fold > .steps {
   line-height: 1.6;
 }
 
-/* Home: the career so far on one ruler, with the flag at "now". */
-.career-strip {
+/* Home: the career so far as one bar per role on a shared year axis (2020 to
+   October 2026 = 6.77 years), with the flag at "now". */
+.career-gantt {
+  --cg-span: 6.77;
+  --cg-label: 200px;
   margin: var(--space-group) 0 0;
 }
 
-.cs-track,
-.cs-roles {
+.cg-rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cg-rows > li,
+.cg-axis {
   display: grid;
-  grid-template-columns: 14.8fr 25.8fr 59.4fr;
-  gap: 4px;
+  grid-template-columns: var(--cg-label) minmax(0, 1fr);
+  column-gap: 16px;
 }
 
-.cs-track {
+.cg-rows > li {
+  align-items: center;
+  margin: 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.cg-label strong {
+  display: block;
+  color: var(--ink);
+  font: 700 1.02rem/1.25 var(--display);
+  letter-spacing: -0.01em;
+}
+
+.cg-rows > li.is-now .cg-label strong {
+  color: var(--accent-strong);
+}
+
+.cg-label > span {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+.cg-track {
   position: relative;
-  height: 10px;
-  margin-top: 30px;
+  height: 36px;
 }
 
-.cs-seg {
+/* A faint line keeps the empty years visible behind each bar. */
+.cg-track::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 4.5px;
+  left: 0;
+  height: 1px;
+  background: var(--line);
+}
+
+.cg-bar,
+.cg-when {
+  position: absolute;
+  left: calc(var(--from) / var(--cg-span) * 100%);
+}
+
+.cg-bar {
+  bottom: 0;
+  width: calc((var(--to) - var(--from)) / var(--cg-span) * 100%);
+  height: 10px;
   border-radius: 5px;
   background: var(--line-strong);
 }
 
-.cs-seg.is-now {
+.cg-rows > li.is-now .cg-bar {
   background: var(--accent);
 }
 
-.cs-track::after {
+.cg-when {
+  top: 0;
+  color: var(--muted);
+  font: 600 var(--text-2xs)/1.4 var(--body);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.cg-rows > li.is-now .cg-track::after {
   content: "";
   position: absolute;
   right: -3px;
-  bottom: calc(100% + 4px);
+  bottom: 13px;
   width: 12px;
   height: 21px;
   background: var(--accent);
@@ -5169,79 +5307,62 @@ details.steps-fold > .steps {
   mask: var(--flag-mask) no-repeat center / contain;
 }
 
-.cs-years {
+.cg-axis {
+  border-top: 1px solid var(--line);
+}
+
+.cg-years {
   position: relative;
-  height: 24px;
-  margin-top: 6px;
+  height: 26px;
   color: var(--muted);
   font: 600 var(--text-2xs)/1 var(--body);
   font-variant-numeric: tabular-nums;
 }
 
-.cs-years span {
+/* Every other year, each label centered under its tick, so 2026 still fits
+   inside the axis before "now". */
+.cg-years span {
   position: absolute;
   top: 0;
-  left: calc(var(--y) * 14.77%);
-  padding: 8px 0 0 5px;
-  border-left: 1px solid var(--line-strong);
+  left: calc(var(--y) / var(--cg-span) * 100%);
+  padding-top: 11px;
+  transform: translateX(-50%);
 }
 
-.cs-roles {
-  margin: 18px 0 0;
-  padding: 0;
-  list-style: none;
+.cg-years span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 6px;
+  background: var(--line-strong);
 }
 
-.cs-roles > li {
-  min-width: 0;
-  margin: 0;
-  padding-right: 14px;
-}
-
-.cs-when {
-  display: block;
-  color: var(--muted);
-  font: 600 var(--text-2xs)/1.4 var(--body);
-  font-variant-numeric: tabular-nums;
-}
-
-.cs-roles strong {
-  display: block;
-  margin-top: 2px;
-  color: var(--ink);
-  font: 700 1.08rem/1.25 var(--display);
-}
-
-.cs-roles .is-now strong {
-  color: var(--accent-strong);
-}
-
-.cs-roles > li > span:last-child {
-  display: block;
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: var(--text-label);
-  line-height: 1.45;
+.cg-years span:nth-child(even) {
+  display: none;
 }
 
 @media (max-width: 680px) {
-  .cs-roles {
-    grid-template-columns: 1fr;
-    gap: 14px;
+  .career-gantt {
+    --cg-label: 136px;
   }
 
-  .cs-roles > li {
-    padding: 0 0 0 14px;
-    border-left: 3px solid var(--line-strong);
+  .cg-rows > li,
+  .cg-axis {
+    column-gap: 12px;
   }
+}
 
-  .cs-roles > li.is-now {
-    border-left-color: var(--accent);
-  }
+/* Two text links in a row get a real gap instead of a single space. */
+.link-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
 
-  .cs-years span:nth-child(even) {
-    display: none;
-  }
+.link-pair > * {
+  margin: 0;
 }
 
 /* Experience: each role uses the full width, details left and result right. */
@@ -5258,10 +5379,11 @@ details.steps-fold > .steps {
     grid-column: 1;
   }
 
+  /* The date sits above both columns, so the result starts level with the title. */
   .career-stop > .career-result {
     grid-column: 2;
-    grid-row: 1 / span 4;
-    margin-top: 0;
+    grid-row: 2 / span 3;
+    margin-top: 6px;
   }
 }
 
@@ -5291,4 +5413,175 @@ details.steps-fold > .steps {
   width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
+}
+
+/* V4.33 ------------------------------------------------------------------ */
+
+/* Short lists under a stacked heading read as a row of open columns, so a
+   short heading no longer sits beside a long empty block. */
+.summary-list.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px var(--space-item);
+  border-top: 0;
+}
+
+.summary-list.summary-grid.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.summary-grid > .summary-item {
+  padding: 16px 0 0;
+  border-top: 2px solid var(--line-strong);
+  border-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .summary-list.summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .summary-list.summary-grid,
+  .summary-list.summary-grid.two-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* How I Work: the worked example sits under the two cards it illustrates. */
+.lead-body > .ai-example {
+  margin-top: 20px;
+}
+
+/* Delve: its real screen is much taller than the copy, so on desktop the
+   callout moves up under the copy instead of leaving a gap beside the image. */
+@media (min-width: 901px) {
+  body[data-route="delve.html"] .page-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 1fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: var(--space-group);
+  }
+
+  body[data-route="delve.html"] .page-intro > .intro-head {
+    grid-column: 1 / -1;
+  }
+
+  body[data-route="delve.html"] .page-intro > .intro-grid {
+    display: contents;
+  }
+
+  body[data-route="delve.html"] .intro-grid > .intro-copy {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: var(--space-group);
+  }
+
+  body[data-route="delve.html"] .intro-grid > .story-illustration {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    margin-top: var(--space-group);
+  }
+
+  body[data-route="delve.html"] .page-intro > .feature-callout {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+    margin-top: var(--space-group);
+  }
+}
+
+/* Step cards stack from the top, so every number in a row sits on one line
+   even when one description runs longer than its neighbors. */
+.process-stage {
+  justify-content: flex-start;
+}
+
+/* A note under a three-step flow uses the flow's columns, so its sentence
+   starts on the same line as the second card's text. */
+@media (min-width: 681px) {
+  .process-flow:not(.flow-4):not(.flow-5) + .visual-note {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--visual-gap);
+    padding-inline: 0;
+  }
+
+  .process-flow:not(.flow-4):not(.flow-5) + .visual-note > strong {
+    padding-left: 16px;
+  }
+
+  .process-flow:not(.flow-4):not(.flow-5) + .visual-note > span {
+    grid-column: 2 / -1;
+    padding: 0 19px 0 17px;
+  }
+}
+
+/* Projects: the chapter number sits on the chapter title's baseline. */
+.project-chapter-heading {
+  align-items: baseline;
+}
+
+/* Card stats read the same on every card: the number over its label, with
+   room above so it doesn't crowd the sentence before it. */
+.share-ratio {
+  display: grid;
+  justify-items: start;
+  gap: 2px;
+  margin-top: 14px;
+}
+
+/* Channel thumbnails keep their left side, where the game logo and the
+   "Best highlights" title sit; only the right edge is trimmed. */
+.project-preview-media.is-thumb img {
+  object-position: left center;
+}
+
+/* Numbered rows share one indent: the number column matches the capability
+   rows and the project chapters, so text starts on the same line site-wide. */
+.step {
+  grid-template-columns: 52px minmax(0, 1fr);
+}
+
+/* The arrow between step cards sits in the middle of its circle. */
+.process-stage:not(:last-child)::after {
+  font-size: 13px;
+  line-height: 1;
+  padding-bottom: 1px;
+}
+
+/* In a row of cards the stat and the link both sit at the foot of the card,
+   so stats line up even when one description runs a line longer. */
+:is(.project-preview-card-body, .directory-tile-body) > .share-ratio {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+:is(.project-preview-card-body, .directory-tile-body) > .share-ratio + :is(.text-link, .directory-tile-action) {
+  margin-top: 0;
+}
+
+@media (min-width: 681px) {
+  :is(.project-preview-card-body, .directory-tile-body) > .share-ratio > span {
+    min-height: calc(2 * 1.45em);
+  }
+}
+
+/* Projects tiles keep their stat inside the copy block; it stretches so the
+   stat sits at the foot of the tile there too. */
+.directory-tile-copy {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.directory-tile-copy > .share-ratio {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+@media (min-width: 681px) {
+  .directory-tile-copy > .share-ratio > span {
+    min-height: calc(2 * 1.45em);
+  }
 }
