@@ -5142,3 +5142,59 @@ body:has([data-draft])::before {
     gap: 10px;
   }
 }
+
+/* Home cards: Market Scan's score spread and the research lab's 11 in 446. */
+.mini-bar.is-pass i {
+  background: var(--signal);
+}
+
+.mini-bar.is-pass em {
+  color: var(--signal);
+}
+
+.dot-grid {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.dot-grid pattern circle {
+  fill: var(--line-strong);
+}
+
+.dot-pass circle {
+  fill: var(--signal);
+}
+
+/* 404: the whole site in one list. */
+.find-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-group);
+  margin-top: var(--space-item);
+}
+
+.find-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.find-list li {
+  display: grid;
+  gap: 2px;
+}
+
+.find-list span {
+  color: var(--muted);
+  font-size: var(--text-label);
+}
+
+@media (max-width: 680px) {
+  .find-lists {
+    grid-template-columns: 1fr;
+  }
+}
