@@ -5090,3 +5090,25 @@ ol.process-flow > li {
 :root[data-theme="dark"] .lightbox-trigger:has(> img.theme-light) {
   display: none;
 }
+
+/* Phones: the three Delve close-ups become a swipe row. */
+@media (max-width: 680px) {
+  .loop-steps {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 82%;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .loop-step {
+    scroll-snap-align: start;
+  }
+}
+
+/* Folded detail lists open with the same spacing as other toggles. */
+details.steps-fold > .steps {
+  margin-top: 14px;
+}

@@ -30,7 +30,7 @@
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=721ec624f1">
+  <link rel="stylesheet" href="style.css?v=d11a9e20be">
 </head>
 <body data-route="research.html" data-recipe="case-study" data-route-role="project">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -193,7 +193,7 @@
     </figure>
     <p class="section-outro"><span class="card-label">Status as of <span data-claim="opt_status_date">August 16, 2026</span></span> The decision in the dated record: <strong class="decision-stamp" data-claim="opt_governance">STAY ON PAPER</strong>. Nothing here has been sized for real money.</p>
     <details>
-    <summary>See every recorded result</summary>
+    <summary>See every recorded result and the scale behind it</summary>
     <figure class="media-block">
     <div class="verdict-distribution" role="img" aria-label="All 446 recorded results. No real pattern is the largest group at 190; 11 passed every check.">
       <div class="verdict-row"><span>No real pattern</span><meter min="0" max="446" value="190">190 of 446</meter><strong>190</strong></div>
@@ -206,19 +206,7 @@
     </div>
     <figcaption>Every outcome stays visible, drawn against all 446 ideas: no real pattern, no usable data, failed, weaker, better, repeated, or passed. Blue marks the ideas that passed.</figcaption>
     </figure>
-    </details>
-    <figure class="media-block system-visual rule-card-figure" data-draft>
-    <div class="rule-card">
-      <span class="visual-label">What one verdict record looks like, with the details redacted</span>
-      <div class="rule-field"><span class="rule-field-label">The idea</span><p>A ████ spread on ████ stocks does better in earnings weeks.</p></div>
-      <div class="rule-field"><span class="rule-field-label">Written down</span><p>August 2, 2026, before any test ran.</p></div>
-      <div class="rule-field is-falsifier"><span class="rule-field-label">What would prove it wrong</span><p>The same trades on shuffled dates do as well in at least 1 of 20 runs.</p></div>
-      <div class="rule-field"><span class="rule-field-label">Result</span><p>Weaker than the comparison: 4 of 20 shuffled runs did as well.</p></div>
-      <div class="rule-field"><span class="rule-field-label">Decision</span><p>Rejected. The record stays, with its date.</p></div>
-    </div>
-    <figcaption><strong>Every idea leaves a record like this, pass or fail.</strong> Strategy details stay private; the dates, the rule, and the verdict don’t.</figcaption>
-    </figure>
-    <figure class="media-block system-visual">
+        <figure class="media-block system-visual">
     <div class="nested-scale" role="img" aria-label="Three nested layers: 988,538 simulated trades inside 15,412 historical tests, which sit behind 446 final conclusions.">
       <div class="nested-layer">
         <span class="nested-label"><strong><span data-claim="opt_per_trade">988,538</span></strong> simulated trades</span>
@@ -231,6 +219,18 @@
       </div>
     </div>
     <figcaption><strong>Each box holds the next.</strong> Computer time shows effort, not that an idea works; the checks still decide what counts.</figcaption>
+    </figure>
+</details>
+    <figure class="media-block system-visual rule-card-figure" data-draft>
+    <div class="rule-card">
+      <span class="visual-label">What one verdict record looks like, with the details redacted</span>
+      <div class="rule-field"><span class="rule-field-label">The idea</span><p>A ████ spread on ████ stocks does better in earnings weeks.</p></div>
+      <div class="rule-field"><span class="rule-field-label">Written down</span><p>August 2, 2026, before any test ran.</p></div>
+      <div class="rule-field is-falsifier"><span class="rule-field-label">What would prove it wrong</span><p>The same trades on shuffled dates do as well in at least 1 of 20 runs.</p></div>
+      <div class="rule-field"><span class="rule-field-label">Result</span><p>Weaker than the comparison: 4 of 20 shuffled runs did as well.</p></div>
+      <div class="rule-field"><span class="rule-field-label">Decision</span><p>Rejected. The record stays, with its date.</p></div>
+    </div>
+    <figcaption><strong>Every idea leaves a record like this, pass or fail.</strong> Strategy details stay private; the dates, the rule, and the verdict don’t.</figcaption>
     </figure>
   </div>
 </section>
@@ -246,6 +246,8 @@
     <p>The automation refreshes the data; I write the rules, read the results, and decide whether an idea moves on. <strong>The answer is allowed to be boring.</strong></p>
     </div>
     </div>
+    <details>
+    <summary>See a written “prove me wrong” rule (illustrative)</summary>
     <figure class="media-block system-visual rule-card-figure">
     <div class="rule-card">
       <span class="visual-label">Illustrative example, not a real idea</span>
@@ -256,6 +258,7 @@
     </div>
     <figcaption><strong>The rule exists before there is any reason to want the idea to survive.</strong> This is what a written rule looks like before a question enters the system.</figcaption>
     </figure>
+    </details>
     <figure class="media-block system-visual">
     <ol class="process-flow">
       <li class="process-stage"><span class="process-stage-label">01 · Written down</span><strong><span data-claim="sp_total">814</span></strong><span>questions entered the research record</span></li>
