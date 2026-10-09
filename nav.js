@@ -394,6 +394,29 @@
     });
   }
 
+  // Copy a checklist as plain text, so it can go straight into a doc or chat.
+  Array.prototype.forEach.call(document.querySelectorAll("[data-copy-steps]"), function (button) {
+    var list = document.querySelector(button.getAttribute("data-copy-steps"));
+    var wrap = button.closest(".copy-checks");
+    var status = wrap && wrap.querySelector(".copy-status");
+    if (!list || !navigator.clipboard || !wrap) return;
+    wrap.hidden = false;
+    button.addEventListener("click", function () {
+      var lines = [button.getAttribute("data-copy-title") || ""];
+      Array.prototype.forEach.call(list.querySelectorAll(".step"), function (step, i) {
+        var body = step.querySelector("span");
+        lines.push((i + 1) + ". " + (body ? body.textContent : step.textContent).replace(/\s+/g, " ").trim());
+      });
+      var source = button.getAttribute("data-copy-source");
+      if (source) lines.push("", "From " + source);
+      navigator.clipboard.writeText(lines.join("\n")).then(function () {
+        if (status) status.textContent = "Copied.";
+      }, function () {
+        if (status) status.textContent = "Copy didn’t work here; select the steps above instead.";
+      });
+    });
+  });
+
   // Analytics stays off until an endpoint is set. Paste a GoatCounter endpoint
   // (https://NAME.goatcounter.com/count) to count page views plus LinkedIn,
   // resume, and YouTube clicks. No cookies, no personal data.
