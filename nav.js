@@ -152,22 +152,21 @@
     if (dialogStatus) dialogStatus.textContent = multiple ? (dialogIndex + 1) + " / " + dialogItems.length : "";
   }
 
+  // Each enlargeable image sits inside a real button, so keyboards and screen
+  // readers get native button behavior.
   document.querySelectorAll("img[data-lightbox]").forEach(function (image) {
-    image.tabIndex = 0;
-    image.setAttribute("role", "button");
-    image.setAttribute("aria-label", (image.alt || "Portfolio image") + ". Open larger view.");
-    image.addEventListener("click", function () {
+    var trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "lightbox-trigger";
+    trigger.setAttribute("aria-label", (image.alt || "Portfolio image") + ". Open larger view.");
+    image.parentNode.insertBefore(trigger, image);
+    trigger.appendChild(image);
+    trigger.addEventListener("click", function () {
       if (!dialog || !dialogImage) return;
-      dialogTrigger = image;
+      dialogTrigger = trigger;
       dialogItems = lightboxGroup(image);
       showDialogItem(dialogItems.indexOf(image));
       if (dialog.showModal) dialog.showModal();
-    });
-    image.addEventListener("keydown", function (event) {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        image.click();
-      }
     });
   });
 

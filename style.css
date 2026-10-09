@@ -5029,3 +5029,64 @@ ol.process-flow > li {
     grid-row: 3;
   }
 }
+
+/* Phones: every tap target is at least 44px tall without moving the layout. */
+@media (max-width: 680px) {
+  .brand {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .site-footer .footer-links a,
+  .breadcrumb a,
+  .directory-tile h4 a {
+    display: inline-block;
+    padding-block: 12px;
+    margin-block: -12px;
+  }
+
+  .site-footer .footer-links {
+    row-gap: 22px;
+  }
+
+  main a.text-link {
+    padding-block: 12px;
+  }
+
+  main a.text-link.resume-text-link,
+  main .prose > p > a.text-link:only-child,
+  main .read-next a.text-link {
+    display: inline-block;
+    padding-block: 10px;
+    margin-block: -10px;
+  }
+
+  .ts-range {
+    height: 44px;
+    margin-block: 0;
+  }
+}
+
+/* Lightbox triggers: a plain button around the image. */
+.lightbox-trigger {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: zoom-in;
+}
+
+.lightbox-trigger:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+:root:not([data-theme="dark"]) .lightbox-trigger:has(> img.theme-dark),
+:root[data-theme="dark"] .lightbox-trigger:has(> img.theme-light) {
+  display: none;
+}
