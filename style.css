@@ -5206,100 +5206,38 @@ details.steps-fold > .steps {
   line-height: 1.6;
 }
 
-/* Home: the career so far as one bar per role on a shared year axis (2020 to
-   October 2026 = 6.77 years), with the flag at "now". */
-.career-gantt {
-  --cg-span: 6.77;
-  --cg-label: 200px;
+/* Home: the career so far on one ruler, with the flag at "now". */
+.career-strip {
   margin: var(--space-group) 0 0;
 }
 
-.cg-rows {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cg-rows > li,
-.cg-axis {
+.cs-track,
+.cs-roles {
   display: grid;
-  grid-template-columns: var(--cg-label) minmax(0, 1fr);
-  column-gap: 16px;
+  grid-template-columns: 14.8fr 25.8fr 59.4fr;
+  gap: 4px;
 }
 
-.cg-rows > li {
-  align-items: center;
-  margin: 0;
-  padding: 12px 0;
-  border-top: 1px solid var(--line);
-}
-
-.cg-label strong {
-  display: block;
-  color: var(--ink);
-  font: 700 1.02rem/1.25 var(--display);
-  letter-spacing: -0.01em;
-}
-
-.cg-rows > li.is-now .cg-label strong {
-  color: var(--accent-strong);
-}
-
-.cg-label > span {
-  display: block;
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: var(--text-sm);
-  line-height: 1.4;
-}
-
-.cg-track {
+.cs-track {
   position: relative;
-  height: 36px;
-}
-
-/* A faint line keeps the empty years visible behind each bar. */
-.cg-track::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 4.5px;
-  left: 0;
-  height: 1px;
-  background: var(--line);
-}
-
-.cg-bar,
-.cg-when {
-  position: absolute;
-  left: calc(var(--from) / var(--cg-span) * 100%);
-}
-
-.cg-bar {
-  bottom: 0;
-  width: calc((var(--to) - var(--from)) / var(--cg-span) * 100%);
   height: 10px;
+  margin-top: 30px;
+}
+
+.cs-seg {
   border-radius: 5px;
   background: var(--line-strong);
 }
 
-.cg-rows > li.is-now .cg-bar {
+.cs-seg.is-now {
   background: var(--accent);
 }
 
-.cg-when {
-  top: 0;
-  color: var(--muted);
-  font: 600 var(--text-2xs)/1.4 var(--body);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-.cg-rows > li.is-now .cg-track::after {
+.cs-track::after {
   content: "";
   position: absolute;
   right: -3px;
-  bottom: 13px;
+  bottom: calc(100% + 4px);
   width: 12px;
   height: 21px;
   background: var(--accent);
@@ -5307,50 +5245,78 @@ details.steps-fold > .steps {
   mask: var(--flag-mask) no-repeat center / contain;
 }
 
-.cg-axis {
-  border-top: 1px solid var(--line);
-}
-
-.cg-years {
+.cs-years {
   position: relative;
-  height: 26px;
+  height: 24px;
+  margin-top: 6px;
   color: var(--muted);
   font: 600 var(--text-2xs)/1 var(--body);
   font-variant-numeric: tabular-nums;
 }
 
-/* Every other year, each label centered under its tick, so 2026 still fits
-   inside the axis before "now". */
-.cg-years span {
+.cs-years span {
   position: absolute;
   top: 0;
-  left: calc(var(--y) / var(--cg-span) * 100%);
-  padding-top: 11px;
-  transform: translateX(-50%);
+  left: calc(var(--y) * 14.77%);
+  padding: 8px 0 0 5px;
+  border-left: 1px solid var(--line-strong);
 }
 
-.cg-years span::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 6px;
-  background: var(--line-strong);
+.cs-roles {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.cg-years span:nth-child(even) {
-  display: none;
+.cs-roles > li {
+  min-width: 0;
+  margin: 0;
+  padding-right: 14px;
+}
+
+.cs-when {
+  display: block;
+  color: var(--muted);
+  font: 600 var(--text-2xs)/1.4 var(--body);
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-roles strong {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink);
+  font: 700 1.08rem/1.25 var(--display);
+}
+
+.cs-roles .is-now strong {
+  color: var(--accent-strong);
+}
+
+.cs-roles > li > span:last-child {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: var(--text-label);
+  line-height: 1.45;
 }
 
 @media (max-width: 680px) {
-  .career-gantt {
-    --cg-label: 136px;
+  .cs-roles {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  .cg-rows > li,
-  .cg-axis {
-    column-gap: 12px;
+  .cs-roles > li {
+    padding: 0 0 0 14px;
+    border-left: 3px solid var(--line-strong);
+  }
+
+  .cs-roles > li.is-now {
+    border-left-color: var(--accent);
+  }
+
+  .cs-years span:nth-child(even) {
+    display: none;
   }
 }
 
@@ -5583,5 +5549,64 @@ details.steps-fold > .steps {
 @media (min-width: 681px) {
   .directory-tile-copy > .share-ratio > span {
     min-height: calc(2 * 1.45em);
+  }
+}
+
+/* V4.34 ------------------------------------------------------------------ */
+
+/* Home career strip: year labels sit centered under their ticks, so they
+   never half-line-up with the role names below; 2020 stays flush with
+   EZLeads, and 2026 stays inside the strip on a phone. */
+.cs-years span {
+  padding: 11px 0 0;
+  border-left: 0;
+  transform: translateX(-50%);
+}
+
+.cs-years span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 6px;
+  background: var(--line-strong);
+}
+
+.cs-years span:first-child {
+  transform: none;
+}
+
+.cs-years span:first-child::before {
+  left: 0;
+}
+
+/* Side-by-side blocks are centered against each other: a short heading sits
+   beside the middle of a longer column instead of above an empty block. */
+@media (min-width: 901px) {
+  .site-section[data-lead="split"] .section-grid,
+  .ending-content {
+    align-items: center;
+  }
+
+  .site-section[data-lead="split"] .lead-heading {
+    align-self: center;
+  }
+}
+
+/* Hero: the copy is centered against the portrait or drawing beside it,
+   instead of sitting at the top with empty space below. */
+@media (min-width: 901px) {
+  .intro-grid:has(.intro-portrait),
+  .intro-grid:has(.story-illustration) {
+    align-items: center;
+  }
+}
+
+/* Short laptop screens: a slightly tighter gap under the headline keeps the
+   first button on screen now that hero copy centers against its visual. */
+@media (min-width: 901px) and (max-height: 760px) {
+  .intro-grid {
+    margin-top: calc(var(--space-group) - 12px);
   }
 }
