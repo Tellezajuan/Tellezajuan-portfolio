@@ -4655,6 +4655,10 @@ picture {
 
 /* V4.18 ------------------------------------------------------------------ */
 
+:root {
+  --flag-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 24'%3E%3Cpath d='M3 3v19' stroke='black' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M3.8 3.2 13 7.4 3.8 11.6z'/%3E%3C/svg%3E");
+}
+
 /* The decision-day flag is the brand mark: logo, section labels, footer. */
 .brand {
   display: inline-flex;
@@ -4869,4 +4873,230 @@ body:has([data-draft])::before {
 .scan-list p + p {
   padding: 2px 0 2px 18px;
   background: none;
+}
+
+/* Home: all five projects, grouped the way the site is: work, then fun. */
+.home-projects {
+  display: grid;
+  gap: var(--space-group);
+  width: 100%;
+}
+
+.home-group-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  color: var(--muted);
+  font: 650 var(--text-label)/1.3 var(--body);
+}
+
+.home-group-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.home-projects .card-title {
+  margin: 0;
+  font: 700 1.3rem/1.25 var(--display);
+}
+
+.home-projects .three-col .card-title {
+  font-size: 1.18rem;
+}
+
+.home-projects .project-preview-card-body {
+  padding: clamp(18px, 2.4vw, 26px);
+}
+
+.home-projects .share-ratio strong {
+  font-size: 1.25rem;
+}
+
+/* Marketing measurement card: the study's own numbers, drawn small. */
+.project-preview-media.is-chart {
+  display: grid;
+  padding: clamp(16px, 2.4vw, 24px) clamp(18px, 3vw, 28px) 14px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.mini-chart {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  min-height: 0;
+}
+
+.mini-chart-title {
+  color: var(--muted);
+  font: 650 var(--text-2xs)/1.3 var(--body);
+}
+
+.mini-bars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+  min-height: 0;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.mini-bar {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+
+.mini-bar i {
+  align-self: end;
+  height: calc(var(--h) * 0.74);
+  border-radius: 5px 5px 0 0;
+  background: var(--line-strong);
+}
+
+.mini-bar.is-flag i {
+  background: var(--accent);
+}
+
+.mini-bar em {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--h) * 0.74 + 7px);
+  color: var(--muted);
+  font: 700 var(--text-2xs)/1 var(--body);
+  font-style: normal;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.mini-bar.is-flag em {
+  color: var(--accent-strong);
+}
+
+.mini-bar.is-flag em::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 17px;
+  margin: 0 auto 4px;
+  background: var(--accent);
+  -webkit-mask: var(--flag-mask) no-repeat center / contain;
+  mask: var(--flag-mask) no-repeat center / contain;
+}
+
+.mini-bar b {
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 100%;
+  padding-top: 6px;
+  color: var(--muted);
+  font: 600 var(--text-2xs)/1 var(--body);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-preview-media.is-chart .mini-bars {
+  margin-bottom: 22px;
+}
+
+@media (max-width: 900px) {
+  .home-projects .project-preview-media {
+    aspect-ratio: 16 / 8;
+  }
+}
+
+/* Footer: brand, then three link columns, one of them the project list. */
+.footer-grid {
+  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(140px, 0.7fr));
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Evidence records: the same three groups on every project. */
+.receipt-minor {
+  margin: 22px 0 10px;
+  color: var(--muted);
+  font: 650 var(--text-label)/1.3 var(--body);
+}
+
+.receipt-subhead + .receipt-minor {
+  margin-top: 8px;
+}
+
+/* Calls to action read at body size. */
+.button {
+  min-height: 46px;
+  padding: 11px 20px;
+  font-size: 0.9375rem;
+}
+
+/* Delve: the daily loop as three readable close-ups, left to right. */
+.loop-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 34px);
+  margin: var(--space-group) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.loop-step {
+  position: relative;
+  min-width: 0;
+}
+
+.loop-step + .loop-step::before {
+  content: "";
+  position: absolute;
+  top: 38%;
+  left: calc(-1 * clamp(18px, 3vw, 34px));
+  width: clamp(18px, 3vw, 34px);
+  height: 2px;
+  background: var(--accent);
+}
+
+.loop-steps img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgb(16 38 50 / 8%);
+}
+
+.loop-steps figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.loop-steps figcaption strong {
+  color: var(--ink);
+}
+
+@media (max-width: 680px) {
+  .loop-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .loop-step + .loop-step::before {
+    display: none;
+  }
 }

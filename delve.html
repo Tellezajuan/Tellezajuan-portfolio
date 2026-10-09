@@ -24,13 +24,13 @@
   <meta name="twitter:image" content="https://www.tellezajuan.com/images/social/delve.png">
   <meta name="twitter:image:alt" content="Preview card: Delve, a daily dungeon game — Juan Tellez">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"All Projects","item":"https://www.tellezajuan.com/projects.html"},{"@type":"ListItem","position":2,"name":"Delve","item":"https://www.tellezajuan.com/delve.html"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A daily dungeon game: easy enough for coffee, worth coming back to.", "description": "A small daily dungeon game prototype: one short run a day, risky doors, four classes, and a boss every Friday.", "image": "https://www.tellezajuan.com/images/social/delve.png", "url": "https://www.tellezajuan.com/delve.html", "mainEntityOfPage": "https://www.tellezajuan.com/delve.html", "dateModified": "2026-09-27", "author": {"@type": "Person", "name": "Juan Tellez", "url": "https://www.tellezajuan.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A daily dungeon game: easy enough for coffee, worth coming back to.", "description": "A small daily dungeon game prototype: one short run a day, risky doors, four classes, and a boss every Friday.", "image": "https://www.tellezajuan.com/images/social/delve.png", "url": "https://www.tellezajuan.com/delve.html", "mainEntityOfPage": "https://www.tellezajuan.com/delve.html", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Juan Tellez", "url": "https://www.tellezajuan.com/"}}</script>
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=5adb86bd39">
+  <link rel="stylesheet" href="style.css?v=809a1fb1d9">
 </head>
 <body data-route="delve.html" data-recipe="case-study" data-route-role="project">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -129,23 +129,29 @@
               <p class="prose">That’s the mix I wanted: <strong>no long sessions</strong>, but enough personality that a result can start a conversation in a group chat. Play quickly, then come back because a friend took a different route or your trophy shelf still has a gap.</p>
             </div>
           </div>
-          <div class="media-grid poster-grid is-wide is-screens">
-            <figure class="media-block">
-              <img class="theme-light" src="images/delve/delve-door-choice-paper.png" width="660" height="1350" alt="Delve floor screen with three doors marked deadly, standard, and safe." loading="lazy" decoding="async" data-lightbox="true">
-              <img class="theme-dark" src="images/delve/delve-door-choice-dark.png" width="660" height="1350" alt="Delve floor screen with three doors marked deadly, standard, and safe." loading="lazy" decoding="async" data-lightbox="true">
-              <figcaption><strong>1. Pick a door.</strong> Safer rooms cost less health and pay less.</figcaption>
-            </figure>
-            <figure class="media-block">
-              <img class="theme-light" src="images/delve/delve-duel-paper.png" width="660" height="1350" alt="Delve encounter screen: the fighter faces a trap called a lock with a needle." loading="lazy" decoding="async" data-lightbox="true">
-              <img class="theme-dark" src="images/delve/delve-duel-dark.png" width="660" height="1350" alt="Delve encounter screen: the fighter faces a trap called a lock with a needle." loading="lazy" decoding="async" data-lightbox="true">
-              <figcaption><strong>2. Face what’s inside.</strong> Every room is a short encounter.</figcaption>
-            </figure>
-            <figure class="media-block">
-              <img class="theme-light" src="images/delve/delve-mouth-paper.png" width="660" height="1350" alt="Delve choice after five floors: bank 81 experience points and climb out, or dive deeper for more." loading="lazy" decoding="async" data-lightbox="true">
-              <img class="theme-dark" src="images/delve/delve-mouth-dark.png" width="660" height="1350" alt="Delve choice after five floors: bank 81 experience points and climb out, or dive deeper for more." loading="lazy" decoding="async" data-lightbox="true">
-              <figcaption><strong>3. Bank it or dive.</strong> Keep what you earned, or risk it for more.</figcaption>
-            </figure>
-          </div>
+          <ol class="loop-steps">
+            <li class="loop-step">
+              <figure class="media-block">
+                <img class="theme-light" src="images/delve/delve-door-choice-crop-paper.png" width="660" height="540" alt="Three doors on a Delve floor, marked deadly, standard, and safe, each with its health cost and experience reward." loading="lazy" decoding="async" data-lightbox="true">
+                <img class="theme-dark" src="images/delve/delve-door-choice-crop-dark.png" width="660" height="540" alt="Three doors on a Delve floor, marked deadly, standard, and safe, each with its health cost and experience reward." loading="lazy" decoding="async" data-lightbox="true">
+                <figcaption><strong>1. Pick a door.</strong> Safer rooms cost less health and pay less.</figcaption>
+              </figure>
+            </li>
+            <li class="loop-step">
+              <figure class="media-block">
+                <img class="theme-light" src="images/delve/delve-duel-crop-paper.png" width="660" height="540" alt="A Delve encounter: the fighter faces a trap called a lock with a needle, with health at 96 of 100." loading="lazy" decoding="async" data-lightbox="true">
+                <img class="theme-dark" src="images/delve/delve-duel-crop-dark.png" width="660" height="540" alt="A Delve encounter: the fighter faces a trap called a lock with a needle, with health at 96 of 100." loading="lazy" decoding="async" data-lightbox="true">
+                <figcaption><strong>2. Face what’s inside.</strong> Every room is a short encounter.</figcaption>
+              </figure>
+            </li>
+            <li class="loop-step">
+              <figure class="media-block">
+                <img class="theme-light" src="images/delve/delve-mouth-crop-paper.png" width="660" height="540" alt="After five floors, Delve offers a choice: bank 81 experience points now, or dive into deadlier rooms for more." loading="lazy" decoding="async" data-lightbox="true">
+                <img class="theme-dark" src="images/delve/delve-mouth-crop-dark.png" width="660" height="540" alt="After five floors, Delve offers a choice: bank 81 experience points now, or dive into deadlier rooms for more." loading="lazy" decoding="async" data-lightbox="true">
+                <figcaption><strong>3. Bank it or dive.</strong> Keep what you earned, or risk it for more.</figcaption>
+              </figure>
+            </li>
+          </ol>
           <div class="highlight">
     <strong>The loop in one sentence</strong>
     <span>Five floors, one shared weekly dungeon, four classes, and a Friday boss give a casual player a complete session and a committed player a harder route to compare.</span>
@@ -257,12 +263,12 @@
   <div class="section-shell">
     <div class="kicker">Where it stands</div>
             <h2>Small on purpose. Honest about what’s next.</h2>
-            <p class="section-intro">A working game isn’t a finished product.</p>
+            <p class="section-intro">It runs and it’s fun. Sharing it takes a few more steps.</p>
             <div class="card-grid">
               <div class="card">
     <span class="card-label">Prototype</span>
     <strong>A personal project</strong>
-    <span>A fun, small game I built to play. It isn’t a claim about sales, players, or growth.</span>
+    <span>A fun, small game I built to play. No claims about sales, players, or growth.</span>
     </div>
               <div class="card">
     <span class="card-label">Not released</span>
@@ -290,7 +296,6 @@
     </div>
     <div class="action-row">
         <a class="button button-primary" href="https://www.linkedin.com/in/tellezajuan" target="_blank" rel="noopener">Connect on LinkedIn →</a>
-        <a class="text-link resume-text-link" href="assets/Juan_Tellez_Public_Resume.pdf" download>Download my resume ↓</a>
       </div>
     </div>
     </div>
@@ -326,6 +331,14 @@
 <a href="projects.html">All Projects</a>
 <a href="how-i-work.html">How I Work</a>
     </nav>
+    <nav class="footer-links" aria-label="Projects">
+      <strong>Projects</strong>
+      <a href="marketing-measurement.html">Marketing Measurement</a>
+      <a href="market-scan.html">Market Scan</a>
+      <a href="youtube-channel.html">YouTube Channel</a>
+      <a href="research.html">Research Lab</a>
+      <a href="delve.html">Delve</a>
+    </nav>
     <nav class="footer-links" aria-label="Elsewhere">
       <strong>Elsewhere</strong>
       <a href="assets/Juan_Tellez_Public_Resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -334,7 +347,7 @@
       <a href="#main-content">Back to top ↑</a>
     </nav>
     <div class="footer-meta">
-      <span>Updated September 2026 · every project page lists where its numbers come from.</span>
+      <span>Updated October 2026 · every project page lists where its numbers come from.</span>
     </div>
   </div>
 </footer>
