@@ -351,6 +351,49 @@
     if (figure) figure.classList.add("has-slider");
   });
 
+  // On-page menu for long pages: always open on wide screens, a toggle on
+  // phones, and it marks the section being read.
+  var toc = document.querySelector(".page-toc");
+  var tocBar = document.querySelector(".page-toc-bar");
+  if (toc && tocBar) {
+    var wide = window.matchMedia("(min-width: 681px)");
+    var tocSummary = toc.querySelector("summary");
+    var tocSummaryText = tocSummary ? tocSummary.textContent : "";
+    var tocLinks = Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]'));
+    var tocTargets = tocLinks.map(function (link) {
+      return document.getElementById(link.getAttribute("href").slice(1));
+    });
+    var tocQueued = false;
+    var syncTocOpen = function () { toc.open = wide.matches; };
+    var markSection = function () {
+      tocQueued = false;
+      var line = tocBar.getBoundingClientRect().bottom + 24;
+      var current = -1;
+      tocTargets.forEach(function (target, i) {
+        if (target && target.getBoundingClientRect().top <= line) current = i;
+      });
+      tocLinks.forEach(function (link, i) {
+        if (i === current) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+      if (tocSummary) {
+        tocSummary.textContent = current >= 0 ? "On this page · " + tocLinks[current].textContent : tocSummaryText;
+      }
+    };
+    syncTocOpen();
+    markSection();
+    if (wide.addEventListener) wide.addEventListener("change", syncTocOpen);
+    window.addEventListener("scroll", function () {
+      if (!tocQueued) {
+        tocQueued = true;
+        window.requestAnimationFrame(markSection);
+      }
+    }, { passive: true });
+    toc.addEventListener("click", function (event) {
+      if (!wide.matches && event.target.closest("a")) toc.open = false;
+    });
+  }
+
   // Analytics stays off until an endpoint is set. Paste a GoatCounter endpoint
   // (https://NAME.goatcounter.com/count) to count page views plus LinkedIn,
   // resume, and YouTube clicks. No cookies, no personal data.
