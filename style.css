@@ -5214,7 +5214,7 @@ details.steps-fold > .steps {
 .cs-track,
 .cs-roles {
   display: grid;
-  grid-template-columns: 14.8fr 25.8fr 59.4fr;
+  grid-template-columns: 26.4fr 14.8fr 58.8fr;
   gap: 4px;
 }
 
