@@ -5610,3 +5610,10 @@ details.steps-fold > .steps {
     margin-top: calc(var(--space-group) - 12px);
   }
 }
+
+/* Two-card snapshot rows (Home's day-job result). */
+@media (min-width: 681px) {
+  .report-snapshots.is-compact.two-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
