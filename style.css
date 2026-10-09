@@ -5112,3 +5112,167 @@ ol.process-flow > li {
 details.steps-fold > .steps {
   margin-top: 14px;
 }
+
+/* V4.27 ------------------------------------------------------------------ */
+
+/* Summary lists read at body size, a step darker than captions. */
+.summary-item span {
+  color: color-mix(in srgb, var(--ink) 80%, var(--paper));
+  font-size: var(--text-base, 1rem);
+  line-height: 1.6;
+}
+
+/* Home: the career so far on one ruler, with the flag at "now". */
+.career-strip {
+  margin: var(--space-group) 0 0;
+}
+
+.cs-track,
+.cs-roles {
+  display: grid;
+  grid-template-columns: 14.8fr 25.8fr 59.4fr;
+  gap: 4px;
+}
+
+.cs-track {
+  position: relative;
+  height: 10px;
+  margin-top: 30px;
+}
+
+.cs-seg {
+  border-radius: 5px;
+  background: var(--line-strong);
+}
+
+.cs-seg.is-now {
+  background: var(--accent);
+}
+
+.cs-track::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  bottom: calc(100% + 4px);
+  width: 12px;
+  height: 21px;
+  background: var(--accent);
+  -webkit-mask: var(--flag-mask) no-repeat center / contain;
+  mask: var(--flag-mask) no-repeat center / contain;
+}
+
+.cs-years {
+  position: relative;
+  height: 24px;
+  margin-top: 6px;
+  color: var(--muted);
+  font: 600 var(--text-2xs)/1 var(--body);
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-years span {
+  position: absolute;
+  top: 0;
+  left: calc(var(--y) * 14.77%);
+  padding: 8px 0 0 5px;
+  border-left: 1px solid var(--line-strong);
+}
+
+.cs-roles {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-roles > li {
+  min-width: 0;
+  margin: 0;
+  padding-right: 14px;
+}
+
+.cs-when {
+  display: block;
+  color: var(--muted);
+  font: 600 var(--text-2xs)/1.4 var(--body);
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-roles strong {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink);
+  font: 700 1.08rem/1.25 var(--display);
+}
+
+.cs-roles .is-now strong {
+  color: var(--accent-strong);
+}
+
+.cs-roles > li > span:last-child {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: var(--text-label);
+  line-height: 1.45;
+}
+
+@media (max-width: 680px) {
+  .cs-roles {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cs-roles > li {
+    padding: 0 0 0 14px;
+    border-left: 3px solid var(--line-strong);
+  }
+
+  .cs-roles > li.is-now {
+    border-left-color: var(--accent);
+  }
+
+  .cs-years span:nth-child(even) {
+    display: none;
+  }
+}
+
+/* Experience: each role uses the full width, details left and result right. */
+@media (min-width: 901px) {
+  .career-stop {
+    display: grid;
+    max-width: none;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    column-gap: var(--space-group);
+    align-items: start;
+  }
+
+  .career-stop > :not(.career-result) {
+    grid-column: 1;
+  }
+
+  .career-stop > .career-result {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    margin-top: 0;
+  }
+}
+
+/* Phones: a lighter Home hero, with a smaller portrait and body-size lede. */
+@media (max-width: 680px) {
+  body[data-route="index.html"] .intro-grid .intro-portrait {
+    max-width: 220px;
+  }
+
+  body[data-route="index.html"] .intro-lede {
+    font-size: var(--text-base, 1rem);
+  }
+}
+
+/* The small charts stand on the same tick ruler as the footer timeline. */
+.mini-bars {
+  border-bottom: 0;
+  background:
+    repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px 14px) 0 100% / 100% 6px no-repeat,
+    linear-gradient(var(--line-strong), var(--line-strong)) 0 100% / 100% 1px no-repeat;
+  padding-bottom: 6px;
+}
