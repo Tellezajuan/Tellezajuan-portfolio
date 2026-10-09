@@ -106,7 +106,7 @@
   --signal: #7fa6be;
   --signal-strong: #a9c8de;
   --signal-bright: #8fb8ce;
-  --inverse: #0d1215;
+  --inverse: #1c252b;
   --inverse-ink: #f3f0e8;
   --inverse-muted: #b4bdb8;
   --success: #7fa6be;
@@ -4802,5 +4802,185 @@ body:has([data-draft])::before {
 
   .read-next .card-grid > .card:not(.is-next) {
     display: none;
+  }
+}
+
+/* Projects collage scales with its width at every size, and the caption sits
+   below it instead of under the images. */
+.story-illustration.project-collage {
+  height: auto;
+  aspect-ratio: 100 / 78;
+  margin-bottom: 72px;
+}
+
+.project-collage .collage-thumb {
+  top: 2%;
+}
+
+.project-collage .collage-game {
+  top: 33%;
+}
+
+.project-collage .collage-chart {
+  bottom: 3%;
+}
+
+.project-collage figcaption {
+  inset: calc(100% + 14px) 0 auto;
+}
+
+@media (max-width: 680px) {
+  .story-illustration.project-collage {
+    height: auto;
+    margin-bottom: 84px;
+  }
+
+  .project-collage .collage-chart {
+    padding: 10px 12px;
+  }
+
+  .collage-chart strong {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets: the portrait stays beside the opening copy. */
+@media (min-width: 681px) and (max-width: 900px) {
+  .intro-grid:has(.intro-portrait) {
+    grid-template-columns: minmax(0, 1fr) 210px;
+  }
+
+  .intro-portrait {
+    justify-self: end;
+  }
+}
+
+/* Tablets: the three "built for fun" cards read as rows, media on the left. */
+@media (min-width: 681px) and (max-width: 900px) {
+  .home-projects .three-col .project-preview-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  }
+
+  .home-projects .three-col .project-preview-media {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 220px;
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+  }
+}
+
+/* One caption style everywhere: small, muted, with a dark lead-in. */
+main figure > figcaption:not([hidden]) {
+  font-size: var(--text-label);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+main figure > figcaption:not([hidden]) strong {
+  color: var(--ink);
+}
+
+/* Links on dark bands use the same rust family as links everywhere else. */
+.tone-inverse .text-link {
+  color: var(--accent-bright);
+  text-decoration-color: color-mix(in srgb, var(--accent-bright) 60%, transparent);
+}
+
+/* Same gap between a section heading and its first paragraph everywhere. */
+.site-section .section-shell h2 + p {
+  margin-top: 16px;
+}
+
+.site-section .lead-heading > h2 + p {
+  margin-top: 6px;
+}
+
+/* Project card links read at the same size as card links on Home. */
+.directory-tile-action {
+  font-size: var(--text-base, 1rem);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-underline-offset: 3px;
+}
+
+/* Small motion: the logo's flag catches the wind on hover, and the Home
+   charts draw in once. Only when the reader allows motion. */
+.brand-flag-pennant {
+  transform-box: fill-box;
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand:hover .brand-flag-pennant,
+  .brand:focus-visible .brand-flag-pennant {
+    animation: flag-wave 900ms ease-in-out;
+  }
+
+  .motion-ready [data-reveal="shown"] .mini-bar i {
+    transform-origin: bottom;
+    animation: bar-grow 700ms var(--ease-out) both;
+    animation-delay: 160ms;
+  }
+
+  .motion-ready [data-reveal="shown"] .mini-bar:nth-child(2) i { animation-delay: 230ms; }
+  .motion-ready [data-reveal="shown"] .mini-bar:nth-child(3) i { animation-delay: 300ms; }
+  .motion-ready [data-reveal="shown"] .mini-bar:nth-child(4) i { animation-delay: 370ms; }
+  .motion-ready [data-reveal="shown"] .mini-bar:nth-child(5) i { animation-delay: 440ms; }
+
+  .motion-ready [data-reveal="shown"] .dot-pass circle {
+    animation: dot-pop 520ms var(--ease-out) both;
+    animation-delay: 420ms;
+  }
+}
+
+@keyframes flag-wave {
+  0%, 100% { transform: none; }
+  30% { transform: skewY(-9deg) scaleX(0.9); }
+  65% { transform: skewY(6deg) scaleX(1.04); }
+}
+
+@keyframes bar-grow {
+  from { transform: scaleY(0); }
+}
+
+@keyframes dot-pop {
+  from { opacity: 0; }
+}
+
+/* Step flows are ordered lists. */
+ol.process-flow {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ol.process-flow > li {
+  margin: 0;
+}
+
+.loop-steps > li,
+.find-list > li {
+  margin: 0;
+}
+
+.tile-tags > li,
+.posting-checks > li {
+  margin: 0;
+}
+
+/* Detail rows: label and text share a first baseline. */
+.detail-row {
+  align-items: baseline;
+}
+
+.dot-grid pattern circle {
+  fill: color-mix(in srgb, var(--muted) 42%, transparent);
+}
+
+@media (min-width: 681px) and (max-width: 900px) {
+  .home-projects .three-col .project-preview-card > * + * {
+    margin-top: 0;
   }
 }

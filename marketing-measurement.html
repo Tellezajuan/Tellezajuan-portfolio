@@ -30,7 +30,7 @@
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=37f0f64105">
+  <link rel="stylesheet" href="style.css?v=a7e9be59d0">
 </head>
 <body data-route="marketing-measurement.html" data-recipe="case-study" data-route-role="project">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -80,7 +80,7 @@
 <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="projects.html">All Projects</a></li><li aria-current="page">Marketing Measurement</li></ol></nav>
 <header class="page-intro container" data-block="intro">
   <div class="intro-head">
-          <p class="eyebrow">Marketing measurement · public ad data</p>
+          <p class="eyebrow">Marketing Measurement · public ad data</p>
           <h1>Most campaigns that looked worth scaling only looked good <span>in hindsight</span>.</h1>
         </div>
         <div class="intro-grid">
@@ -88,8 +88,8 @@
             <p class="intro-subtitle" data-intro-role="primary">Ad reports keep crediting results to a campaign for weeks after its budget was decided. I rebuilt 675 campaign reports to show only what was known on the day each decision was due.</p>
             <p class="intro-lede" data-intro-role="supporting">On decision day, only <span data-claim="share_credited_at_gate">39%</span> of the eventual credit existed. I wrote the plan first, then tried hard to break the result.</p>
             <div class="action-row" data-intro-role="action">
-  <a class="button button-primary" href="#findings">Read the finding</a>
-  <a class="button button-secondary" href="#receipt">See the evidence</a>
+  <a class="button button-primary" href="#findings">Read the finding ↓</a>
+  <a class="button button-secondary" href="#receipt">See the evidence ↓</a>
   </div>
           </div>
           <figure class="story-illustration" data-intro-role="visual">
@@ -120,11 +120,11 @@
   <path class="illo-line" d="M520 118h80M540 88v16M580 88v16"/>
   <path class="illo-text" d="M536 136h10M556 136h10M576 136h10M536 152h10M556 152h10"/>
 </svg>
-            <figcaption><strong>The problem in one picture:</strong> the budget is decided on the day of the flag, but credit keeps arriving for weeks and gets filed back into the old report.</figcaption>
+            <figcaption><strong>In one picture:</strong> the budget is decided on the day of the flag, but credit keeps arriving for weeks and gets filed back into the old report.</figcaption>
           </figure>
         </div>
         <div class="feature-callout">
-  <span class="callout-label">The finding</span>
+  <span class="callout-label">The result</span>
   <strong class="callout-title">167 of 285 campaigns that looked worth scaling only looked good because of credit that arrived after the budget was set.</strong>
   <span class="callout-copy">At the extreme, the 25 campaigns with the most late credit looked about 4× cheaper in hindsight than on decision day: their middle cost per customer rose <span data-claim="median_cpa_inflation_pct">297%</span> once late credit was removed. Those 25 were picked after the study, so they show the problem’s size, not a typical campaign.</span>
   </div>
@@ -202,11 +202,11 @@
     <div class="kicker">How the correction works</div>
     <h2>Score every campaign twice: once the usual way, once with only what was known on decision day.</h2>
     <figure class="media-block system-visual">
-    <div class="process-flow">
-      <article class="process-stage"><span class="process-stage-label">01 · The usual report</span><strong><span data-claim="naive_candidates">285</span></strong><span>campaigns looked promising once all the late credit was counted</span></article>
-      <article class="process-stage is-decision"><span class="process-stage-label">02 · Decision-day view</span><strong><span data-claim="corrected_candidates">118</span></strong><span>still looked promising using only credit that existed on decision day</span></article>
-      <article class="process-stage is-outcome"><span class="process-stage-label">03 · Worth another test</span><strong><span data-claim="promote_candidates">33</span></strong><span>passed the remaining checks and earned another experiment</span></article>
-    </div>
+    <ol class="process-flow">
+      <li class="process-stage"><span class="process-stage-label">01 · The usual report</span><strong><span data-claim="naive_candidates">285</span></strong><span>campaigns looked promising once all the late credit was counted</span></li>
+      <li class="process-stage is-decision"><span class="process-stage-label">02 · Decision-day view</span><strong><span data-claim="corrected_candidates">118</span></strong><span>still looked promising using only credit that existed on decision day</span></li>
+      <li class="process-stage is-outcome"><span class="process-stage-label">03 · Worth another test</span><strong><span data-claim="promote_candidates">33</span></strong><span>passed the remaining checks and earned another experiment</span></li>
+    </ol>
     <div class="visual-note"><strong>167 dropped out</strong><span>They only looked good because of credit that arrived late. Another 85 did not clear the next-test bar.</span></div>
     <figcaption>
     <strong>The timing check is the whole idea.</strong> Separately, <span data-claim="spend_at_risk_pct">60.3%</span> of the test budget sat behind campaigns that failed it, a figure calculated after the planned study.</figcaption>
